@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include base/pagetitle.html %}
+    <meta name="description" content="{% if page.description == null or page.description == '' %}{{ site.data.i18n-base[page.language].site-title }}{% else %}{{ page.description }}{% endif %}">
+    {% include base/socialmediatags.html %}
+ 	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+	wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+	{% include base/headresources.html %}
+	</head>
+  <body vocab="http://schema.org/" typeof="WebPage">
+  <noscript>This website requires JavaScript to function properly.</noscript>
+		<ul id="wb-tphp" role="navigation" aria-label="Keyboard-only menu">
+			<li class="wb-slc">
+				<a class="wb-sl" href="#wb-cont">Skip to main content</a>
+			</li>
+{% unless page.footer == "false" %}
+			<li class="wb-slc visible-sm visible-md visible-lg">
+				<a class="wb-sl" href="#wb-info">Skip to About This Site</a>
+			</li>
+{% endunless %}
+{% if page.secondarymenu == "true" %}
+			<li class="wb-slc visible-md visible-lg">
+				<a class="wb-sl" href="#wb-sec">Skip to secondary menu</a>
+			</li>
+{% endif %}
+		</ul>
+		<header>
+      <div class="masthead container-fluid">
+        {% include theme-base/brand.html %}
+      </div>
+    </header>
+		<main class="container">
+{% unless page.feedback == "false" %}
+      {% include feedback-banner.html %}
+{% endunless %}
+			<h1 id="wb-cont" property="name">{{ page.title }}</h1>
+			{{ content }}
+		</main>
+{% unless page.footer == "false" %}
+		<footer class="nav-footer mrgn-tp-lg">
+			<div class="container-fluid">
+        <div class="row">
+          <div id="wb-info" class="col-sm-6 col-sm-offset-3 text-center">
+            <p class="mrgn-tp-sm">&copy; {{ site.copyright_date }} Health Analytics, Research &amp; Policy Team</p>
+            <p>Made with <span id="heart" class="fas fa-heart"></span> &amp; <span id="coffee" class="fas fa-coffee"></span></p>
+            <nav class="wb-navcurr" aria-labelledby="ft-nav-name">
+              <h2 id="ft-nav-name">{{ site.data.i18n-base[page.language].tmpl-about-site }}</h2>
+              {% include theme-base/footer.html %}
+            </nav>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3">
+            {% include theme-base/social.html %}
+          </div>
+        </div>
+			</div>
+		</footer>
+{% endunless %}
+		{% include base/footerresources.html %}
+	</body>
+</html>
