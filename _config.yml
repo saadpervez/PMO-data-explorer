@@ -1,0 +1,41 @@
+#
+# Turn this into a basic template for HARP
+
+# Site settings
+title: PMO data explorer
+description: Make data beautiful with Jekyll
+baseurl: "/PMO-data-explorer"
+url: "https://rrfss.durham.ca"
+copyright_date: "2019"
+
+# User settings
+username: Durham Region HARP
+user_description: Epidemiologists making data fun again
+user_title: Health Analytics Research and Policy
+email: harp@durham.ca
+facebook_username: durhamregionhealth
+twitter_username: durhamepis
+github_username: DurhamRegionHARP
+
+# Build settings
+markdown: kramdown
+exclude: ['gulpfile.js',
+  'package.json',
+  'params.json',
+  '.travis.yml',
+  'Rakefile',
+  'yarn-error.log',
+  'yarn.lock',
+  'node_modules',
+  'css/src/',
+  'css/deps/',
+  'script/src/']
+
+# Plugins
+#plugins:
+#  - jekyll-sitemap
+# Prose configuration
+# Set ignore parameter to limit access to files we don't want available to edit
+prose:
+  rooturl: "_data"
+  ignore: ['/css','/assests','/script','/theme_base','/','*.yml','*.html']
