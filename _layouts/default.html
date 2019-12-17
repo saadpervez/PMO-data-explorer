@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% include base/pagetitle.html %}
+    {% include pagetitle.html %}
     <meta name="description" content="{% if page.description == null or page.description == '' %}{{ site.data.i18n-base[page.language].site-title }}{% else %}{{ page.description }}{% endif %}">
-    {% include base/socialmediatags.html %}
+    {% include socialmediatags.html %}
  	<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 	wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-	{% include base/headresources.html %}
+	{% include headresources.html %}
 	</head>
   <body vocab="http://schema.org/" typeof="WebPage">
   <noscript>This website requires JavaScript to function properly.</noscript>
@@ -30,13 +30,10 @@
 		</ul>
 		<header>
       <div class="masthead container-fluid">
-        {% include theme-base/brand.html %}
+        {% include brand.html %}
       </div>
     </header>
 		<main class="container">
-{% unless page.feedback == "false" %}
-      {% include feedback-banner.html %}
-{% endunless %}
 			<h1 id="wb-cont" property="name">{{ page.title }}</h1>
 			{{ content }}
 		</main>
@@ -49,18 +46,18 @@
             <p>Made with <span id="heart" class="fas fa-heart"></span> &amp; <span id="coffee" class="fas fa-coffee"></span></p>
             <nav class="wb-navcurr" aria-labelledby="ft-nav-name">
               <h2 id="ft-nav-name">{{ site.data.i18n-base[page.language].tmpl-about-site }}</h2>
-              {% include theme-base/footer.html %}
+              {% include footer.html %}
             </nav>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-6 col-sm-offset-3">
-            {% include theme-base/social.html %}
+            {% include social.html %}
           </div>
         </div>
 			</div>
 		</footer>
 {% endunless %}
-		{% include base/footerresources.html %}
+		{% include footerresources.html %}
 	</body>
 </html>
