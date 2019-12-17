@@ -27,6 +27,7 @@ exclude: ['gulpfile.js',
   'yarn-error.log',
   'yarn.lock',
   'node_modules',
+  'README.md',
   'css/src/',
   'css/deps/',
   'script/src/']
