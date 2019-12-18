@@ -1,0 +1,12 @@
+{
+  "name": "PMO-data-explorer",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "https://github.com/HealthAnalyticsResearchPolicy/PMO-data-explorer.git",
+  "author": "James Lane <lanejames35@gmail.com>",
+  "license": "",
+  "dependencies": {
+    "bootstrap-sass": "^3.4.1",
+    "magnific-popup": "^1.1.0"
+  }
+}
