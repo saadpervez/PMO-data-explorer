@@ -29,8 +29,7 @@ exclude: ['gulpfile.js',
   'node_modules',
   'README.md',
   'css/src/',
-  'css/deps/',
-  'script/src/']
+  'css/deps/']
 
 # Plugins
 #plugins:
