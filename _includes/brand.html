@@ -1,36 +1,32 @@
-<header>
-	<div id="wb-bnr" class="container">
-		<div class="row">
-			<div class="brand col-xs-5 col-md-4">
-        <a href="{{ site.url }}" property="url">
-          <!-- Logo goes here -->
-          <img src="https://wet-boew.github.io/themes-dist/GCWeb/assets/sig-blk-en.svg" alt="" property="logo">
-          <span class="wb-inv" property="name">PMO data explorer</span>
-        </a>
-			</div>
-		</div>
-	</div>
-	<nav class="gcweb-menu" typeof="SiteNavigationElement">
-		<div class="container">
-			<h2 class="wb-inv">Menu</h2>
-			<button type="button" aria-haspopup="true" aria-expanded="false"><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
-			<ul role="menu" aria-orientation="vertical" data-ajax-replace="https://wet-boew.github.io/themes-dist/GCWeb/ajax/sitemenu-v5-en.html">
-				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/jobs.html">Jobs and the workplace</a></li>
-				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/immigration-citizenship.html">Immigration and citizenship</a></li>
-				<li role="presentation"><a role="menuitem" href="https://travel.gc.ca/">Travel and tourism</a></li>
-				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/business.html">Business and industry</a></li>
-				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/benefits.html">Benefits</a></li>
-				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/health.html">Health</a></li>
-				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/taxes.html">Taxes</a></li>
-				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/environment.html">Environment and natural resources</a></li>
-				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/defence.html">National security and defence</a></li>
-				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
-				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
-				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
-				<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
-				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
-				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li>
-			</ul>
-		</div>
-	</nav>
-</header>
+<div class="row">
+  <div class="brand col-xs-5 col-md-4">
+    <a href="{{ site.baseurl }}/" property="url">
+      <!-- Logo goes here -->
+      <img src="https://wet-boew.github.io/themes-dist/GCWeb/assets/sig-blk-en.svg" alt="" property="logo">
+      <span class="wb-inv" property="name">PMO data explorer</span>
+    </a>
+  </div>
+  <div class="col-xs-7">
+    <nav id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-menu" role="navigation" typeof="SiteNavigationElement">
+      <div class="pnl-strt container nvbar">
+        <h2 class="wb-inv">Menu</h2>
+        <div class="row">
+          <ul class="list-inline menu" role="menubar">
+            <li><a href="https://google.com">Link</a></li>
+            <li><a href="https://google.com">Link</a></li>
+            <li><a href="https://google.com">Link</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="wb-glb-mn" class="wb-mb-links pull-right visible-sm visible-xs">
+      <h2>Main Menu</h2>
+      <a href="#mb-menu" title="Main menu" aria-controls="mb-menu" class="overlay-lnk btn btn-default" role="button">
+        <span class="wb-inv">Open the main menu</span>
+        <span class="glyphicon glyphicon-th-list"></span>
+      </a>
+      <div id="mb-menu" class="wb-overlay modal-content overlay-def wb-panel-r" aria-hidden="true">
+      </div>
+    </section>
+  </div>
+</div>
