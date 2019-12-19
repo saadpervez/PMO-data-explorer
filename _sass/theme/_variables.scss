@@ -1,7 +1,7 @@
 // Theme Variable overrides
 
 // Body
-$body-bg: #f9f9f9; // Body element's background colour (Bootstrap override).
+$body-bg: #fff; // Body element's background colour (Bootstrap override).
 
 // Breadcrumb
 $breadcrumb-bg: #fff; // Inner background colour (Bootstrap override).
@@ -13,7 +13,7 @@ $main-bg: $breadcrumb-bg; // Main element's background colour (WET override).
 $wb-so-background-color: #fff;
 
 /*Banner*/
-$wb-bnr-background-color: #114f7a; /*Dark Cerulean*/
+$wb-bnr-background-color: hsl(204, 86%, 53%); /*Dark Cerulean*/
 $wb-bnr-background-linear-gradient: linear-gradient(#176ca7, #114f7a); /*Lochmara, Dark Cerulean*/
 $wb-bar-background: #474747; /*Charcoal*/
 $wb-bnr-border-bottom: #fff; /*White*/
@@ -33,12 +33,12 @@ $wb-lng-curr-color: #ccc; /*Very Light Grey*/
 $wb-cont-border-bottom: #eee; /*Whisper*/
 
 /*Site menu*/
-$wet-theme-wb-sm-wb-navcurr-background: #0b3048; /*Blue Whale*/
+$wet-theme-wb-sm-wb-navcurr-background: hsl(204, 86%, 53%); /*Bulma is-info*/
 $wet-theme-wb-sm-wb-navcurr-color: #fff; /*White*/
 
-$wet-theme-wb-menu-hover-active-background: #ccc; /*Very Light Grey*/
+$wet-theme-wb-menu-hover-active-background: hsl(217, 71%, 53%); /*Bulma is-info*/
 $wet-theme-wb-menu-hover-active-border-color: #ccc; /*Very Light Grey*/
-$wet-theme-wb-menu-hover-active-color: #000; /*Black*/
+$wet-theme-wb-menu-hover-active-color: #fff; /*Black*/
 
 $wb-sm-menu-text-shadow: #666; /*Dim Gray*/
 

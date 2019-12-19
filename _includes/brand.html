@@ -1,32 +1,35 @@
 <div class="row">
-  <div class="brand col-xs-5 col-md-4">
-    <a href="{{ site.baseurl }}/" property="url">
-      <!-- Logo goes here -->
-      <img src="https://wet-boew.github.io/themes-dist/GCWeb/assets/sig-blk-en.svg" alt="" property="logo">
-      <span class="wb-inv" property="name">PMO data explorer</span>
-    </a>
-  </div>
-  <div class="col-xs-7">
-    <nav id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-menu" role="navigation" typeof="SiteNavigationElement">
-      <div class="pnl-strt container nvbar">
-        <h2 class="wb-inv">Menu</h2>
-        <div class="row">
+  <nav id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-menu" role="navigation" typeof="SiteNavigationElement">
+    <div class="pnl-strt container nvbar">
+      <div class="row">
+        <div class="nav-brand col-xs-5 col-md-1">
+          <a href="{{ site.baseurl }}/" property="url">
+            <!-- Logo goes here -->
+            <img src="{{ "/assets/DRHD-blue.svg" | absolute_url }}" alt="Durham Region Health Department logo" property="logo" height="50">
+            <span class="wb-inv" property="name">PMO data explorer</span>
+          </a>
+        </div>      
+        <div class="nav-links col-xs-7 col-md-9">
+          <h2 class="wb-inv">Menu</h2>
           <ul class="list-inline menu" role="menubar">
             <li><a href="https://google.com">Link</a></li>
             <li><a href="https://google.com">Link</a></li>
             <li><a href="https://google.com">Link</a></li>
           </ul>
         </div>
+        <div class="nav-btn col-md-2 visible-md visible-lg">
+          <button class="btn btn-lg btn-warning">Hello</button>
+        </div>
       </div>
-    </nav>
-    <section id="wb-glb-mn" class="wb-mb-links pull-right visible-sm visible-xs">
-      <h2>Main Menu</h2>
-      <a href="#mb-menu" title="Main menu" aria-controls="mb-menu" class="overlay-lnk btn btn-default" role="button">
-        <span class="wb-inv">Open the main menu</span>
-        <span class="glyphicon glyphicon-th-list"></span>
-      </a>
-      <div id="mb-menu" class="wb-overlay modal-content overlay-def wb-panel-r" aria-hidden="true">
-      </div>
-    </section>
-  </div>
+    </div>
+  </nav>
+  <section id="wb-glb-mn" class="wb-mb-links pull-right visible-sm visible-xs">
+    <h2>Main Menu</h2>
+    <a href="#mb-menu" title="Main menu" aria-controls="mb-menu" class="overlay-lnk btn btn-default" role="button">
+      <span class="wb-inv">Open the main menu</span>
+      <span class="glyphicon glyphicon-th-list"></span>
+    </a>
+    <div id="mb-menu" class="wb-overlay modal-content overlay-def wb-panel-r" aria-hidden="true">
+    </div>
+  </section>
 </div>

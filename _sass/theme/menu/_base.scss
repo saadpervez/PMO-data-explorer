@@ -9,7 +9,6 @@
 
 %wet-theme-wb-menu-hover-active {
 	background: $wet-theme-wb-menu-hover-active-background;
-	border-color: $wet-theme-wb-menu-hover-active-border-color;
 	color: $wet-theme-wb-menu-hover-active-color;
 }
 
@@ -19,14 +18,14 @@
 
 	.menu {
 		margin-bottom: 0;
-		text-shadow: 1px 1px 1px $wb-sm-menu-text-shadow;
+		//text-shadow: 1px 1px 1px $wb-sm-menu-text-shadow;
 
 		> {
 			li {
 				> {
 					a {
-						border-left: 1px solid $wb-sm-menu-li-a-border-left;
-						color: $mb-pnl-body-link-color;
+            color: $mb-pnl-body-link-color;
+            border-radius: 4px;
 
 						&.wb-navcurr {
 							@extend %wet-theme-wb-sm-wb-navcurr;
@@ -35,14 +34,6 @@
 						// :focus not needed since already covered by the &.active state
 						&:hover {
 							@extend %wet-theme-wb-menu-hover-active;
-						}
-					}
-				}
-
-				&:last-child {
-					> {
-						a {
-							border-right: 1px solid $wb-sm-menu-li-last-child-border-right;
 						}
 					}
 				}

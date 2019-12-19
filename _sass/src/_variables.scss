@@ -299,7 +299,7 @@ $txthl-font-weight: 700 !default;
 //
 //##
 $overlay-background-color: #fff !default;
-$overlay-header-background-color: #2e5274 !default;
+$overlay-header-background-color: hsl(204, 86%, 53%) !default;
 $overlay-header-color: #fff !default;
 $overlay-bar-background-color: #000 !default;
 
@@ -311,9 +311,9 @@ $overlay-bar-background-color: #000 !default;
 //== Mobile menu
 //
 //##
-$mb-pnl-background: #193451 !default;
+$mb-pnl-background: hsl(204, 86%, 53%) !default;
 $mb-pnl-header-background: $overlay-header-background-color !default;
 $mb-pnl-header-color: $overlay-header-color !default;
-$mb-pnl-body-background: #0e4164 !default;
+$mb-pnl-body-background: hsl(204, 86%, 53%) !default;
 $mb-pnl-body-color: #fff !default;
 $mb-pnl-body-link-color: #fff !default;
