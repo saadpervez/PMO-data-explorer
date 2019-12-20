@@ -14,7 +14,10 @@
 
 #wb-sm {
 	background: $mb-pnl-body-background;
-	color: $mb-pnl-body-color;
+  color: $mb-pnl-body-color;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 
 	.menu {
 		margin-bottom: 0;

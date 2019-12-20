@@ -1,10 +1,40 @@
 ---
 ---
-.nav-brand, .nav-btn, .nav-links {
+@charset "utf-8";
+
+.nav-brand, .nav-btn, .nav-links, .wb-mb-links {
   padding-top: 1em;
-  padding-bottom: 1em;
-}
+  padding-bottom: 1em; }
 .nav-btn{
-  margin-top: 3px;
+  margin-top: 3px; }
+.masthead{
+  background-color: hsl(204, 86%, 53%); }
+#wb-sm{
+  .nav-left{
+    flex: 0 1 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    .nav-brand{
+      a{
+        margin-right: 1em;
+      }
+    }
+  }
+  .nav-right{
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;  }
+}
+@media screen and (max-width: 991px){
+  #wb-sm{
+    .nav-right{
+      flex: 0 1 auto;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center; }
+  }
 }
 @import 'theme/theme';
