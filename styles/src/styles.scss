@@ -2,6 +2,7 @@
 ---
 @charset "utf-8";
 
+// Navigation bar
 .nav-brand, .nav-btn, .nav-links, .wb-mb-links {
   padding-top: 1em;
   padding-bottom: 1em; }
@@ -37,4 +38,25 @@
       align-items: center; }
   }
 }
+// Search bar
+.search{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  font-size: 40px;
+  padding: 2rem;
+  background-color:#FFB14B;
+  margin-top: 1rem;
+  .search-text{
+    border: 0;
+    border-bottom: 2px solid black;
+    text-align: center;
+    background-color: inherit;
+    &:focus{
+      background-color: darken(#FFB14B, 15%);
+    }
+  }
+}
+
+// WET-BOEW core
 @import 'theme/theme';

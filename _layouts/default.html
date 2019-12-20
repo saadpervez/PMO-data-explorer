@@ -34,6 +34,9 @@
       </div>
     </header>
 		<main class="container">
+{% if page.name == "index.html" %}
+      {% include search.html %}
+{% endif %}
 			<h1 id="wb-cont" property="name">{{ page.title }}</h1>
 			{{ content }}
 		</main>
