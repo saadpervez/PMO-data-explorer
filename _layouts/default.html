@@ -38,25 +38,34 @@
       {% include search.html %}
       {% include dataindex.html %}
 {% endif %}
-			<h1 id="wb-cont" property="name">{{ page.title }}</h1>
+			<h1 id="wb-cont" class="wb-inv" property="name">{{ page.title }}</h1>
 			{{ content }}
 		</main>
 {% unless page.footer == "false" %}
-		<footer class="nav-footer mrgn-tp-lg">
-			<div class="container-fluid">
+    <hr>
+		<footer class="nav-footer">
+			<div class="container">
         <div class="row">
-          <div id="wb-info" class="col-sm-6 col-sm-offset-3 text-center">
-            <p class="mrgn-tp-sm">&copy; {{ site.copyright_date }} Health Analytics, Research &amp; Policy Team</p>
-            <p>Made with <span id="heart" class="fas fa-heart"></span> &amp; <span id="coffee" class="fas fa-coffee"></span></p>
+          <div class="col-md-6">
+            <h2 class="h4">Youth Data Explorer</h2>
+            <p>Follow trends in youth health behaviours within Durham Region</p>
+            <p>Created &amp; maintained with <span class="glyphicon glyphicon-heart"></span> by the Health Analytics &amp; Research Team, design by <a href="https://twitter.com/jamesd_lane">@jamesd_lane</a></p>
+            <p>Data are from the Ontario Student Drug Use and Health Survey</p>
+            <p>This site is powered by <a href="https://jekyllrb.com">Jekyll</a> and <a href="https://wet-boew.github.io">WET</a></p>
+          </div>
+          <div id="wb-info" class="col-md-3">
+            <h2 id="ft-nav-name" class="h4">Site links</h2>
             <nav class="wb-navcurr" aria-labelledby="ft-nav-name">
-              <h2 id="ft-nav-name">{{ site.data.i18n-base[page.language].tmpl-about-site }}</h2>
               {% include footer.html %}
             </nav>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-6 col-sm-offset-3">
-            {% include social.html %}
+          <div class="col-md-3">
+            <h2 class="h4">Our channels</h2>
+            <ul class="list-unstyled">
+              <li>Facebook: <a href="">Durham Region Health</a></li>
+              <li>Twitter: <a href="">@DurhamEpis</a></li>
+              <li>GitHub: <a href="">DurhamRegionHarp</a></li>
+            </ul>
           </div>
         </div>
 			</div>
