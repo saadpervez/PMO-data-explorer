@@ -61,5 +61,28 @@
 // Data index
 
 
+// Footer
+.foot-container{
+  border-top: #eee 2px solid;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  .foot-left{
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  .foot-right{
+    flex: 0 1 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    .foot-links{
+      padding-right: 5rem;
+    }
+  }
+}
+
 // WET-BOEW core
 @import 'theme/theme';
