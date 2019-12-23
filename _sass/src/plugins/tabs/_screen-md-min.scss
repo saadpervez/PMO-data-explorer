@@ -6,11 +6,11 @@
 %tabs-screen-md-min-details {
 	> {
 		details {
-			border: {
-				color: $tabpanel-border-color;
-				style: $tabpanel-border-style;
-				width: $tabpanel-border-width;
-			}
+			// border: {
+			// 	color: $tabpanel-border-color;
+			// 	style: $tabpanel-border-style;
+			// 	width: $tabpanel-border-width;
+			// }
 			display: none;
 
 			&[open] {
