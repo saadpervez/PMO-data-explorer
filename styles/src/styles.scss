@@ -83,6 +83,34 @@
     }
   }
 }
+// Indicator cards
+.indicator-block{
+  padding: 2rem;
+  background: #e0e0e0;
+  position: relative;
+  .indicator-header{
+    display: inline-block;
+    .indicator-title{
+      margin-top: 0;
+    }
+  }
+  .indicator-permalink{
+    position: absolute;
+    top: 3px;
+    left: -32px;
+    height: 32px;
+    width: 32px;
+    background: #FFB14B;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    font-size: 26px;
+    &:hover{
+      background: #999;
+      color: #fff;
+    }
+  }
+}
 
 // WET-BOEW core
 @import 'theme/theme';
