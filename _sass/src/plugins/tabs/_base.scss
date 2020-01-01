@@ -4,6 +4,7 @@
  */
 
 $tab-margin-width: 10px;
+$tablist-active-bg-color: #eaebed;
 
 %tabs-tablist-li-margin {
 	margin: 0 $tab-margin-width 0 0;
@@ -197,7 +198,8 @@ $tab-margin-width: 10px;
 		.tabpanels {
 			@extend %tabs-details-padding-6-12;
 			overflow: hidden;
-			position: relative;
+      position: relative;
+      background-color: #eaebed;
 		}
 	}
 
@@ -212,18 +214,28 @@ $tab-margin-width: 10px;
 		> {
 			li {
 				@extend %tabs-display-inline-block;
-				background: $tablist-bg-color;
-				border: {
-					color: $tablist-border-color;
-					style: $tablist-border-style;
-					width: $tablist-border-width;
-				}
+				background: lighten($tablist-bg-color, 15%);
+				// border: {
+				// 	color: $tablist-border-color;
+				// 	style: $tablist-border-style;
+				// 	width: $tablist-border-width;
+				// }
 				color: $carousel-tablist-tabcount-color;
 				cursor: pointer;
 				display: table-cell;
 				left: -$tab-margin-width;
 				position: relative;
-				text-align: center;
+        text-align: center;
+        // WET override: simulates the corner of a index tab
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: 2;
+          right: -18px;
+          bottom: 1px;
+          border-left: 19px solid lighten($tablist-bg-color, 15%);
+          border-top: 42px solid transparent;
+        }
 
 				a {
 					@extend %tabs-display-inline-block;
@@ -236,7 +248,10 @@ $tab-margin-width: 10px;
 				&:focus,
 				&:hover {
 					background: $tablist-hover-bg-color;
-					background: transparentize($tablist-hover-bg-color, .1);
+          background: transparentize($tablist-hover-bg-color, .1);
+          &::after {
+            border-left: 19px solid $tablist-hover-bg-color;
+          }
 				}
 
 				&.active {
@@ -252,14 +267,18 @@ $tab-margin-width: 10px;
 					border-bottom: 0;
 					cursor: default;
 					padding-bottom: 1px;
-					z-index: 2;
+          z-index: 2;
+          
+          &::after{
+            border-left: 19px solid $tablist-active-bg-color;
+          }
 
 					a {
-						border: {
-							color: $tablist-active-link-border-color;
-							style: $tablist-active-link-border-style;
-							width: $tablist-active-link-border-width;
-						}
+						// border: {
+						// 	color: $tablist-active-link-border-color;
+						// 	style: $tablist-active-link-border-style;
+						// 	width: $tablist-active-link-border-width;
+						// }
 						cursor: default;
 						padding-top: 6px;
 					}

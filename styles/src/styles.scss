@@ -86,7 +86,7 @@
 // Indicator cards
 .indicator-block{
   padding: 2rem;
-  background: #e0e0e0;
+  background: lighten(#75C1F2, 25%);
   position: relative;
   .indicator-header{
     display: inline-block;
@@ -108,6 +108,22 @@
     &:hover{
       background: #999;
       color: #fff;
+    }
+  }
+  .indicator-footer{
+    details{
+      &[role=tabpanel]{
+        border: 0;
+      }
+    }
+    .wb-tabs{
+      >{
+        ul{
+          li{
+            
+          }
+        }
+      }
     }
   }
 }
