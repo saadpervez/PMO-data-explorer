@@ -234,7 +234,7 @@ $tablist-active-bg-color: #eaebed;
           right: -18px;
           bottom: 1px;
           border-left: 19px solid lighten($tablist-bg-color, 15%);
-          border-top: 42px solid transparent;
+          border-top: 43px solid transparent;
         }
 
 				a {
@@ -250,7 +250,7 @@ $tablist-active-bg-color: #eaebed;
 					background: $tablist-hover-bg-color;
           background: transparentize($tablist-hover-bg-color, .1);
           &::after {
-            border-left: 19px solid $tablist-hover-bg-color;
+            border-left: 19px solid transparentize($tablist-hover-bg-color, .1);
           }
 				}
 
