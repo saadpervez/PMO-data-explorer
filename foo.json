@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://path.to.this.schema.json",
+  "title": "Indicator",
+  "description": "A indicator from the survey",
+  "type": "object",
+  "properties": {
+    "pmoId": {
+      "description": "The unique identifier for an indicator",
+      "type": "number"
+    },
+    "pmoName": {
+      "description": "The name of an indicator",
+      "type": "string"
+    },
+    "estimates": {
+      "description": "A collection of estimates for an indicator",
+      "type": "object",
+      "properties": {
+        "byGrade": {
+          "type": "object",
+          "properties": {
+            "labels": {
+              "type": "array"
+            },
+            "series":{
+              "type": "array"
+            },
+            "legned": {
+              "type": "array"
+            }
+          },
+          "required": [ "labels", "series", "results" ]
+        },
+        "bySex": {
+          "type": "object",
+          "properties": {
+            "labels": {
+              "type": "array"
+            },
+            "results": {
+              "type": "array"
+            }
+          },
+          "required": [ "labels", "results" ]
+        },
+        "byAll": {
+          "type": "object",
+          "properties": {
+            "labels": {
+              "type": "array"
+            },
+            "results": {
+              "type": "array"
+            }
+          },
+          "required": [ "labels", "results" ]
+        },
+        "TrendOverTime": {
+          "type": "object",
+          "properties": {
+            "labels": {
+              "type": "array"
+            },
+            "results": {
+              "type": "array"
+            }
+          },
+          "required": [ "labels", "results" ]
+        }
+      }
+    },
+    "notes": {
+      "description": "A collection of data notes for an indicator",
+      "type": "object",
+      "properties": {
+        "definition": {
+          "type": "string"
+        },
+        "reportingIssues": {
+          "type": "string"
+        },
+        "seeAlso": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [ "pmoId", "pmoName", "estimates" ]
+}
