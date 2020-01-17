@@ -14,7 +14,8 @@
     height: '250px',
     high: 100,
     low: 0,
-    showGridBackground: true
+    showGridBackground: true,
+    seriesBarDistance: 22
   };
   new Chartist.Bar('#chart', nums, chartOpts);
 })(window, document, Chartist);
