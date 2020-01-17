@@ -1,5 +1,5 @@
-"use strict";
 (function(window, document, Chartist){
+"use strict";
   var nums = data[0].estimates.bySex;
   var chartOpts = {
     axisX : {
