@@ -1,7 +1,7 @@
 .ct-label {
-  fill: rgba(0, 0, 0, 0.4);
-  color: rgba(0, 0, 0, 0.4);
-  font-size: 0.75rem;
+  fill: #000;
+  color: #000;
+  font-size: 1.4rem;
   line-height: 1; }
 
 .ct-chart-line .ct-label,
@@ -138,9 +138,8 @@
   text-anchor: end; }
 
 .ct-grid {
-  stroke: rgba(0, 0, 0, 0.2);
-  stroke-width: 1px;
-  stroke-dasharray: 2px; }
+  stroke: #000;
+  stroke-width: 1px; }
 
 .ct-grid-background {
   fill: none; }
