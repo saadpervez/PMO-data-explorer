@@ -3,7 +3,7 @@
  */
 (function($, window, document, data, Chartist){
   // define the elements of interest
-  var list = null,
+  var list = document.querySelector('.indicator-list'),
       search = document.querySelector('.search-text'),
       messageElem = document.createElement('div');
 
@@ -17,6 +17,7 @@
       };
     });
     handleSearchResult(found);
+    return found;
   }
   
   // Handle the result
@@ -172,15 +173,15 @@
     else{
       setTimeout(function(){
       // Do things when something is searched
-      searchData(currentQuery);
-      // results.forEach(function(elem, idx){
-      //   buildArticleNode();
-      //   buildArticleLink(elem, idx);
-      //   buildArticleHeader(elem,idx);
-      //   buildArticleCharts(elem, idx);
-      //   buildArticleNotes(elem, idx);
-      //});        
-     }, 1000);
+      var results = searchData(currentQuery);
+      results.forEach(function(elem, idx){
+        buildArticleNode();
+        buildArticleLink(elem, idx);
+        buildArticleHeader(elem,idx);
+        buildArticleCharts(elem, idx);
+        buildArticleNotes(elem, idx);
+      });        
+     }, 500);
     }
   });
 })($, window, document, data, Chartist);
