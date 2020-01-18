@@ -1,7 +1,7 @@
 /*
  * Search for indicators and create an article with data from pmo.js
  */
-(function(window, document, data){
+(function($, window, document, data, Chartist){
   // define the elements of interest
   var list = document.querySelector('.indicator-list'),
       search = document.querySelector('.search-text');
@@ -94,6 +94,23 @@
       chartContainer.appendChild(el);
     })
     block[id].appendChild(chartContainer);
+    var chartOpts = {
+      axisX : {
+        showGrid: false
+      },
+      axisY : {
+        labelInterpolationFunc: function(value){
+          return value + '%';
+        },
+        onlyInteger: true
+      },
+      height: '250px',
+      high: 100,
+      low: 0,
+      showGridBackground: true,
+      seriesBarDistance: 22
+    };
+    new Chartist.Bar('#chart-grade', indicator.estimates.bySex, chartOpts);  
   }
   // Note tabs <-- need to be initalized with WET
   function buildArticleNotes(indicator, id){
@@ -123,6 +140,7 @@
     tabsDiv.appendChild(panelDiv);
     noteDiv.appendChild(tabsDiv);
     block[id].appendChild(noteDiv);
+    $(".wb-tabs").trigger("wb-init.wb-tabs");
   }
   search.addEventListener('input', function(e){
     var size = e.target.value.length;
@@ -143,4 +161,4 @@
       }, 1000);
     }
   })
-})(window, document, data);
+})($, window, document, data, Chartist);

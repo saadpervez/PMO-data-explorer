@@ -11665,7 +11665,7 @@ $document.on( "timerpoke.wb " + initEvent + " " + shiftEvent + " " + selectEvent
 			break;
 
 		/*
-		 * Select a specific tab panel
+		 * Selec t a specific tab panel
 		 */
 		case "wb-select":
 			onSelect( event.id );
