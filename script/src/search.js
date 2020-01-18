@@ -3,8 +3,10 @@
  */
 (function($, window, document, data, Chartist){
   // define the elements of interest
-  var list = document.querySelector('.indicator-list'),
-      search = document.querySelector('.search-text');
+  var list = null,
+      search = document.querySelector('.search-text'),
+      messageElem = document.createElement('div');
+
 
   // Search the data
   function searchData(query){
@@ -14,8 +16,26 @@
         return elem;
       };
     });
-    return found;
-  }   
+    handleSearchResult(found);
+  }
+  
+  // Handle the result
+  function handleSearchResult(data){
+    var amount = data.length,
+    // Google analytics log this query -> query = search.value.trim()
+    message = '<p>' + amount + ' result' + ( amount === 1 ? '' : 's') + ' found</p>';
+    if (amount === 0){
+      message += '<p>Why not <a href="#">suggest</a> this topic be added?</p>';
+    }
+    messageElem.innerHTML = message;
+    search.parentNode.appendChild(messageElem);
+  }
+
+  // Reset the search
+  function resetSearch(){
+    search.parentNode.removeChild(messageElem);
+  }
+  // Initialize the search
 
   // Build the article
   function buildArticleNode(){
@@ -34,22 +54,25 @@
     block[id].appendChild(link);
   }
   function buildArticleHeader(indicator, id){
-    var block = document.querySelectorAll('.indicator-block');
-    var headContainer = document.createElement('div');
-    var header = document.createElement('h3');
-    var desc = document.createElement('p');
-    var ctrlDiv = document.createElement('div');
-    var btnDiv = document.createElement('div');
-    var genderBtn = document.createElement('button');
-    var genderBtnText = document.createTextNode('Sex relative');
-    var gradeBtn = document.createElement('button');
-    var gradeBtnText = document.createTextNode('Grade relative');
-    var allBtn = document.createElement('button');
-    var allBtnText = document.createTextNode('All responses');
-    var optionsHint = document.createElement('a');
-    var optionsHintText = document.createTextNode('?');
-    var headerText = document.createTextNode(indicator.pmoName);
-    var descText = document.createTextNode(indicator.description);
+    var block = document.querySelectorAll('.indicator-block'),
+    headContainer = document.createElement('div'),
+    header = document.createElement('h3'),
+    desc = document.createElement('p'),
+    ctrlDiv = document.createElement('div'),
+    btnDiv = document.createElement('div'),
+    genderBtn = document.createElement('button'),
+    genderBtnText = document.createTextNode('Sex relative'),
+    gradeBtn = document.createElement('button'),
+    gradeBtnText = document.createTextNode('Grade relative'),
+    allBtn = document.createElement('button'),
+    allBtnText = document.createTextNode('All responses'),
+    optionsHint = document.createElement('a'),
+    optionsHintText = document.createTextNode('?'),
+    headerText = document.createTextNode(indicator.pmoName),
+    descText = document.createTextNode(indicator.description)
+    buttons = [ genderBtn, gradeBtn, allBtn ];
+    btnText = [ genderBtnText, gradeBtnText, allBtnText ];
+
     headContainer.setAttribute('class', 'indicator-header');
     header.setAttribute('class', 'indicator-title');
     header.appendChild(headerText);
@@ -60,20 +83,18 @@
     // Buttons
     ctrlDiv.setAttribute('class', 'view-control');
     btnDiv.setAttribute('class', 'view-mode-control btn-group-sm btn-group');
-    genderBtn.setAttribute('class', 'btn btn-default');
-    genderBtn.appendChild(genderBtnText);
-    gradeBtn.setAttribute('class', 'btn btn-default');
-    gradeBtn.appendChild(gradeBtnText);
-    allBtn.setAttribute('class', 'btn btn-default');
-    allBtn.appendChild(allBtnText);
+    buttons.forEach(function(el, idx){
+      el.setAttribute('class', 'btn btn-default wb-toggle');
+      el.setAttribute('data-toggle', '{ "selector": "#chart"}')
+      el.appendChild(btnText[idx]);
+      btnDiv.appendChild(el);
+    });
+    // Help button
     optionsHint.setAttribute('class', 'btn btn-sm btn-default overlay-lnk');
     optionsHint.setAttribute('href', '#options-hint');
     optionsHint.setAttribute('aria-controls', 'options-hint');
     optionsHint.setAttribute('role', 'button');
     optionsHint.appendChild(optionsHintText);
-    btnDiv.appendChild(genderBtn);
-    btnDiv.appendChild(gradeBtn);
-    btnDiv.appendChild(allBtn);
     ctrlDiv.appendChild(btnDiv);
     ctrlDiv.appendChild(optionsHint)
     block[id].appendChild(headContainer);
@@ -142,23 +163,24 @@
     block[id].appendChild(noteDiv);
     $(".wb-tabs").trigger("wb-init.wb-tabs");
   }
-  search.addEventListener('input', function(e){
-    var size = e.target.value.length;
-    if(size < 3){
-      e.preventDefault();
+  search.addEventListener('input', function(){
+    var currentQuery = this.value;
+    if(!currentQuery.length){
+      resetSearch();
+      return;
     }
     else{
       setTimeout(function(){
       // Do things when something is searched
-      var results = searchData(e.target.value);
-      results.forEach(function(elem, idx){
-        buildArticleNode();
-        buildArticleLink(elem, idx);
-        buildArticleHeader(elem,idx);
-        buildArticleCharts(elem, idx);
-        buildArticleNotes(elem, idx);
-      });        
-      }, 1000);
+      searchData(currentQuery);
+      // results.forEach(function(elem, idx){
+      //   buildArticleNode();
+      //   buildArticleLink(elem, idx);
+      //   buildArticleHeader(elem,idx);
+      //   buildArticleCharts(elem, idx);
+      //   buildArticleNotes(elem, idx);
+      //});        
+     }, 1000);
     }
-  })
+  });
 })($, window, document, data, Chartist);
