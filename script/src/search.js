@@ -90,8 +90,8 @@
     optionsHintText = document.createTextNode('?'),
     headerText = document.createTextNode(indicator.pmoName),
     descText = document.createTextNode(indicator.description)
-    buttons = [ genderBtn, gradeBtn, allBtn ];
-    btnText = [ genderBtnText, gradeBtnText, allBtnText ];
+    buttons = [ gradeBtn, genderBtn, allBtn ];
+    btnText = [ gradeBtnText, genderBtnText, allBtnText ];
 
     headContainer.setAttribute('class', 'indicator-header');
     header.setAttribute('class', 'indicator-title');
@@ -104,8 +104,9 @@
     ctrlDiv.setAttribute('class', 'view-control');
     btnDiv.setAttribute('class', 'view-mode-control btn-group-sm btn-group');
     buttons.forEach(function(el, idx){
+      var chartIds = [ 'chart-sex', 'chart-grade', 'chart-all' ];
       el.setAttribute('class', 'btn btn-default wb-toggle');
-      el.setAttribute('data-toggle', '{ "selector": "#chart"}')
+      el.setAttribute('data-toggle', '{ "selector": "#' + chartIds[idx] + '","group": ".chart","type": "on"}')
       el.appendChild(btnText[idx]);
       btnDiv.appendChild(el);
     });
@@ -132,30 +133,34 @@
     chartGrade.setAttribute('id', 'chart-grade');
     var chartAll = document.createElement('div');
     chartAll.setAttribute('id', 'chart-all');
-    var charts = [ chartGrade, chartSex, chartAll ];
-    charts.forEach(function(el){
+    var charts = [  chartSex, chartGrade, chartAll ];
+    charts.forEach(function(el, idx){
+      el.setAttribute('class', 'chart');
       chartContainer.appendChild(el);
-    })
+    });
     block.appendChild(chartContainer);
-    // Chartist.js
-    var chartOpts = {
-      axisX : {
-        showGrid: false
-      },
-      axisY : {
-        labelInterpolationFunc: function(value){
-          return value + '%';
+    charts.forEach(function(el, idx){
+      var chartOpts = {
+        axisX : {
+          showGrid: false
         },
-        onlyInteger: true
-      },
-      height: '250px',
-      high: 100,
-      low: 0,
-      showGridBackground: true,
-      seriesBarDistance: 22
-    };
-    new Chartist.Bar('#chart-grade', indicator.estimates.bySex, chartOpts);
+        axisY : {
+          labelInterpolationFunc: function(value){
+            return value + '%';
+          },
+          onlyInteger: true
+        },
+        height: '250px',
+        high: 100,
+        low: 0,
+        showGridBackground: true,
+        seriesBarDistance: 22
+      };
+      new Chartist.Bar('#' + el.id, indicator.estimates[idx], chartOpts);      
+    });
+    // Chartist.js
     buildArticleNotes(indicator);
+    $(".wb-toggle").trigger("wb-init.wb-toggle");
   }
   // Note tabs <-- need to be initalized with WET
   function buildArticleNotes(indicator){
