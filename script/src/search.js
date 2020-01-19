@@ -7,7 +7,6 @@
       search = document.querySelector('.search-text'),
       messageElem = document.createElement('div');
 
-
   // Search the data
   function searchData(query){
     var regex = new RegExp(query, 'i');
@@ -39,23 +38,43 @@
   // Initialize the search
 
   // Build the article
-  function buildArticleNode(){
-    var article = document.createElement('article');
-    article.setAttribute('class', 'indicator-block');
-    list.appendChild(article);
+  function buildArticleNode(indicator){
+    // Check that an article doesn't exist already
+    var articles = document.querySelectorAll('.indicator-block'),
+      slug = indicator.pmoName.split(' ').join('-').toLowerCase();
+      regex = new RegExp(slug, 'i');
+    if(articles.length > 0){
+      for(var i = 0; i < articles.length; i++){
+        if (!regex.test(articles[i].className)){
+          var article = document.createElement('article');
+          article.setAttribute('class', 'indicator-block indicator-' + slug);
+          list.appendChild(article);
+          buildArticleLink(indicator);      
+        };
+      }
+    }
+    else {
+      var article = document.createElement('article');
+      article.setAttribute('class', 'indicator-block indicator-' + slug);
+      list.appendChild(article);      
+      buildArticleLink(indicator);
+    }
   }
-  function buildArticleLink(indicator, id){
-    var block = document.querySelectorAll('.indicator-block');
+  function buildArticleLink(indicator){
+    var slug = indicator.pmoName.split(' ').join('-').toLowerCase();
+    var block = document.querySelector('.indicator-' + slug);
     var link = document.createElement('a');
     var text = document.createTextNode('#');
     link.setAttribute('class','indicator-permalink');
     link.setAttribute('href', '#' + indicator.pmoName.split(' ').join('-').toLowerCase());
     link.setAttribute('title', 'Link to just this indicator');
     link.appendChild(text);
-    block[id].appendChild(link);
+    block.appendChild(link);
+    buildArticleHeader(indicator);
   }
-  function buildArticleHeader(indicator, id){
-    var block = document.querySelectorAll('.indicator-block'),
+  function buildArticleHeader(indicator){
+    var slug = indicator.pmoName.split(' ').join('-').toLowerCase();
+    var block = document.querySelector('.indicator-' + slug),
     headContainer = document.createElement('div'),
     header = document.createElement('h3'),
     desc = document.createElement('p'),
@@ -98,11 +117,13 @@
     optionsHint.appendChild(optionsHintText);
     ctrlDiv.appendChild(btnDiv);
     ctrlDiv.appendChild(optionsHint)
-    block[id].appendChild(headContainer);
-    block[id].appendChild(ctrlDiv);
+    block.appendChild(headContainer);
+    block.appendChild(ctrlDiv);
+    buildArticleCharts(indicator);
   }
-  function buildArticleCharts(indicator, id){
-    var block = document.querySelectorAll('.indicator-block');
+  function buildArticleCharts(indicator){
+    var slug = indicator.pmoName.split(' ').join('-').toLowerCase();
+    var block = document.querySelector('.indicator-' + slug);
     var chartContainer = document.createElement('div');
     chartContainer.setAttribute('class', 'indicator-chart');
     var chartSex = document.createElement('div');
@@ -115,7 +136,8 @@
     charts.forEach(function(el){
       chartContainer.appendChild(el);
     })
-    block[id].appendChild(chartContainer);
+    block.appendChild(chartContainer);
+    // Chartist.js
     var chartOpts = {
       axisX : {
         showGrid: false
@@ -132,11 +154,13 @@
       showGridBackground: true,
       seriesBarDistance: 22
     };
-    new Chartist.Bar('#chart-grade', indicator.estimates.bySex, chartOpts);  
+    new Chartist.Bar('#chart-grade', indicator.estimates.bySex, chartOpts);
+    buildArticleNotes(indicator);
   }
   // Note tabs <-- need to be initalized with WET
-  function buildArticleNotes(indicator, id){
-    var block = document.querySelectorAll('.indicator-block');
+  function buildArticleNotes(indicator){
+    var slug = indicator.pmoName.split(' ').join('-').toLowerCase();
+    var block = document.querySelector('.indicator-' + slug);
     var noteDiv = document.createElement('div');
     noteDiv.setAttribute('class', 'indicator-footer');
     var tabsDiv = document.createElement('div');
@@ -161,7 +185,7 @@
     });
     tabsDiv.appendChild(panelDiv);
     noteDiv.appendChild(tabsDiv);
-    block[id].appendChild(noteDiv);
+    block.appendChild(noteDiv);
     $(".wb-tabs").trigger("wb-init.wb-tabs");
   }
   search.addEventListener('input', function(){
@@ -174,14 +198,10 @@
       setTimeout(function(){
       // Do things when something is searched
       var results = searchData(currentQuery);
-      results.forEach(function(elem, idx){
-        buildArticleNode();
-        buildArticleLink(elem, idx);
-        buildArticleHeader(elem,idx);
-        buildArticleCharts(elem, idx);
-        buildArticleNotes(elem, idx);
+      results.forEach(function(elem){
+        buildArticleNode(elem);
       });        
-     }, 500);
+     }, 700);
     }
   });
 })($, window, document, data, Chartist);
