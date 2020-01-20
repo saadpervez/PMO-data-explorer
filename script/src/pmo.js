@@ -14,7 +14,7 @@ var data = [
         },
         "byAll": {
           "labels": [ "Did not use","Once or twice","Three or more times" ],
-          "series": [ { "name": "Durham Region", "data": [ 74,5,18] },{ "name": "Durham Region", "data": [ 82,7,10] },{ "name": "Ontario", "data": [ 79,5,15] },{ "name": "Ontario", "data": [ 81,7,11] } ]
+          "series": [ { "name": "Durham Region ES", "data": [ 74,5,18] },{ "name": "Durham Region SS", "data": [ 82,7,10] },{ "name": "Ontario ES", "data": [ 79,5,15] },{ "name": "Ontario SS", "data": [ 81,7,11] } ]
         }
     }
   }

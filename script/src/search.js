@@ -104,7 +104,7 @@
     ctrlDiv.setAttribute('class', 'view-control');
     btnDiv.setAttribute('class', 'view-mode-control btn-group-sm btn-group');
     buttons.forEach(function(el, idx){
-      var chartIds = [ 'chart-sex', 'chart-grade', 'chart-all' ];
+      var chartIds = [ 'bySex', 'byGrade', 'byAll' ];
       el.setAttribute('class', 'btn btn-default wb-toggle');
       el.setAttribute('data-toggle', '{ "selector": "#' + chartIds[idx] + '","group": ".chart","type": "on"}')
       el.appendChild(btnText[idx]);
@@ -125,38 +125,38 @@
   function buildArticleCharts(indicator){
     var slug = indicator.pmoName.split(' ').join('-').toLowerCase();
     var block = document.querySelector('.indicator-' + slug);
+    var chartOpts = {
+      axisX : {
+        showGrid: false
+      },
+      axisY : {
+        labelInterpolationFunc: function(value){
+          return value + '%';
+        },
+        onlyInteger: true
+      },
+      height: '250px',
+      high: 100,
+      low: 0,
+      showGridBackground: true,
+      seriesBarDistance: 22
+    };
     var chartContainer = document.createElement('div');
     chartContainer.setAttribute('class', 'indicator-chart');
     var chartSex = document.createElement('div');
-    chartSex.setAttribute('id', 'chart-sex');
+    chartSex.setAttribute('id', 'bySex');
     var chartGrade = document.createElement('div');
-    chartGrade.setAttribute('id', 'chart-grade');
+    chartGrade.setAttribute('id', 'byGrade');
     var chartAll = document.createElement('div');
-    chartAll.setAttribute('id', 'chart-all');
-    var charts = [  chartSex, chartGrade, chartAll ];
-    charts.forEach(function(el, idx){
+    chartAll.setAttribute('id', 'byAll');
+    var charts = [ chartSex, chartGrade, chartAll ];
+    charts.forEach(function(el){
       el.setAttribute('class', 'chart');
       chartContainer.appendChild(el);
     });
     block.appendChild(chartContainer);
-    charts.forEach(function(el, idx){
-      var chartOpts = {
-        axisX : {
-          showGrid: false
-        },
-        axisY : {
-          labelInterpolationFunc: function(value){
-            return value + '%';
-          },
-          onlyInteger: true
-        },
-        height: '250px',
-        high: 100,
-        low: 0,
-        showGridBackground: true,
-        seriesBarDistance: 22
-      };
-      new Chartist.Bar('#' + el.id, indicator.estimates[idx], chartOpts);      
+    charts.forEach(function(el){
+      new Chartist.Bar('#' + el.id, indicator.estimates[el.id], chartOpts);      
     });
     // Chartist.js
     buildArticleNotes(indicator);
