@@ -43,26 +43,22 @@
   }
 
   // Build the article
-  function buildArticleNode(indicator){
-    // Check that an article doesn't exist already
+  function buildArticleNode(query, indicator){
     var articles = document.querySelectorAll('.indicator-block'),
       slug = indicator.pmoName.split(' ').join('-').toLowerCase();
-      regex = new RegExp(slug, 'i');
-    if(!articles.length){
+      regex = new RegExp(query, 'i');
+    // Filter out indicators on screen that do not match the current query string
+    articles.forEach(function(el){
+      if(!regex.test(el.className)){
+        el.parentNode.removeChild(el);
+      }
+    });
+    // Only build if an indicator block does not exist
+    if (!document.querySelector('.indicator-' + slug)){
       var article = document.createElement('article');
       article.setAttribute('class', 'indicator-block indicator-' + slug);
-      list.appendChild(article);      
-      buildArticleLink(indicator);  
-    }
-    else {
-      for(var i = 0; i < articles.length; i++){
-        if (!regex.test(articles[i].className)){
-          var article = document.createElement('article');
-          article.setAttribute('class', 'indicator-block indicator-' + slug);
-          list.appendChild(article);
-          buildArticleLink(indicator);      
-        }
-      };
+      list.appendChild(article);
+      buildArticleLink(indicator);        
     }
   }
   function buildArticleLink(indicator){
@@ -240,16 +236,16 @@
     }
     else{
       setTimeout(function(){
-      // Do things when something is searched
-      // Check the .indicator-block <div> has children
-      var results = searchData(currentQuery);
-      if(!results.length && list.hasChildNodes()){
-        resetList();
-      }
-      results.forEach(function(elem){
-        buildArticleNode(elem);
-      });        
-     }, 700);
+        // Do things when something is searched
+        // Check the .indicator-block <div> has children
+        var results = searchData(currentQuery);
+        if(!results.length && list.hasChildNodes()){
+          resetList();
+        }
+        results.forEach(function(el){
+          buildArticleNode(currentQuery, el);
+        });
+      }, 700);
     }
   });
 })($, window, document, data, Chartist);
