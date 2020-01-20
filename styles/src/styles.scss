@@ -111,11 +111,19 @@
     }
   }
   .indicator-chart{
-    div{
+    .chart{
       display: none;
       padding-top: 15px;
       &.on{
         display: block;
+      }
+      .ct-bar{
+        @media screen and (max-width: 767px){
+          stroke-width: 12px;
+        }
+      }
+      @media screen and (max-width: 767px){
+        overflow-x: scroll;
       }
     }
   }
