@@ -4,8 +4,7 @@
 (function($, window, document, data, Chartist){
   // define the elements of interest
   var list = document.querySelector('.indicator-list'),
-      search = document.querySelector('.search-text'),
-      messageElem = document.createElement('div');
+      search = document.querySelector('.search-text');
 
   // Search the data
   function searchData(query){
@@ -22,18 +21,23 @@
   // Handle the result
   function handleSearchResult(data){
     var amount = data.length,
+    messageSpan = document.createElement('span');
     // Google analytics log this query -> query = search.value.trim()
     message = '<p>' + amount + ' result' + ( amount === 1 ? '' : 's') + ' found</p>';
     if (amount === 0){
       message += '<p>Why not <a href="#">suggest</a> this topic be added?</p>';
     }
-    messageElem.innerHTML = message;
-    search.parentNode.appendChild(messageElem);
+    messageSpan.setAttribute('class', 'search-feedback');
+    messageSpan.insertAdjacentHTML('beforeend', message);
+    search.parentNode.appendChild(messageSpan);
   }
 
   // Reset the search
   function resetSearch(){
-    search.parentNode.removeChild(messageElem);
+    messageElem = document.querySelector('.search-feedback');
+    if(messageElem){
+      search.parentNode.removeChild(messageElem);
+    }
   }
   // Reset the indicator block
   function resetList(){
