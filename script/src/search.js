@@ -48,11 +48,12 @@
       slug = indicator.pmoName.split(' ').join('-').toLowerCase();
       regex = new RegExp(query, 'i');
     // Filter out indicators on screen that do not match the current query string
-    articles.forEach(function(el){
-      if(!regex.test(el.className)){
-        el.parentNode.removeChild(el);
+    // Switch to for loop
+    for(var i = 0; i < articles.length; i++){
+      if(!regex.test(articles[i].className)){
+        articles[i].parentNode.removeChild(articles[i]);
       }
-    });
+    };
     // Only build if an indicator block does not exist
     if (!document.querySelector('.indicator-' + slug)){
       var article = document.createElement('article');
