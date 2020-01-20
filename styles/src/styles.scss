@@ -85,9 +85,13 @@
 }
 // Indicator cards
 .indicator-block{
+  margin-top: 2.5rem;
   padding: 2rem;
   background: lighten(#75C1F2, 25%);
   position: relative;
+  &:first-child{
+    margin-top: 5px;
+  }
   .indicator-header{
     display: inline-block;
     .indicator-title{
