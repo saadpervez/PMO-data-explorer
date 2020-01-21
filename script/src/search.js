@@ -17,21 +17,35 @@
     handleSearchResult(found);
     return found;
   }
-  
   // Handle the result
+  // TODO:
+  //  - Google analytics log this query -> query = search.value.trim()
   function handleSearchResult(data){
     var amount = data.length,
-    messageSpan = document.createElement('span');
-    // Google analytics log this query -> query = search.value.trim()
-    message = '<p>' + amount + ' result' + ( amount === 1 ? '' : 's') + ' found</p>';
+    message = document.createElement('p'),
+    messageHtml = amount + ' result' + ( amount === 1 ? '' : 's') + ' found';
     if (amount === 0){
-      message += '<p>Why not <a href="#">suggest</a> this topic be added?</p>';
+      messageHtml += '<p>Why not <a href="#">suggest</a> this topic be added?</p>';
     }
-    messageSpan.setAttribute('class', 'search-feedback');
-    messageSpan.insertAdjacentHTML('beforeend', message);
-    search.parentNode.appendChild(messageSpan);
+    message.insertAdjacentHTML('afterbegin', messageHtml);
+    // Check whether a "search-feedback" element exists
+    var messageSpan = document.querySelector('.search-feedback');
+    if(messageSpan){
+      // We've got a message on screen already
+      // remove the former and add the current
+      messageSpan.removeChild(messageSpan.firstChild);
+      messageSpan.appendChild(message);
+      search.parentNode.appendChild(messageSpan);
+    }
+    else{
+      // "search-feedback" element does not exist
+      // Create it
+      var messageContainer = document.createElement('span');
+      messageContainer.setAttribute('class', 'search-feedback');
+      messageContainer.appendChild(message);
+      search.parentNode.appendChild(messageContainer);
+    }
   }
-
   // Reset the search
   function resetSearch(){
     messageElem = document.querySelector('.search-feedback');
@@ -45,7 +59,6 @@
       list.removeChild(list.firstChild);
     }
   }
-
   // Build the article
   function buildArticleNode(query, indicator){
     var articles = document.querySelectorAll('.indicator-block'),
@@ -202,7 +215,6 @@
     buildArticleNotes(indicator);
     $(".wb-toggle").trigger("wb-init.wb-toggle");
   }
-  // Note tabs <-- need to be initalized with WET
   function buildArticleNotes(indicator){
     var slug = indicator.pmoName.split(' ').join('-').toLowerCase();
     var block = document.querySelector('.indicator-' + slug);
@@ -241,8 +253,6 @@
     }
     else{
       setTimeout(function(){
-        // Do things when something is searched
-        // Check the .indicator-block <div> has children
         var results = searchData(currentQuery);
         if(!results.length && list.hasChildNodes()){
           resetList();
