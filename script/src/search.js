@@ -10,7 +10,7 @@
   function searchData(query){
     var regex = new RegExp(query, 'i');
     var found = data.filter(function(elem){
-      if (regex.test(elem.pmoName) || regex.test(elem.description)){
+      if (regex.test(elem.pmoName) || regex.test(elem.description) || regex.test(elem.tags.join(' '))){
         return elem;
       };
     });
@@ -123,9 +123,9 @@
     ctrlDiv.setAttribute('class', 'view-control');
     btnDiv.setAttribute('class', 'view-mode-control btn-group-sm btn-group');
     buttons.forEach(function(el, idx){
-      var chartIds = [ 'bySex', 'byGrade', 'byAll' ];
+      var chartIds = [ 'byGrade', 'bySex', 'byAll' ];
       el.setAttribute('class', 'btn btn-default wb-toggle');
-      el.setAttribute('data-toggle', '{ "selector": "#' + chartIds[idx] + '","group": ".chart","type": "on"}')
+      el.setAttribute('data-toggle', '{ "selector": "#' + slug + '-' + chartIds[idx] + '","group": ".chart","type": "on"}')
       el.appendChild(btnText[idx]);
       btnDiv.appendChild(el);
     });
@@ -197,19 +197,19 @@
     var chartContainer = document.createElement('div');
     chartContainer.setAttribute('class', 'indicator-chart');
     var chartSex = document.createElement('div');
-    chartSex.setAttribute('id', 'bySex');
+    chartSex.setAttribute('id', slug + '-bySex');
     var chartGrade = document.createElement('div');
-    chartGrade.setAttribute('id', 'byGrade');
+    chartGrade.setAttribute('id', slug + '-byGrade');
     var chartAll = document.createElement('div');
-    chartAll.setAttribute('id', 'byAll');
-    var charts = [ chartSex, chartGrade, chartAll ];
+    chartAll.setAttribute('id', slug + '-byAll');
+    var charts = [ chartGrade, chartSex, chartAll ];
     charts.forEach(function(el){
       el.setAttribute('class', 'chart');
       chartContainer.appendChild(el);
     });
     block.appendChild(chartContainer);
     charts.forEach(function(el){
-      new Chartist.Bar('#' + el.id, indicator.estimates[el.id], chartOpts, responsiveOpts);      
+      new Chartist.Bar('#' + el.id, indicator.estimates[el.id.substr(slug.length + 1)], chartOpts, responsiveOpts);      
     });
     // Chartist.js
     buildArticleNotes(indicator);
@@ -245,22 +245,24 @@
     block.appendChild(noteDiv);
     $(".wb-tabs").trigger("wb-init.wb-tabs");
   }
-  search.addEventListener('input', function(){
-    var currentQuery = this.value;
-    if(!currentQuery.length){
-      resetSearch();
-      return;
+  search.addEventListener('input', function(e){
+    if(typeof this.toId === 'number'){
+      clearTimeout(this.toId);
+      this.toId = undefined;
     }
-    else{
-      setTimeout(function(){
-        var results = searchData(currentQuery);
-        if(!results.length && list.hasChildNodes()){
-          resetList();
-        }
-        results.forEach(function(el){
-          buildArticleNode(currentQuery, el);
-        });
-      }, 700);
-    }
+    this.toId = setTimeout(function(evt){
+      var currentQuery = evt.target.value;
+      if(!currentQuery.length){
+        resetSearch();
+        return;
+      }  
+      var results = searchData(currentQuery);
+      if(!results.length && list.hasChildNodes()){
+        resetList();
+      }
+      results.forEach(function(el){
+        buildArticleNode(currentQuery, el);
+      });
+    }.bind(this), 600, e);
   });
 })($, window, document, data, Chartist);
