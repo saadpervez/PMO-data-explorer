@@ -1,7 +1,7 @@
 /*
  * Search for indicators and create an article with data from pmo.js
  */
-(function($, window, document, data, Chartist){
+(function($, window, document, pmo, Chartist){
   // define the elements of interest
   var list = document.querySelector('.indicator-list'),
       search = document.querySelector('.search-text');
@@ -9,7 +9,7 @@
   // Search the data
   function searchData(query){
     var regex = new RegExp(query, 'i');
-    var found = data.filter(function(elem){
+    var found = pmo.getData().filter(function(elem){
       if (regex.test(elem.pmoName) || regex.test(elem.description) || regex.test(elem.tags.join(' '))){
         return elem;
       };
@@ -62,7 +62,7 @@
   // Build the article
   function buildArticleNode(query, indicator){
     var articles = document.querySelectorAll('.indicator-block'),
-      slug = indicator.pmoName.split(' ').join('-').toLowerCase();
+      slug = indicator.pmoName.split(' ').join('-').toLowerCase(),
       regex = new RegExp(query, 'i');
     // Filter out indicators on screen that do not match the current query string
     // Switch to for loop
@@ -108,8 +108,8 @@
     optionsHint = document.createElement('a'),
     optionsHintText = document.createTextNode('?'),
     headerText = document.createTextNode(indicator.pmoName),
-    descText = document.createTextNode(indicator.description)
-    buttons = [ gradeBtn, genderBtn, allBtn ];
+    descText = document.createTextNode(indicator.description),
+    buttons = [ gradeBtn, genderBtn, allBtn ],
     btnText = [ gradeBtnText, genderBtnText, allBtnText ];
 
     headContainer.setAttribute('class', 'indicator-header');
@@ -209,11 +209,11 @@
     });
     block.appendChild(chartContainer);
     charts.forEach(function(el){
+      // Chartist.js
       new Chartist.Bar('#' + el.id, indicator.estimates[el.id.substr(slug.length + 1)], chartOpts, responsiveOpts);      
     });
-    // Chartist.js
-    buildArticleNotes(indicator);
     $(".wb-toggle").trigger("wb-init.wb-toggle");
+    buildArticleNotes(indicator);
   }
   function buildArticleNotes(indicator){
     var slug = indicator.pmoName.split(' ').join('-').toLowerCase();
@@ -265,4 +265,4 @@
       });
     }.bind(this), 600, e);
   });
-})($, window, document, data, Chartist);
+})($, window, document, pmo, Chartist);
