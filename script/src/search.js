@@ -208,9 +208,12 @@
       chartContainer.appendChild(el);
     });
     block.appendChild(chartContainer);
-    charts.forEach(function(el){
+    charts.forEach(function(el, idx){
+      if(idx == 0){
+        el.className += ' on';
+      }
       // Chartist.js
-      new Chartist.Bar('#' + el.id, indicator.estimates[el.id.substr(slug.length + 1)], chartOpts, responsiveOpts);      
+      new Chartist.Bar('#' + el.id, indicator.estimates[el.id.substr(slug.length + 1)], chartOpts, responsiveOpts);
     });
     $(".wb-toggle").trigger("wb-init.wb-toggle");
     buildArticleNotes(indicator);
