@@ -144,56 +144,6 @@
   function buildArticleCharts(indicator){
     var slug = indicator.pmoName.split(' ').join('-').toLowerCase();
     var block = document.querySelector('.indicator-' + slug);
-    var chartOpts = {
-      axisX : {
-        showGrid: false
-      },
-      axisY : {
-        labelInterpolationFnc: function(value){
-          return value + '%';
-        },
-        onlyInteger: true
-      },
-      height: '250px',
-      width: '1100px',
-      high: 100,
-      low: 0,
-      showGridBackground: true,
-      seriesBarDistance: 22
-    };
-    var responsiveOpts = [
-      ['screen and (max-width: 767px)', {
-        horizontalBars: true,
-        width: '650px',
-        seriesBarDistance: 15,
-        chartPadding: {
-          right: 25
-        },
-        axisX: {
-          labelInterpolationFnc: function(value){
-            return value + '%';
-          },
-          onlyInteger: true,
-          showGrid: true           
-        },
-        axisY: {
-          labelInterpolationFnc: Chartist.noop,
-          showGrid: false
-        }
-      }],
-      ['screen and (min-width: 768px)', {
-        width: '680px',
-        seriesBarDistance: 22,
-      }],
-      ['screen and (min-width: 992px)', {
-        seriesBarDistance: 22,
-        width: '900px',
-      }],
-      ['screen and (min-width: 1200px)', {
-        seriesBarDistance: 22,
-        width: '1100px',
-      }],
-    ];
     var chartContainer = document.createElement('div');
     chartContainer.setAttribute('class', 'indicator-chart');
     var chartSex = document.createElement('div');
@@ -213,7 +163,77 @@
         el.className += ' on';
       }
       // Chartist.js
-      new Chartist.Bar('#' + el.id, indicator.estimates[el.id.substr(slug.length + 1)], chartOpts, responsiveOpts);
+      var dataObj = indicator.estimates[el.id.substr(slug.length + 1)]
+      var upper = dataObj['series'].map(function(el){
+        return el['cl'].map(function(el){
+          return el[0];
+        });
+      });
+      var lower = dataObj['series'].map(function(el){
+        return el['cl'].map(function(el){
+          return el[1];
+        });
+      });
+      var chartOpts = {
+        axisX : {
+          showGrid: false
+        },
+        axisY : {
+          labelInterpolationFnc: function(value){
+            return value + '%';
+          },
+          onlyInteger: true
+        },
+        height: '250px',
+        width: '1100px',
+        high: 100,
+        low: 0,
+        showGridBackground: true,
+        seriesBarDistance: 22,
+        plugins: [
+          Chartist.plugins.errorBars({
+            orientation: 'vertical',
+            confidenceLimit: {
+              upper: upper,
+              lower: lower
+            }
+          })
+        ]
+      };
+      var responsiveOpts = [
+        ['screen and (max-width: 767px)', {
+          horizontalBars: true,
+          width: '650px',
+          seriesBarDistance: 15,
+          chartPadding: {
+            right: 25
+          },
+          axisX: {
+            labelInterpolationFnc: function(value){
+              return value + '%';
+            },
+            onlyInteger: true,
+            showGrid: true           
+          },
+          axisY: {
+            labelInterpolationFnc: Chartist.noop,
+            showGrid: false
+          }
+        }],
+        ['screen and (min-width: 768px)', {
+          width: '680px',
+          seriesBarDistance: 22,
+        }],
+        ['screen and (min-width: 992px)', {
+          seriesBarDistance: 22,
+          width: '900px',
+        }],
+        ['screen and (min-width: 1200px)', {
+          seriesBarDistance: 22,
+          width: '1100px',
+        }],
+      ];
+      new Chartist.Bar('#' + el.id, dataObj, chartOpts, responsiveOpts);
     });
     $(".wb-toggle").trigger("wb-init.wb-toggle");
     buildArticleNotes(indicator);

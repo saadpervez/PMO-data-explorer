@@ -175,6 +175,10 @@
       @media screen and (max-width: 767px){
         overflow-x: scroll;
       }
+      .ct-error{
+        stroke: #000;
+        stroke-width: 2px;
+      }
     }
   }
   .indicator-footer{
