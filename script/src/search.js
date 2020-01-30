@@ -159,7 +159,7 @@
     });
     block.appendChild(chartContainer);
     charts.forEach(function(el, idx){
-      if(idx == 0){
+      if(idx === 0){
         el.className += ' on';
       }
       // Chartist.js
@@ -252,17 +252,17 @@
     var tab3 = document.createElement('details');
     var tabs = [ tab1, tab2, tab3 ];
     tabs.forEach(function(el, idx){
-      var tabElement = document.createElement('summary');
-      var tabName = document.createTextNode("Notes");
-      tabElement.appendChild(tabName);
-      var sum = document.createElement('p');
-      var sumText = document.createTextNode('The note text goes here.');
-      sum.appendChild(sumText);
+      var tabNames = ['Notes', 'Source', 'Feedback'];
       el.setAttribute('class', 'tab' + idx);
+      var tabElement = document.createElement('summary');
+      tabElement.insertAdjacentText('afterbegin', tabNames[idx]);
       el.appendChild(tabElement);
-      el.appendChild(sum);
-      panelDiv.appendChild(el)
+      panelDiv.appendChild(el);
     });
+    // Add this to the data
+    tab1.insertAdjacentHTML('beforeend', '<p>Results are weighted by sex and grade to the 2017 Ontario student population</p>');
+    tab2.insertAdjacentHTML('beforeend', '<p>2018-2019 Ontario Student Drug Use and Health Survey.</p>');
+    tab3.insertAdjacentHTML('beforeend', '<p>Your comments are welcome through our feedback form</p>');
     tabsDiv.appendChild(panelDiv);
     noteDiv.appendChild(tabsDiv);
     block.appendChild(noteDiv);
