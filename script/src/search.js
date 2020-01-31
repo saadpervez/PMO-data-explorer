@@ -139,7 +139,7 @@
     buttons.forEach(function(el, idx){
       var chartIds = [ 'byGrade', 'bySex', 'byAll' ];
       el.setAttribute('class', 'btn btn-default wb-toggle');
-      el.setAttribute('data-toggle', '{ "selector": "#' + slug + '-' + chartIds[idx] + '","group": ".chart","type": "on"}')
+      el.setAttribute('data-toggle', '{ "selector": "#' + slug + '-' + chartIds[idx] + '","group": ".chart-' + slug + '","type": "on"}');
       el.appendChild(btnText[idx]);
       btnDiv.appendChild(el);
     });
@@ -169,6 +169,7 @@
     var charts = [ chartGrade, chartSex, chartAll ];
     charts.forEach(function(el){
       el.setAttribute('class', 'chart');
+      el.className += ' chart-' + slug;
       chartContainer.appendChild(el);
     });
     block.appendChild(chartContainer);
