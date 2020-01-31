@@ -8,13 +8,11 @@
 
   // Search the data
   function searchData(query){
-    fetch('https://cdn.jsdelivr.net/gh/durhamregionharp/pmo-data-explorer@xhr-get-data/_data/pmo.json')
+    fetch('https://cdn.jsdelivr.net/gh/DurhamRegionHARP/PMO-data-explorer@xhr-get-data/_data/pmo.json')
       .then(function(response){
         return response.json();
       })
-      .then(function(jsonText){
-        console.log(jsonText);
-        var data = JSON.parse(jsonText);
+      .then(function(data){
         var regex = new RegExp(query, 'i');
         var found = data.indicators.filter(function(elem){
           if (regex.test(elem.pmoName) || regex.test(elem.description) || regex.test(elem.tags.join(' '))){
@@ -22,7 +20,12 @@
           };
         });
         handleSearchResult(found);
-        return found;
+        if(!found.length && list.hasChildNodes()){
+          resetList();
+        }
+        found.forEach(function(el){
+          buildArticleNode(query, el);
+        });           
       })
       .catch(function(error){
         console.log(error);
@@ -290,13 +293,7 @@
         resetSearch();
         return;
       }  
-      var results = searchData(currentQuery);
-      if(!results.length && list.hasChildNodes()){
-        resetList();
-      }
-      results.forEach(function(el){
-        buildArticleNode(currentQuery, el);
-      });
+      searchData(currentQuery);
     }.bind(this), 600, e);
   });
 })($, window, document, Chartist);
