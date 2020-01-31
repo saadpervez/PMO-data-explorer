@@ -5,30 +5,21 @@
     </a>
     <div class="index-container">
       <div class="row">
-        <div class="col-md-4">
-          <span class="h3">Category 1</span>
+        {% assign categories = site.data.pmo | group_by: "category" %}
+        {% for category in categories %}
+        <div class="col-md-3">
+          <span class="h3">{{ category.name }}</span>
           <ul class="index-links">
-            <li>indicator</li>
-            <li>indicator</li>
-            <li>indicator</li>
+          {% for item in category.items %}
+            <li>
+              <a href="#{{ item.pmoName | slugify }}">
+              {{ item.pmoName }}
+              </a>
+            </li>
+          {% endfor %}
           </ul>
         </div>
-        <div class="col-md-4">
-          <span class="h3">Category 1</span>
-          <ul class="index-links">
-            <li>indicator</li>
-            <li>indicator</li>
-            <li>indicator</li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <span class="h3">Category 1</span>
-          <ul class="index-links">
-            <li>indicator</li>
-            <li>indicator</li>
-            <li>indicator</li>
-          </ul>
-        </div>
+        {% endfor %}        
         <div class="index-close">
           <a title="Close this section" class="wb-toggle" data-toggle='{"selector":".data-index","type":"off"}'>X</a>
         </div>

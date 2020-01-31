@@ -1,0 +1,107 @@
+[
+  {
+    "pmoID":1,
+    "pmoName":"Cannabis Use",
+    "description":"How often cannabis was used in the last year",
+    "tags": ['Blaze','blunt','bong','cannabanoids','cannabis','cannabis brownies','cannabis candy','cannabis cookies','cannabis drink','cannabis food','cannabis tea','dabbing','grass','hash','hashish','joint','marijuana','pot','smoking','weed' ],
+    "category": "Cannabis",
+    "estimates": {
+      "byAll": {
+          "labels": [ 'Did not use','Once or twice','Three or more times' ],
+          "series": [ { "name": "Durham Region", "data": [80,6,15], "cl": [[85,74],[8,3],[20,9]],"notes": [null,'Interpret with caution as the estimate has high sampling variability','Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario", "data": [81,6,13], "cl": [[83,79],[6,5],[15,12]],"notes": [null,null,null] } ]
+      },
+      "bySex": {
+          "labels": [ 'Did not use','Once or twice','Three or more times' ],
+          "series": [ { "name": "Durham Region Male", "data": [76,5,19], "cl": [[85,67],[7,3],[28,10]],"notes": [null,'Interpret with caution as the estimate has high sampling variability','Interpret with caution as the estimate has high sampling variability'] },{ "name": "Durham Region Female", "data": [83,7,10], "cl": [[88,78],[10,3],[14,6]],"notes": [null,'Interpret with caution as the estimate has high sampling variability','Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario Male", "data": [80,5,15], "cl": [[83,78],[6,4],[17,13]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [82,7,12], "cl": [[84,79],[8,6],[13,10]],"notes": [null,null,null] } ]
+      },
+      "byGrade": {
+          "labels": [ 'Did not use','Once or twice','Three or more times' ],
+          "series": [ { "name": "Durham Region Grades 7 and 8", "data": [98,null,null], "cl": [[100,97],[null,null],[null,null]],"notes": [null,'Unreliable and not releasable','Unreliable and not releasable'] },{ "name": "Durham Region Grades 9 to 12", "data": [72,8,20], "cl": [[79,65],[11,5],[27,13]],"notes": [null,'Interpret with caution as the estimate has high sampling variability','Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario Grades 7 and 8", "data": [98,1,1], "cl": [[99,97],[2,1],[1,0]],"notes": [null,'Interpret with caution as the estimate has high sampling variability','Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario Grades 9 to 12", "data": [75,8,18], "cl": [[77,72],[8,7],[20,16]],"notes": [null,null,null] } ],
+      }
+    }
+  },
+  {
+    "pmoID":2,
+    "pmoName":"Opioid Use",
+    "description":"How often opioids were used in the past year",
+    "tags": ['Codeine','OxyNeo','Percocet','Percodan','Tylenol 3','addiction','drug problem','heroin','opioids','pain relief pills' ],
+    "category": "Drugs",
+    "estimates": {
+      "byAll": {
+          "labels": [ 'Did not use','Once or twice','Three or more times' ],
+          "series": [ { "name": "Durham Region", "data": [90,5,4], "cl": [[93,87],[9,2],[6,3]],"notes": [null,'Interpret with caution as the estimate has high sampling variability',null] },{ "name": "Ontario", "data": [89,5,6], "cl": [[91,88],[6,4],[7,5]],"notes": [null,null,null] } ]
+      },
+      "bySex": {
+          "labels": [ 'Did not use','Once or twice','Three or more times' ],
+          "series": [ { "name": "Durham Region Male", "data": [90,null,4], "cl": [[94,85],[null,null],[5,2]],"notes": [null,'Unreliable and not releasable','Interpret with caution as the estimate has high sampling variability'] },{ "name": "Durham Region Female", "data": [91,4,5], "cl": [[94,88],[6,2],[6,3]],"notes": [null,'Interpret with caution as the estimate has high sampling variability','Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario Male", "data": [90,4,6], "cl": [[91,88],[5,3],[7,5]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [89,5,6], "cl": [[91,87],[6,4],[7,5]],"notes": [null,null,null] } ]
+      },
+      "byGrade": {
+          "labels": [ 'Did not use','Once or twice','Three or more times' ],
+          "series": [ { "name": "Durham Region Grades 7 and 8", "data": [92,5,null], "cl": [[94,90],[7,2],[null,null]],"notes": [null,'Unreliable and not releasable','Interpret with caution as the estimate has high sampling variability'] },{ "name": "Durham Region Grades 9 to 12", "data": [90,null,5], "cl": [[94,85],[null,null],[6,3]],"notes": [null,'Unreliable and not releasable','Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario Grades 7 and 8", "data": [92,4,4], "cl": [[94,89],[5,3],[6,3]],"notes": [null,null,null] },{ "name": "Ontario Grades 9 to 12", "data": [88,5,6], "cl": [[90,87],[6,4],[7,5]],"notes": [null,null,null] } ],
+      }
+    }
+  },
+  {
+    "pmoID":3,
+    "pmoName":"Alcohol use",
+    "description":"Frequncy of drinking alcohol in past 12 months",
+    "tags": ['alcohol','alcohol consumption','liquor','rum','whiskey','vodka','gin','beer' ],
+    "category": "Alcohol",
+    "estimates": {
+      "byAll": {
+          "labels": [ 'Did not drink','Experimental','Special occasions only','Once a month or less','Twice a month or more' ],
+          "series": [ { "name": "Durham Region", "data": [37,22,21,8,12], "cl": [[43,32],[25,19],[25,17],[10,6],[18,6]],"notes": [null,null,null,null,'Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario", "data": [38,20,19,9,14], "cl": [[40,35],[22,18],[20,17],[11,8],[16,12]],"notes": [null,null,null,null,null] } ]
+      },
+      "bySex": {
+          "labels": [ 'Did not drink','Experimental','Special occasions only','Once a month or less','Twice a month or more' ],
+          "series": [ { "name": "Durham Region Male", "data": [38,21,21,9,13], "cl": [[47,29],[26,15],[27,14],[11,6],[19,6]],"notes": [null,null,'Interpret with caution as the estimate has high sampling variability',null,'Interpret with caution as the estimate has high sampling variability'] },{ "name": "Durham Region Female", "data": [37,23,21,8,12], "cl": [[42,32],[27,19],[26,16],[11,4],[17,6]],"notes": [null,null,null,'Interpret with caution as the estimate has high sampling variability','Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario Male", "data": [38,20,19,9,15], "cl": [[41,35],[22,17],[20,17],[10,8],[18,13]],"notes": [null,null,null,null,null] },{ "name": "Ontario Female", "data": [37,20,19,10,13], "cl": [[40,34],[23,18],[21,17],[12,8],[16,11]],"notes": [null,null,null,null,null] } ]
+      },
+      "byGrade": {
+          "labels": [ 'Did not drink','Experimental','Special occasions only','Once a month or less','Twice a month or more' ],
+          "series": [ { "name": "Durham Region Grades 7 and 8", "data": [62,29,5,null,null], "cl": [[71,53],[35,23],[7,3],[null,null],[null,null]],"notes": [null,'Interpret with caution as the estimate has high sampling variability','Interpret with caution as the estimate has high sampling variability','Unreliable and not releasable','Unreliable and not releasable'] },{ "name": "Durham Region Grades 9 to 12", "data": [27,19,27,11,16], "cl": [[34,20],[22,16],[32,22],[13,9],[24,8]],"notes": [null,null,null,null,'Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario Grades 7 and 8", "data": [62,27,8,2,1], "cl": [[65,59],[30,23],[9,7],[3,1],[1,1]],"notes": [null,null,null,'Interpret with caution as the estimate has high sampling variability','Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario Grades 9 to 12", "data": [28,17,23,12,19], "cl": [[31,26],[19,15],[24,21],[14,11],[22,17]],"notes": [null,null,null,null,null] } ],
+      }
+    }
+  },
+  {
+    "pmoID":5,
+    "pmoName":"Binge Drinking",
+    "description":"Drank 5 or more drinks of alcohol on the occasion in the past 12 months",
+    "tags": ['alcohol','alcohol misuse','hazardous drinking','liquor','rum','whiskey','vodka','gin','beer' ],
+    "category": "Alcohol",
+    "estimates": {
+      "byAll": {
+          "labels": [ 'Did not binge','Had a drinking binge' ],
+          "series": [ { "name": "Durham Region", "data": [82,18], "cl": [[88,75],[25,12]],"notes": [null,'Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario", "data": [83,17], "cl": [[85,81],[19,15]],"notes": [null,null] } ]
+      },
+      "bySex": {
+          "labels": [ 'Did not binge','Had a drinking binge' ],
+          "series": [ { "name": "Durham Region Male", "data": [80,20], "cl": [[89,72],[28,11]],"notes": [null,'Interpret with caution as the estimate has high sampling variability'] },{ "name": "Durham Region Female", "data": [83,17], "cl": [[90,77],[23,10]],"notes": [null,'Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario Male", "data": [82,18], "cl": [[85,80],[20,15]],"notes": [null,null] },{ "name": "Ontario Female", "data": [84,16], "cl": [[86,82],[18,14]],"notes": [null,null] } ]
+      },
+      "byGrade": {
+          "labels": [ 'Did not binge','Had a drinking binge' ],
+          "series": [ { "name": "Durham Region Grades 7 and 8", "data": [98,null], "cl": [[99,96],[null,null]],"notes": [null,'Unreliable and not releasable'] },{ "name": "Durham Region Grades 9 to 12", "data": [75,25], "cl": [[84,66],[34,16]],"notes": [null,'Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario Grades 7 and 8", "data": [99,1], "cl": [[99,98],[2,1]],"notes": [null,'Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario Grades 9 to 12", "data": [77,23], "cl": [[79,75],[25,21]],"notes": [null,null] } ],
+      }
+    }
+  },
+  {
+    "pmoID":4,
+    "pmoName":"Cigarette Smoking",
+    "description":"Frequency of smoking tobacco cigarettes in the past year",
+    "tags": ['smoking','tobacco','ciggy','dart','stogie','smokes' ],
+    "category": "Tobacco",
+    "estimates": {
+      "byAll": {
+          "labels": [ 'Never/Former','Experimental','Current' ],
+          "series": [ { "name": "Durham Region", "data": [91,4,null], "cl": [[96,86],[6,2],[null,null]],"notes": [null,'Interpret with caution as the estimate has high sampling variability','Unreliable and not releasable'] },{ "name": "Ontario", "data": [88,5,7], "cl": [[90,87],[5,4],[8,6]],"notes": [null,null,null] } ]
+      },
+      "bySex": {
+          "labels": [ 'Never/Former','Experimental','Current' ],
+          "series": [ { "name": "Durham Region Male", "data": [91,3,null], "cl": [[97,85],[5,2],[null,null]],"notes": [null,'Interpret with caution as the estimate has high sampling variability','Unreliable and not releasable'] },{ "name": "Durham Region Female", "data": [92,null,null], "cl": [[97,86],[null,null],[null,null]],"notes": [null,'Unreliable and not releasable','Unreliable and not releasable'] },{ "name": "Ontario Male", "data": [87,5,8], "cl": [[90,84],[6,4],[10,6]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [90,4,6], "cl": [[92,88],[5,3],[7,4]],"notes": [null,null,null] } ]
+      },
+      "byGrade": {
+          "labels": [ 'Never/Former','Experimental','Current' ],
+          "series": [ { "name": "Durham Region Grades 7 and 8", "data": [99,null,null], "cl": [[100,97],[null,null],[null,null]],"notes": [null,'Unreliable and not releasable','Unreliable and not releasable'] },{ "name": "Durham Region Grades 9 to 12", "data": [88,5,null], "cl": [[95,81],[8,3],[null,null]],"notes": [null,'Interpret with caution as the estimate has high sampling variability','Unreliable and not releasable'] },{ "name": "Ontario Grades 7 and 8", "data": [99,1,null], "cl": [[99,98],[2,1],[null,null]],"notes": [null,'Interpret with caution as the estimate has high sampling variability','Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario Grades 9 to 12", "data": [85,6,9], "cl": [[87,82],[7,5],[11,8]],"notes": [null,null,null] } ],
+      }
+    }
+  }
+]
