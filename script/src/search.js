@@ -123,8 +123,8 @@
     optionsHintText = document.createTextNode('?'),
     headerText = document.createTextNode(indicator.pmoName),
     descText = document.createTextNode(indicator.description),
-    buttons = [ gradeBtn, genderBtn, allBtn ],
-    btnText = [ gradeBtnText, genderBtnText, allBtnText ];
+    buttons = [ allBtn, gradeBtn, genderBtn ],
+    btnText = [ allBtnText, gradeBtnText, genderBtnText ];
 
     headContainer.setAttribute('class', 'indicator-header');
     header.setAttribute('class', 'indicator-title');
@@ -137,7 +137,7 @@
     ctrlDiv.setAttribute('class', 'view-control');
     btnDiv.setAttribute('class', 'view-mode-control btn-group-sm btn-group');
     buttons.forEach(function(el, idx){
-      var chartIds = [ 'byGrade', 'bySex', 'byAll' ];
+      var chartIds = [ 'byAll', 'byGrade', 'bySex' ];
       el.setAttribute('class', 'btn btn-default wb-toggle');
       el.setAttribute('data-toggle', '{ "selector": "#' + slug + '-' + chartIds[idx] + '","group": ".chart-' + slug + '","type": "on"}');
       el.appendChild(btnText[idx]);
@@ -166,7 +166,7 @@
     chartGrade.setAttribute('id', slug + '-byGrade');
     var chartAll = document.createElement('div');
     chartAll.setAttribute('id', slug + '-byAll');
-    var charts = [ chartGrade, chartSex, chartAll ];
+    var charts = [ chartAll, chartGrade, chartSex ];
     charts.forEach(function(el){
       el.setAttribute('class', 'chart');
       el.className += ' chart-' + slug;
