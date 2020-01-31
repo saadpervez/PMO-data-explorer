@@ -1,21 +1,32 @@
 /*
  * Search for indicators and create an article with data from pmo.js
  */
-(function($, window, document, pmo, Chartist){
+(function($, window, document, Chartist){
   // define the elements of interest
   var list = document.querySelector('.indicator-list'),
       search = document.querySelector('.search-text');
 
   // Search the data
   function searchData(query){
-    var regex = new RegExp(query, 'i');
-    var found = pmo.getData().filter(function(elem){
-      if (regex.test(elem.pmoName) || regex.test(elem.description) || regex.test(elem.tags.join(' '))){
-        return elem;
-      };
-    });
-    handleSearchResult(found);
-    return found;
+    fetch('https://cdn.jsdelivr.net/gh/durhamregionharp/pmo-data-explorer@xhr-get-data/_data/pmo.json')
+      .then(function(response){
+        return response.json();
+      })
+      .then(function(jsonText){
+        console.log(jsonText);
+        var data = JSON.parse(jsonText);
+        var regex = new RegExp(query, 'i');
+        var found = data.indicators.filter(function(elem){
+          if (regex.test(elem.pmoName) || regex.test(elem.description) || regex.test(elem.tags.join(' '))){
+            return elem;
+          };
+        });
+        handleSearchResult(found);
+        return found;
+      })
+      .catch(function(error){
+        console.log(error);
+      });
   }
   // Handle the result
   // TODO:
@@ -288,4 +299,4 @@
       });
     }.bind(this), 600, e);
   });
-})($, window, document, pmo, Chartist);
+})($, window, document, Chartist);
