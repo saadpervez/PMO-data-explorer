@@ -282,18 +282,20 @@
     block.appendChild(noteDiv);
     $(".wb-tabs").trigger("wb-init.wb-tabs");
   }
-  search.addEventListener('input', function(e){
-    if(typeof this.toId === 'number'){
-      clearTimeout(this.toId);
-      this.toId = undefined;
-    }
-    this.toId = setTimeout(function(evt){
-      var currentQuery = evt.target.value;
-      if(!currentQuery.length){
-        resetSearch();
-        return;
-      }  
-      searchData(currentQuery);
-    }.bind(this), 600, e);
+  document.addEventListener('DOMContentLoaded', function(){
+    search.addEventListener('input', function(e){
+      if(typeof this.toId === 'number'){
+        clearTimeout(this.toId);
+        this.toId = undefined;
+      }
+      this.toId = setTimeout(function(evt){
+        var currentQuery = evt.target.value;
+        if(!currentQuery.length){
+          resetSearch();
+          return;
+        }  
+        searchData(currentQuery);
+      }.bind(this), 600, e);
+    });
   });
 })($, window, document, Chartist);
