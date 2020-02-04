@@ -1,29 +1,123 @@
-var pmo = (function(){
-  var returnData = function(){
-    return [
-    {  
-      "pmoID":1,
-      "pmoName":"Cannabis Use",
-      "description":"How often cannabis was used in the last year",
-      "tags": ['Blaze','blunt','bong','cannabanoids','cannabis','cannabis brownies','cannabis candy','cannabis cookies','cannabis drink','cannabis food','cannabis tea','dabbing','grass','hash','hashish','joint','marijuana','pot','smoking','weed' ],
-      "estimates": {
-        "byAll": {
-            "labels": [ 'Did not use','Once or twice','Three or more times' ],
-            "series": [ { "name": "Durham Region", "data": [80,6,15], "cl": [[85,74],[8,3],[20,9]],"notes": [null,'Interpret with caution as the estimate has high sampling variability','Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario", "data": [81,6,13], "cl": [[83,79],[6,5],[15,12]],"notes": [null,null,null] } ]
-        },
-        "bySex": {
-            "labels": [ 'Did not use','Once or twice','Three or more times' ],
-            "series": [ { "name": "Durham Region Male", "data": [76,5,19], "cl": [[85,67],[7,3],[28,10]],"notes": [null,'Interpret with caution as the estimate has high sampling variability','Interpret with caution as the estimate has high sampling variability'] },{ "name": "Durham Region Female", "data": [83,7,10], "cl": [[88,78],[10,3],[14,6]],"notes": [null,'Interpret with caution as the estimate has high sampling variability','Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario Male", "data": [80,5,15], "cl": [[83,78],[6,4],[17,13]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [82,7,12], "cl": [[84,79],[8,6],[13,10]],"notes": [null,null,null] } ]
-        },
-        "byGrade": {
-            "labels": [ 'Did not use','Once or twice','Three or more times' ],
-            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [98,null,null], "cl": [[100,97],[null,null],[null,null]],"notes": [null,'Unreliable and not releasable','Unreliable and not releasable'] },{ "name": "Durham Region Grades 9 to 12", "data": [72,8,20], "cl": [[79,65],[11,5],[27,13]],"notes": [null,'Interpret with caution as the estimate has high sampling variability','Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario Grades 7 and 8", "data": [98,1,1], "cl": [[99,97],[2,1],[1,0]],"notes": [null,'Interpret with caution as the estimate has high sampling variability','Interpret with caution as the estimate has high sampling variability'] },{ "name": "Ontario Grades 9 to 12", "data": [75,8,18], "cl": [[77,72],[8,7],[20,16]],"notes": [null,null,null] } ],
-        }
-      }
-    }
-    ]
-  }
-  return {
-    getData: returnData
+(function(window, document){
+// PMO indicator instance
+let PMO = function(data){
+  this.version = "0.0.1";
+  this.anchor = document.querySelector('.indicator-list');
+  this.name = data.pmoName;
+  this.description = data.description;
+  this.slug = data.pmoName.split(' ').join('-').toLowerCase();
+  this.chartData = data.estimates;
+  this.chartsToBuild = Object.keys(data.estimates);
+  this.container = function(){
+    const article = document.createElement('article');
+    article.setAttribute('class', `indicator-block indicator-${this.slug}`);
+    return article;
   };
-})();
+  this.notes = {
+    Notes: 'Results are weighted by sex and grade to the 2017 Ontario student population',
+    Source: '2018-2019 Ontario Student Drug Use and Health Survey',
+    Feedback: 'Your comments are welcome through our feedback form'
+  };
+  // Build functions
+  // Get all the Elements ready but do not print to the DOM
+  this.buildLink = function(){
+    const link = document.createElement('a');
+    link.insertAdjacentText('afterbegin', '#');
+    link.setAttribute('class','indicator-permalink');
+    link.setAttribute('href', `#${this.slug}`);
+    link.setAttribute('title', 'Link to just this indicator');
+    return link;
+  }
+  this.buildHeader = function(){
+    const self = this;
+    const headContainer = document.createElement('div');
+    const header = document.createElement('h3');
+    const desc = document.createElement('p');
+    headContainer.setAttribute('class', 'indicator-header');
+    header.setAttribute('class', 'indicator-title');
+    desc.setAttribute('class', 'indicator-desc');
+    desc.insertAdjacentText('afterbegin', this.description);
+    header.insertAdjacentText('afterbegin', this.name);
+    headContainer.appendChild(header);
+    headContainer.appendChild(desc);
+    // Buttons
+    const allBtn = document.createElement('button');
+    const gradeBtn = document.createElement('button');
+    const genderBtn = document.createElement('button');
+    const buttons = [ allBtn, gradeBtn, genderBtn ];
+    const buttonDiv = document.createElement('div');
+    const ctrlDiv = document.createElement('div');
+    const optionsHint = document.createElement('a');
+    const optionsHintAttrs = {
+      class: 'btn btn-sm btn-default overlay-lnk',
+      href: '#options-hint',
+      "aria-controls": 'options-hint',
+      role: 'button'
+    };
+    optionsHint.insertAdjacentText('afterbegin', '?');
+    for (let [key, value] of Object.entries(optionsHintAttrs)){
+      optionsHint.setAttribute(key, value);
+    }
+    ctrlDiv.setAttribute('class', 'view-control');
+    buttonDiv.setAttribute('class', 'view-mode-control btn-group-sm btn-group');
+    buttons.forEach(function(btn, idx){
+      const chartIds = [ 'byAll', 'byGrade', 'bySex' ];
+      const btnText = [ 'All responses', 'Grade relative', 'Sex relative' ];
+      btn.setAttribute('class', 'btn btn-default wb-toggle');
+      btn.setAttribute('data-toggle', `{ "selector": "#${self.slug}-${chartIds[idx]}","group": ".chart-${self.slug}","type": "on"}`);
+      btn.insertAdjacentText('afterbegin', btnText[idx]);
+      buttonDiv.appendChild(btn);
+    });
+    ctrlDiv.appendChild(buttonDiv);
+    ctrlDiv.appendChild(optionsHint);
+    headContainer.appendChild(ctrlDiv);
+    return headContainer;
+  }
+  this.buildCharts = function(){
+    const self = this;
+    const chartContainer = document.createElement('div');
+    chartContainer.setAttribute('class', 'indicator-chart');
+    Object.keys(this.chartData).forEach(function(chart){
+      let chartDiv = document.createElement('div');
+      chartDiv.setAttribute('id', `${self.slug}-${chart}`);
+      chartDiv.setAttribute('class', `chart chart-${self.slug}`);
+      if(chart === 'byAll'){
+        chartDiv.className += ' on';
+      }
+      chartContainer.appendChild(chartDiv);
+    });
+    return chartContainer;
+  } 
+  this.buildNotes = function(){
+    const noteContainer = document.createElement('div');
+    noteContainer.setAttribute('class', 'indicator-footer');
+    const tabsDiv = document.createElement('div');
+    tabsDiv.setAttribute('class', 'wb-tabs');
+    const panelDiv = document.createElement('div');
+    panelDiv.setAttribute('class', 'tabpanels');
+    for(let [key, value] of Object.entries(this.notes)){
+      let noteTab = document.createElement('details');
+      noteTab.setAttribute('class', `tab-${key.toLowerCase()}`);
+      let noteTitle = document.createElement('summary');
+      noteTitle.insertAdjacentText('afterbegin', key);
+      let noteText = document.createElement('p');
+      noteText.insertAdjacentText('afterbegin', value);
+      noteTab.appendChild(noteTitle);
+      noteTab.appendChild(noteText);
+      panelDiv.appendChild(noteTab);
+    }
+    tabsDiv.appendChild(panelDiv);
+    noteContainer.appendChild(tabsDiv);
+    return noteContainer;
+  }
+  this.create = function(){
+    const _container = this.container();
+    _container.appendChild(this.buildLink());
+    _container.appendChild(this.buildHeader());
+    _container.appendChild(this.buildCharts());
+    _container.appendChild(this.buildNotes());
+    this.anchor.appendChild(_container);
+  }
+};
+window.PMO = PMO;
+})(window, document);
