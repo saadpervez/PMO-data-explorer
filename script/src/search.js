@@ -3,8 +3,7 @@
  */
 (function($, window, document, Chartist, PMO){
   // define the elements of interest
-  var search = document.querySelector('.search-text');
-
+  const search = document.querySelector('.search-text');
   // Search the data
   function searchData(query){
     fetch('https://cdn.jsdelivr.net/gh/DurhamRegionHARP/PMO-data-explorer@xhr-get-data/_data/pmo.json')
@@ -12,8 +11,8 @@
         return response.json();
       })
       .then(function(data){
-        var regex = new RegExp(query, 'i');
-        var found = data.indicators.filter(function(elem){
+        const regex = new RegExp(query, 'i');
+        const found = data.indicators.filter(function(elem){
           if (regex.test(elem.pmoName) || regex.test(elem.description) || regex.test(elem.tags.join(' '))){
             return elem;
           };
@@ -34,7 +33,7 @@
   // TODO:
   //  - Google analytics log this query -> query = search.value.trim()
   function handleSearchResult(data){
-    var amount = data.length,
+    const amount = data.length,
     message = document.createElement('p'),
     messageHtml = amount + ' result' + ( amount === 1 ? '' : 's') + ' found';
     if (amount === 0){
@@ -53,7 +52,7 @@
     else{
       // "search-feedback" element does not exist
       // Create it
-      var messageContainer = document.createElement('span');
+      const messageContainer = document.createElement('span');
       messageContainer.setAttribute('class', 'search-feedback');
       messageContainer.appendChild(message);
       search.parentNode.appendChild(messageContainer);
@@ -85,7 +84,7 @@
       }
     };
     // Only build if an indicator block does not exist
-    let _indicator = new PMO(indicator);
+    const _indicator = new PMO(indicator);
     if (!document.querySelector('.indicator-' + _indicator.slug)){
       _indicator.create();
       _indicator.chartsToBuild.forEach(function(chart){
@@ -174,7 +173,7 @@
         this.toId = undefined;
       }
       this.toId = setTimeout(function(evt){
-        var currentQuery = evt.target.value;
+        let currentQuery = evt.target.value;
         if(!currentQuery.length){
           resetSearch();
           return;
