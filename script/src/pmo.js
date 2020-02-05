@@ -14,7 +14,10 @@ let PMO = function(data){
     return article;
   };
   this.notes = {
-    Notes: 'Results are weighted by sex and grade to the 2017 Ontario student population',
+    Notes: [
+      'Results are weighted by sex and grade to the 2017 Ontario student population',
+      'Missing bars indicate an estimate is unreliable and not releaseable'
+    ],
     Source: '2018-2019 Ontario Student Drug Use and Health Survey',
     Feedback: 'Your comments are welcome through our feedback form'
   };
@@ -95,17 +98,26 @@ let PMO = function(data){
     tabsDiv.setAttribute('class', 'wb-tabs');
     const panelDiv = document.createElement('div');
     panelDiv.setAttribute('class', 'tabpanels');
-    for(let [key, value] of Object.entries(this.notes)){
+    Object.entries(this.notes).forEach(function([key, value]){
       let noteTab = document.createElement('details');
       noteTab.setAttribute('class', `tab-${key.toLowerCase()}`);
       let noteTitle = document.createElement('summary');
       noteTitle.insertAdjacentText('afterbegin', key);
-      let noteText = document.createElement('p');
-      noteText.insertAdjacentText('afterbegin', value);
-      noteTab.appendChild(noteTitle);
-      noteTab.appendChild(noteText);
+      if(Array.isArray(value)){
+        noteTab.appendChild(noteTitle);
+        value.forEach(function(el){
+          let noteText = document.createElement('p');
+          noteText.insertAdjacentText('afterbegin', el);
+          noteTab.appendChild(noteText);             
+        })
+      }else{
+        let noteText = document.createElement('p');
+        noteText.insertAdjacentHTML('afterbegin', value);
+        noteTab.appendChild(noteTitle);
+        noteTab.appendChild(noteText);
+      }
       panelDiv.appendChild(noteTab);
-    }
+    });
     tabsDiv.appendChild(panelDiv);
     noteContainer.appendChild(tabsDiv);
     return noteContainer;
