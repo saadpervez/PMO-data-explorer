@@ -2,11 +2,13 @@
  * Search for indicators and create an article with data from pmo.js
  */
 (function($, window, document, Chartist, PMO){
+  'use strict';
   // define the elements of interest
   const search = document.querySelector('.search-text');
   // Search the data
   function searchData(query){
-    fetch('https://cdn.jsdelivr.net/gh/DurhamRegionHARP/PMO-data-explorer@xhr-get-data/_data/pmo.json')
+    //fetch('https://cdn.jsdelivr.net/gh/DurhamRegionHARP/PMO-data-explorer@gh-pages/_data/pmo.json')
+    fetch('http://127.0.0.1:4000/PMO-data-explorer/pmo.json')
       .then(function(response){
         return response.json();
       })
@@ -18,7 +20,7 @@
           };
         });
         handleSearchResult(found);
-        if(!found.length && list.hasChildNodes()){
+        if(!found.length && document.querySelector('.indicator-list').hasChildNodes()){
           resetList();
         }
         found.forEach(function(el){
@@ -33,15 +35,15 @@
   // TODO:
   //  - Google analytics log this query -> query = search.value.trim()
   function handleSearchResult(data){
-    const amount = data.length,
-    message = document.createElement('p'),
-    messageHtml = amount + ' result' + ( amount === 1 ? '' : 's') + ' found';
+    const amount = data.length;
+    const message = document.createElement('p');
+    let messageHtml = amount + ' result' + ( amount === 1 ? '' : 's') + ' found';
     if (amount === 0){
       messageHtml += '<p>Why not <a href="#">suggest</a> this topic be added?</p>';
     }
     message.insertAdjacentHTML('afterbegin', messageHtml);
     // Check whether a "search-feedback" element exists
-    var messageSpan = document.querySelector('.search-feedback');
+    const messageSpan = document.querySelector('.search-feedback');
     if(messageSpan){
       // We've got a message on screen already
       // remove the former and add the current
@@ -103,6 +105,9 @@
         return el[1];
       });
     });
+    const notes = data['series'].map(function(el){
+      return el['notes'];
+    });
     const chartOpts = {
       axisX : {
         showGrid: false
@@ -125,6 +130,13 @@
           confidenceLimit: {
             upper: upper,
             lower: lower
+          }
+        }),
+        Chartist.plugins.tooltip({
+          appendToBody: true,
+          tooltipFnc: function(meta, value){
+            let metaText = (meta == "null") ? "" : `<br>${meta}`;
+            return `${value}%${metaText}`;
           }
         })
       ]
@@ -162,7 +174,12 @@
         width: '1100px',
       }],
     ];
-    new Chartist.Bar(chartName, data, chartOpts, responsiveOpts);
+    let chart = new Chartist.Bar(chartName, data, chartOpts, responsiveOpts);
+    chart.on('draw', function(component){
+      if (component.type === 'bar'){
+        component.element.attr({ "ct:meta": this[component.seriesIndex][component.index] });
+      }
+    }.bind(notes));
     $(".wb-toggle").trigger("wb-init.wb-toggle");
     $(".wb-tabs").trigger("wb-init.wb-tabs");
   }
