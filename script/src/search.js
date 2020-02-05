@@ -138,6 +138,9 @@
             let metaText = (meta == "null") ? "" : `<br>${meta}`;
             return `${value}%${metaText}`;
           }
+        }),
+        Chartist.plugins.legend({
+          className: String.raw`"list-unstyled", "list-inline"`
         })
       ]
     };
