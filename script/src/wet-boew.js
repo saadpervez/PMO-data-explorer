@@ -521,8 +521,10 @@ Modernizr.load( [
 	{
 		test: Modernizr.details,
 		nope: [
-			"plyfll!details.min.js",
-			"plyfll!details.min.css"
+      // WET override
+			//"plyfll!details.min.js",
+      //"plyfll!details.min.css"
+      "script/src/details.js"
 		]
 	}, {
 		test: Modernizr.input.list,

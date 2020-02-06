@@ -140,7 +140,8 @@
           }
         }),
         Chartist.plugins.legend({
-          className: "list-inline"
+          className: "list-inline",
+          clickable: false
         })
       ]
     };
