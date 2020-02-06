@@ -140,7 +140,7 @@
           }
         }),
         Chartist.plugins.legend({
-          className: String.raw`"list-unstyled", "list-inline"`
+          className: "list-inline"
         })
       ]
     };
