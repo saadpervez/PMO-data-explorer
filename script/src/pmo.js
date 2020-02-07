@@ -15,11 +15,10 @@ let PMO = function(data){
   };
   this.notes = {
     Notes: [
-      'Results are weighted by sex and grade to the 2017 Ontario student population',
+      'Source: 2018-2019 Ontario Student Drug Use and Health Survey',
       'Missing bars indicate an estimate is unreliable and not releaseable'
     ],
-    Source: '2018-2019 Ontario Student Drug Use and Health Survey',
-    Feedback: 'Your comments are welcome through our feedback form'
+    Feedback: 'Your comments are welcome through our <a href="#">feedback form</a>'
   };
   // Build functions
   // Get all the Elements ready but do not print to the DOM
