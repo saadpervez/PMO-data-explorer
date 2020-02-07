@@ -64,7 +64,7 @@ let PMO = function(data){
     buttonDiv.setAttribute('class', 'view-mode-control btn-group-sm btn-group');
     buttons.forEach(function(btn, idx){
       const chartIds = [ 'byAll', 'byGrade', 'bySex' ];
-      const btnText = [ 'All responses', 'Grade relative', 'Sex relative' ];
+      const btnText = [ 'All responses', 'By Grade', 'By Sex' ];
       btn.setAttribute('class', 'btn btn-default wb-toggle');
       btn.setAttribute('data-toggle', `{ "selector": "#${self.slug}-${chartIds[idx]}","group": ".chart-${self.slug}","type": "on"}`);
       btn.insertAdjacentText('afterbegin', btnText[idx]);
