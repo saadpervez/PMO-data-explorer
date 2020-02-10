@@ -26,7 +26,8 @@
     flex: 1 1 auto;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;  }
+    justify-content: flex-end;
+    align-items: center;  }
 }
 @media screen and (max-width: 991px){
   #wb-sm{
