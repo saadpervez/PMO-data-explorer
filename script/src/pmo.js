@@ -16,7 +16,7 @@ let PMO = function(data){
   this.notes = {
     Notes: [
       'Source: 2018-2019 Ontario Student Drug Use and Health Survey',
-      'Missing bars indicate an estimate is unreliable and not releaseable'
+      'Missing bars indicate an estimate is not releaseable due to small numbers'
     ],
     Feedback: 'Your comments are welcome through our <a href="#">feedback form</a>'
   };

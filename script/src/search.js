@@ -133,7 +133,6 @@
           }
         }),
         Chartist.plugins.tooltip({
-          appendToBody: true,
           tooltipFnc: function(meta, value){
             let metaText = (meta == "null") ? "" : `<br>${meta}`;
             return `${value}%${metaText}`;
@@ -147,22 +146,10 @@
     };
     const responsiveOpts = [
       ['screen and (max-width: 767px)', {
-        horizontalBars: true,
         width: '650px',
         seriesBarDistance: 15,
         chartPadding: {
           right: 25
-        },
-        axisX: {
-          labelInterpolationFnc: function(value){
-            return value + '%';
-          },
-          onlyInteger: true,
-          showGrid: true           
-        },
-        axisY: {
-          labelInterpolationFnc: Chartist.noop,
-          showGrid: false
         }
       }],
       ['screen and (min-width: 768px)', {

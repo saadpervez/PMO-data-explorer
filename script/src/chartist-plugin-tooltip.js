@@ -26,8 +26,8 @@
       currency: undefined,
       currencyFormatCallback: undefined,
       tooltipOffset: {
-        x: 0,
-        y: -20
+        x: 20,
+        y: 100
       },
       anchorToPoint: false,
       appendToBody: false,
