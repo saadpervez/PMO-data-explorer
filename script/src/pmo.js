@@ -1,7 +1,7 @@
 (function(window, document){
 // PMO indicator instance
 let PMO = function(data){
-  this.version = "0.0.1";
+  this.version = "0.0.2";
   this.anchor = document.querySelector('.indicator-list');
   this.name = data.pmoName;
   this.description = data.description;
@@ -46,7 +46,8 @@ let PMO = function(data){
     const allBtn = document.createElement('button');
     const gradeBtn = document.createElement('button');
     const genderBtn = document.createElement('button');
-    const buttons = [ allBtn, gradeBtn, genderBtn ];
+    const trendBtn = document.createElement('button');
+    const buttons = [ allBtn, gradeBtn, genderBtn, trendBtn ];
     const buttonDiv = document.createElement('div');
     const ctrlDiv = document.createElement('div');
     const optionsHint = document.createElement('a');
@@ -63,8 +64,8 @@ let PMO = function(data){
     ctrlDiv.setAttribute('class', 'view-control');
     buttonDiv.setAttribute('class', 'view-mode-control btn-group-sm btn-group');
     buttons.forEach(function(btn, idx){
-      const chartIds = [ 'byAll', 'byGrade', 'bySex' ];
-      const btnText = [ 'All responses', 'By Grade', 'By Sex' ];
+      const chartIds = [ 'byAll', 'byGrade', 'bySex', 'byYear' ];
+      const btnText = [ 'All responses', 'By Grade', 'By Sex', 'Trend over time' ];
       btn.setAttribute('class', 'btn btn-default wb-toggle');
       btn.setAttribute('data-toggle', `{ "selector": "#${self.slug}-${chartIds[idx]}","group": ".chart-${self.slug}","type": "on"}`);
       btn.insertAdjacentText('afterbegin', btnText[idx]);
