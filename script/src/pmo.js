@@ -18,7 +18,8 @@ let PMO = function(data){
       'Source: 2018-2019 Ontario Student Drug Use and Health Survey',
       'Missing bars indicate an estimate is not releaseable due to small numbers'
     ],
-    Feedback: 'Your comments are welcome through our <a href="#">feedback form</a>'
+    "Trend analysis": data.trendTests,
+    Feedback: 'Your comments are welcome through our <a href="#">feedback form</a>',
   };
   // Build functions
   // Get all the Elements ready but do not print to the DOM
