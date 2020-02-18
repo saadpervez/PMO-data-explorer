@@ -4,4 +4,4 @@ _site/
 .jekyll-metadata
 node_modules
 # Development data set
-pmo.json
+/pmo.json
