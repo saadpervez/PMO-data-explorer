@@ -76,7 +76,13 @@
 }
 @media screen and (max-width: 767px){
   .search{
-    font-size: 2rem;   
+    font-size: 1.75rem;   
+    .search-label{
+      font-weight: normal;
+    }
+    .search-text{
+      width: 48%;
+    }
   }   
 }
 @media screen and (min-width: 768px) and (max-width: 991px){
