@@ -114,9 +114,14 @@
       background-color: rgba(0, 0, 0, 0.2);
       padding: 1.5rem 1rem;
       font-size: 2rem;
+      text-align: left;
+      border: none;
       &:hover{
         background-color: #FFB14B;
         cursor: pointer;
+      }
+      &:focus{
+        outline: #209CEE solid 2px;
       }
     }
     .index-container{
