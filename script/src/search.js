@@ -187,8 +187,12 @@
         if(!currentQuery.length){
           resetSearch();
           return;
-        }  
-        searchData(currentQuery);
+        }
+        resetSearch();
+        window.location.hash = `query=${currentQuery}`;
+        // snippet from developer.mozilla.org
+        let escape = currentQuery.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&');
+        searchData(escape);
       }.bind(this), 600, e);
     });
   });
