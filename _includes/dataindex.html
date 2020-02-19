@@ -10,11 +10,13 @@
         {% assign categories = site.data.pmo.indicators | group_by: "category" %}
         {% for category in categories %}
         <div class="col-md-3">
-          <span class="h3">{{ category.name }}</span>
+          <h3>
+            <a href="#cat={{ category.name | slugify }}">{{ category.name }}</a>
+          </h3>
           <ul class="index-links">
           {% for item in category.items %}
             <li>
-              <a href="#{{ item.pmoName | slugify }}">
+              <a href="#ind={{ item.pmoName | slugify }}">
               {{ item.pmoName }}
               </a>
             </li>

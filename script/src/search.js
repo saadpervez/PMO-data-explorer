@@ -5,6 +5,7 @@
   'use strict';
   // define the elements of interest
   const search = document.querySelector('.search-text');
+  const index = document.querySelector('.index-container');
   // Search the data
   function searchData(query){
     //fetch('https://cdn.jsdelivr.net/gh/DurhamRegionHARP/PMO-data-explorer@gh-pages/_data/pmo.json')
@@ -194,6 +195,9 @@
         let escape = currentQuery.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&');
         searchData(escape);
       }.bind(this), 600, e);
+    });
+    index.addEventListener('click', function(e){
+      console.log(`Clicked ${e.target.hash}`);
     });
   });
 })($, window, document, Chartist, PMO);
