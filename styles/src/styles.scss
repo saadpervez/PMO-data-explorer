@@ -10,7 +10,13 @@
   margin-top: 3px; }
 .masthead{
   background-color: #209CEE; }
-#wb-sm{
+.brand{
+  background: #209cee;
+  color: #fff;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   .nav-left{
     flex: 0 1 auto;
     display: flex;
@@ -27,7 +33,8 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
-    align-items: center;  }
+    align-items: center;
+  }
 }
 @media screen and (max-width: 991px){
   #wb-sm{

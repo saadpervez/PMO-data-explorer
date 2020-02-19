@@ -1,28 +1,26 @@
 <div class="row">
   <div class="container">
-    <nav id="wb-sm" class="wb-menu" data-trgt="mb-menu" role="navigation" typeof="SiteNavigationElement">
+    <div class="brand">
       <div class="nav-left">
         <div class="nav-brand">
-          <a href="{{ site.baseurl }}/" property="url">
+          <a href="{{ site.baseurl }}/" tabindex="0">
             <img src="{{ "/assets/bannerAvenir.png" | absolute_url }}" alt="Discover Me Logo" height="66">
             <span class="wb-inv" property="name">Return to the home page</span>
           </a>
         </div>      
       </div>
       <div class="nav-right">
-        <!-- <div class="nav-links visible-md visible-lg">
-          <h2 class="wb-inv">Menu</h2>
-          <ul class="list-inline menu" role="menubar">
-            <li><a href="https://google.com">Link</a></li>
-            <li><a href="https://google.com">Link</a></li>
-            <li><a href="https://google.com">Link</a></li>
-          </ul>
-        </div> -->
         <div class="nav-btn visible-md visible-lg">
-          <a class="btn btn-lg btn-warning" href="https://github.com/durhamregionHARP/PMO-data-explorer" target="_blank" role="button">
+          <a class="btn btn-lg btn-warning"
+             href="https://github.com/durhamregionHARP/PMO-data-explorer"
+             target="_blank"
+             role="button"
+             tabindex="0">
             Fork us on GitHub <span class="glyphicon glyphicon-new-window"></span>
           </a>
         </div>
+      </div>
+      <nav id="wb-sm" class="wb-menu" data-trgt="mb-menu" role="navigation" typeof="SiteNavigationElement">
         <section id="wb-glb-mn" class="wb-mb-links visible-sm visible-xs">
           <h2>Main Menu</h2>
           <a href="#mb-menu" title="Main menu" aria-controls="mb-menu" class="overlay-lnk btn btn-default" role="button">
@@ -32,7 +30,7 @@
           <div id="mb-menu" class="wb-overlay modal-content overlay-def wb-panel-r" aria-hidden="true">
           </div>
         </section>        
-      </div>
-    </nav>
+      </nav>  
+    </div>
   </div>
 </div>
