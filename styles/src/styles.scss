@@ -165,6 +165,17 @@
     }
   }
 }
+@media screen and (max-width: 767px){
+  .foot-container{
+    flex-flow: column nowrap;
+    .foot-left{
+      flex-flow: column nowrap;
+    }
+    .foot-right{
+      flex-flow: column nowrap;
+    }
+  }
+}
 // Indicator cards
 .indicator-block{
   margin-top: 2.5rem;
