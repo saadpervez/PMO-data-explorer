@@ -208,7 +208,7 @@
         window.location.hash = hashString;
         searchData({
           action: info[0],
-          value: info[1].replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&') // thanks to : developer.mozilla.org
+          value: info[1].replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&') // thanks to: developer.mozilla.org
         });
       }.bind(this), 600, e);
     });

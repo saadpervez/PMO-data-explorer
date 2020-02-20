@@ -61,7 +61,7 @@
     text-align: center;
     background-color: inherit;
     width: 60%;
-    &:focus{
+    &:hover, &:focus{
       background-color: darken(#FFB14B, 15%);
     }
   }
@@ -110,7 +110,7 @@
   .index-close{
     position: absolute;
     top: 0;
-    left: -11px;
+    left: -11px;  
     font-size: 2rem;
     background-color: rgba(0,0,0,0.2);
     padding: 5px 7px;
@@ -132,6 +132,7 @@
       &:hover{
         background-color: #FFB14B;
         cursor: pointer;
+        text-decoration: underline;
       }
       &:focus{
         outline: #209CEE solid 2px;
