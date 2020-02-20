@@ -7,25 +7,38 @@
   const search = document.querySelector('.search-text');
   const index = document.querySelector('.index-container');
   // Search the data
-  function searchData(query){
+  function searchData(task){
     //fetch('https://cdn.jsdelivr.net/gh/DurhamRegionHARP/PMO-data-explorer@gh-pages/_data/pmo.json')
     fetch('http://localhost:4000/PMO-data-explorer/pmo.json')
       .then(function(response){
         return response.json();
       })
       .then(function(data){
-        const regex = new RegExp(query, 'i');
-        const found = data.indicators.filter(function(elem){
-          if (regex.test(elem.pmoName) || regex.test(elem.description) || regex.test(elem.tags.join(' '))){
-            return elem;
-          };
-        });
-        handleSearchResult(found);
-        if(!found.length && document.querySelector('.indicator-list').hasChildNodes()){
-          resetList();
+        const searchFunc = {
+          qry: function(elem){
+            const regex = new RegExp(task.value, 'i');
+            if (regex.test(elem.pmoName) || regex.test(elem.description) || regex.test(elem.tags.join(' '))){
+              return elem;
+            }
+          },
+          cat: function(elem){
+            if (elem.category.split(' ').join('-').toLowerCase() === task.value){
+              return elem;
+            }
+          },
+          ind: function(elem){
+            if (elem.pmoName.split(' ').join('-').toLowerCase() === task.value){
+              return elem;
+            }
+          }
+        }  
+        const found = data.indicators.filter( searchFunc[task.action] );
+        if(task.action === 'qry'){
+          handleSearchResult(found);
         }
+        resetList();
         found.forEach(function(el){
-          buildArticleNode(query, el);
+          buildArticleNode(task.value, el);
         });           
       })
       .catch(function(error){
@@ -190,14 +203,25 @@
           return;
         }
         resetSearch();
-        window.location.hash = `query=${currentQuery}`;
-        // snippet from developer.mozilla.org
-        let escape = currentQuery.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&');
-        searchData(escape);
+        const hashString = `#qry=${currentQuery}`;
+        const info = hashString.substr(1).split("=");
+        window.location.hash = hashString;
+        searchData({
+          action: info[0],
+          value: info[1].replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&') // thanks to : developer.mozilla.org
+        });
       }.bind(this), 600, e);
     });
     index.addEventListener('click', function(e){
-      console.log(`Clicked ${e.target.hash}`);
+      if(e.target.className === "index-link"){
+        const hashString = e.target.hash;
+        const info = hashString.substr(1).split("=");
+        window.location.hash = e.target.hash;
+        searchData({
+          action: info[0],
+          value: info[1],
+        });
+      }      
     });
   });
 })($, window, document, Chartist, PMO);

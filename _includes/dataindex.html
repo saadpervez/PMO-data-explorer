@@ -11,12 +11,12 @@
         {% for category in categories %}
         <div class="col-md-3">
           <h3>
-            <a href="#cat={{ category.name | slugify }}">{{ category.name }}</a>
+            <a class="index-link" href="#cat={{ category.name | slugify }}">{{ category.name }}</a>
           </h3>
           <ul class="index-links">
           {% for item in category.items %}
             <li>
-              <a href="#ind={{ item.pmoName | slugify }}">
+              <a class="index-link" href="#ind={{ item.pmoName | slugify }}">
               {{ item.pmoName }}
               </a>
             </li>
