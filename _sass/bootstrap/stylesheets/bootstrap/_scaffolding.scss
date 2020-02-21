@@ -29,7 +29,7 @@ body {
   font-size: $font-size-base;
   line-height: $line-height-base;
   color: $text-color;
-  background-color: $body-bg;
+  background: repeating-linear-gradient(0deg, rgb(247, 247, 247) 0px, rgb(247, 247, 247) 1px,transparent 1px, transparent 21px),repeating-linear-gradient(90deg, rgb(247, 247, 247) 0px, rgb(247, 247, 247) 1px,transparent 1px, transparent 21px),linear-gradient(90deg, hsl(247,0%,100%),hsl(247,0%,100%));
 }
 
 // Reset fonts for relevant elements
