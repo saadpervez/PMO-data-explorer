@@ -23,14 +23,6 @@ let PMO = function(data){
   };
   // Build functions
   // Get all the Elements ready but do not print to the DOM
-  this.buildLink = function(){
-    const link = document.createElement('a');
-    link.insertAdjacentText('afterbegin', '#');
-    link.setAttribute('class','indicator-permalink');
-    link.setAttribute('href', `#${this.slug}`);
-    link.setAttribute('title', 'Link to just this indicator');
-    return link;
-  }
   this.buildHeader = function(){
     const self = this;
     const headContainer = document.createElement('div');
@@ -125,7 +117,6 @@ let PMO = function(data){
   }
   this.create = function(){
     const _container = this.container();
-    _container.appendChild(this.buildLink());
     _container.appendChild(this.buildHeader());
     _container.appendChild(this.buildCharts());
     _container.appendChild(this.buildNotes());
