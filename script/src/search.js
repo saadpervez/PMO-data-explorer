@@ -216,11 +216,16 @@
       if(e.target.className === "index-link"){
         const hashString = e.target.hash;
         const info = hashString.substr(1).split("=");
+        const $closeBtn = $("#close-index");
+        const settings = $closeBtn.data("toggle");
         window.location.hash = e.target.hash;
-        searchData({
-          action: info[0],
-          value: info[1],
-        });
+          searchData({
+            action: info[0],
+            value: info[1],
+          });
+        // Simulatle closing the data index as this will
+        // take up a lot of real estate 
+        $closeBtn.trigger("toggle.wb-toggle", settings);
       }      
     });
   });
