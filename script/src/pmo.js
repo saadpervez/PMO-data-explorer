@@ -1,6 +1,6 @@
 (function(window, document){
 // PMO indicator instance
-let PMO = function(data){
+window.PMO = function(data){
   this.version = "0.3.0";
   this.anchor = document.querySelector('.indicator-list');
   this.name = data.pmoName;
@@ -139,5 +139,4 @@ let PMO = function(data){
     this.anchor.appendChild(_container);
   }
 };
-window.PMO = PMO;
 })(window, document);

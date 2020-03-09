@@ -9,8 +9,19 @@
     "bootstrap-sass": "^3.4.1",
     "chartist": "^0.11.4",
     "chartist-error-bars": "0.0.6",
+    "chartist-plugin-accessibility": "0.0.5",
     "chartist-plugin-legend": "^0.6.2",
     "chartist-plugin-tooltips": "0.0.17",
+    "gulp-uglify": "^3.0.2",
     "magnific-popup": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "esm": "^3.2.25",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sourcemaps": "^2.6.5"
   }
 }

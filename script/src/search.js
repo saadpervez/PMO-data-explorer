@@ -7,7 +7,7 @@
   const search = document.querySelector('.search-text');
   const index = document.querySelector('.index-container');
   // Search the data
-  function searchData(query){
+  function searchData(task){
     fetch('https://cdn.jsdelivr.net/gh/DurhamRegionHARP/PMO-data-explorer@gh-pages/_data/pmo.json')
       .then(function(response){
         return response.json();
@@ -149,6 +149,13 @@
         Chartist.plugins.legend({
           className: "list-inline",
           clickable: false
+        }),
+        Chartist.plugins.ctAccessibility({
+          caption: 'OSDUHS Results',
+          seriesHeader: 'Analysis group',
+          valueTransform: function(value){
+            return value + '%';
+          }
         })
       ]
     };
