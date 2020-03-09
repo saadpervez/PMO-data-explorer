@@ -7,9 +7,8 @@
   const search = document.querySelector('.search-text');
   const index = document.querySelector('.index-container');
   // Search the data
-  function searchData(task){
-    //fetch('https://cdn.jsdelivr.net/gh/DurhamRegionHARP/PMO-data-explorer@gh-pages/_data/pmo.json')
-    fetch('http://localhost:4000/PMO-data-explorer/pmo.json')
+  function searchData(query){
+    fetch('https://cdn.jsdelivr.net/gh/DurhamRegionHARP/PMO-data-explorer@gh-pages/_data/pmo.json')
       .then(function(response){
         return response.json();
       })
