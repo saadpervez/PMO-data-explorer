@@ -5,29 +5,45 @@
   'use strict';
   // define the elements of interest
   const search = document.querySelector('.search-text');
+  const index = document.querySelector('.index-container');
   // Search the data
   function searchData(query){
     fetch('https://cdn.jsdelivr.net/gh/DurhamRegionHARP/PMO-data-explorer@gh-pages/_data/pmo.json')
-    //fetch('http://127.0.0.1:4000/PMO-data-explorer/pmo.json')
       .then(function(response){
         return response.json();
       })
       .then(function(data){
-        const regex = new RegExp(query, 'i');
-        const found = data.indicators.filter(function(elem){
-          if (regex.test(elem.pmoName) || regex.test(elem.description) || regex.test(elem.tags.join(' '))){
-            return elem;
-          };
-        });
-        handleSearchResult(found);
-        if(!found.length && document.querySelector('.indicator-list').hasChildNodes()){
-          resetList();
+        const searchFunc = {
+          qry: function(elem){
+            const regex = new RegExp(task.value, 'i');
+            if (regex.test(elem.pmoName) || regex.test(elem.description) || regex.test(elem.tags.join(' '))){
+              return elem;
+            }
+          },
+          cat: function(elem){
+            if (elem.category.split(' ').join('-').toLowerCase() === task.value){
+              console.log(elem)
+              return elem;
+            }
+          },
+          ind: function(elem){
+            if (elem.pmoName.split(' ').join('-').toLowerCase() === task.value){
+              return elem;
+            }
+          }
+        }  
+        const found = data.indicators.filter( searchFunc[task.action] );
+        if(task.action === 'qry'){
+          handleSearchResult(found);
         }
+        resetList();
         found.forEach(function(el){
-          buildArticleNode(query, el);
+          buildArticleNode(task.value, el);
         });           
       })
       .catch(function(error){
+        // TODO 
+        // Give the user some feedback here
         console.log(error);
       });
   }
@@ -77,14 +93,6 @@
   // Build the article
   function buildArticleNode(query, indicator){
     const articles = document.querySelectorAll('.indicator-block');
-    const regex = new RegExp(query, 'i');
-    // Filter out indicators on screen that do not match the current query string
-    // Switch to for loop
-    for(let i = 0; i < articles.length; i++){
-      if(!regex.test(articles[i].className)){
-        articles[i].parentNode.removeChild(articles[i]);
-      }
-    };
     // Only build if an indicator block does not exist
     const _indicator = new PMO(indicator);
     if (!document.querySelector('.indicator-' + _indicator.slug)){
@@ -133,7 +141,6 @@
           }
         }),
         Chartist.plugins.tooltip({
-          appendToBody: true,
           tooltipFnc: function(meta, value){
             let metaText = (meta == "null") ? "" : `<br>${meta}`;
             return `${value}%${metaText}`;
@@ -147,22 +154,10 @@
     };
     const responsiveOpts = [
       ['screen and (max-width: 767px)', {
-        horizontalBars: true,
         width: '650px',
         seriesBarDistance: 15,
         chartPadding: {
           right: 25
-        },
-        axisX: {
-          labelInterpolationFnc: function(value){
-            return value + '%';
-          },
-          onlyInteger: true,
-          showGrid: true           
-        },
-        axisY: {
-          labelInterpolationFnc: Chartist.noop,
-          showGrid: false
         }
       }],
       ['screen and (min-width: 768px)', {
@@ -198,9 +193,32 @@
         if(!currentQuery.length){
           resetSearch();
           return;
-        }  
-        searchData(currentQuery);
+        }
+        resetSearch();
+        const hashString = `#qry=${currentQuery}`;
+        const info = hashString.substr(1).split("=");
+        window.location.hash = hashString;
+        searchData({
+          action: info[0],
+          value: info[1].replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&') // thanks to: developer.mozilla.org
+        });
       }.bind(this), 600, e);
+    });
+    index.addEventListener('click', function(e){
+      if(e.target.className === "index-link"){
+        const hashString = e.target.hash;
+        const info = hashString.substr(1).split("=");
+        const $closeBtn = $("#close-index");
+        const settings = $closeBtn.data("toggle");
+        window.location.hash = e.target.hash;
+        searchData({
+          action: info[0],
+          value: info[1],
+        });
+        // Simulatle closing the data index as this will
+        // take up a lot of real estate 
+        $closeBtn.trigger("toggle.wb-toggle", settings);
+      }      
     });
   });
 })($, window, document, Chartist, PMO);

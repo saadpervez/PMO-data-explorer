@@ -1,18 +1,23 @@
 <div class="row">
   <div class="col-xs-12 mrgn-tp-sm data-index">
-    <a title="Expand this section" class="wb-toggle index-toggle" data-toggle='{"selector":".data-index","type":"on"}'>
+    <button title="Expand this section"
+            class="wb-toggle index-toggle"
+            data-toggle='{"selector":".data-index","type":"on"}'>
       <span class="wb-inv">Open the</span>Index of data
-    </a>
+    </button>
     <div class="index-container">
       <div class="row">
-        {% assign categories = site.data.pmo.indicators | group_by: "category" %}
+        {% assign categories = site.data.pmo.indicators | sort: "category" | group_by: "category" %}
         {% for category in categories %}
         <div class="col-md-3">
-          <span class="h3">{{ category.name }}</span>
+          <h3>
+            <a class="index-link" href="#cat={{ category.name | slugify }}">{{ category.name }}</a>
+          </h3>
           <ul class="index-links">
-          {% for item in category.items %}
+          {% assign sorted_items = (category.items | sort: "pmoName") %}
+          {% for item in sorted_items" %}
             <li>
-              <a href="#{{ item.pmoName | slugify }}">
+              <a class="index-link" href="#ind={{ item.pmoName | slugify }}">
               {{ item.pmoName }}
               </a>
             </li>
@@ -20,9 +25,16 @@
           </ul>
         </div>
         {% endfor %}        
-        <div class="index-close">
-          <a title="Close this section" class="wb-toggle" data-toggle='{"selector":".data-index","type":"off"}'>X</a>
-        </div>
+      </div>
+      <div class="index-close">
+        <button 
+           id="close-index"
+           title="Close this section"
+           class="btn btn-link wb-toggle"
+           data-toggle='{"selector":".data-index","type":"off"}'>
+           <span class="glyphicon glyphicon-remove"></span>
+           <span class="wb-inv">Close this section</span>
+      </button>
       </div>
     </div>
   </div>

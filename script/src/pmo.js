@@ -1,7 +1,7 @@
 (function(window, document){
 // PMO indicator instance
 let PMO = function(data){
-  this.version = "0.0.1";
+  this.version = "0.3.0";
   this.anchor = document.querySelector('.indicator-list');
   this.name = data.pmoName;
   this.description = data.description;
@@ -15,22 +15,14 @@ let PMO = function(data){
   };
   this.notes = {
     Notes: [
-      'Results are weighted by sex and grade to the 2017 Ontario student population',
-      'Missing bars indicate an estimate is unreliable and not releaseable'
+      'Source: 2018-2019 Ontario Student Drug Use and Health Survey',
+      'Missing bars indicate an estimate is not releaseable due to small numbers'
     ],
-    Source: '2018-2019 Ontario Student Drug Use and Health Survey',
-    Feedback: 'Your comments are welcome through our feedback form'
+    "Trend analysis": data.trendTests,
+    Feedback: 'Your comments are welcome through our <a href="#">feedback form</a>',
   };
   // Build functions
   // Get all the Elements ready but do not print to the DOM
-  this.buildLink = function(){
-    const link = document.createElement('a');
-    link.insertAdjacentText('afterbegin', '#');
-    link.setAttribute('class','indicator-permalink');
-    link.setAttribute('href', `#${this.slug}`);
-    link.setAttribute('title', 'Link to just this indicator');
-    return link;
-  }
   this.buildHeader = function(){
     const self = this;
     const headContainer = document.createElement('div');
@@ -44,10 +36,32 @@ let PMO = function(data){
     headContainer.appendChild(header);
     headContainer.appendChild(desc);
     // Buttons
-    const allBtn = document.createElement('button');
-    const gradeBtn = document.createElement('button');
-    const genderBtn = document.createElement('button');
-    const buttons = [ allBtn, gradeBtn, genderBtn ];
+    const buttons = [];
+    Object.keys(this.chartData).forEach(function(chart){
+      let button = document.createElement('button');
+      let buttonText = function(){
+        let label = '';
+        switch(chart){
+          case 'byAll':
+            label  = 'By Response Category';
+            break;
+          case 'byGrade':
+            label  = 'By Grade';
+            break;          
+          case 'bySex':
+            label  = 'By Sex';
+            break;
+          case 'byYear':
+            label  = 'By Year';
+            break;
+        }
+        return label;
+      }
+      button.setAttribute('class', 'btn btn-default wb-toggle');
+      button.setAttribute('data-toggle', `{ "selector": "#${self.slug}-${chart}","group": ".chart-${self.slug}","type": "on"}`);
+      button.insertAdjacentText('afterbegin', buttonText());
+      buttons.push(button);
+    })
     const buttonDiv = document.createElement('div');
     const ctrlDiv = document.createElement('div');
     const optionsHint = document.createElement('a');
@@ -64,11 +78,6 @@ let PMO = function(data){
     ctrlDiv.setAttribute('class', 'view-control');
     buttonDiv.setAttribute('class', 'view-mode-control btn-group-sm btn-group');
     buttons.forEach(function(btn, idx){
-      const chartIds = [ 'byAll', 'byGrade', 'bySex' ];
-      const btnText = [ 'All responses', 'Grade relative', 'Sex relative' ];
-      btn.setAttribute('class', 'btn btn-default wb-toggle');
-      btn.setAttribute('data-toggle', `{ "selector": "#${self.slug}-${chartIds[idx]}","group": ".chart-${self.slug}","type": "on"}`);
-      btn.insertAdjacentText('afterbegin', btnText[idx]);
       buttonDiv.appendChild(btn);
     });
     ctrlDiv.appendChild(buttonDiv);
@@ -124,7 +133,6 @@ let PMO = function(data){
   }
   this.create = function(){
     const _container = this.container();
-    _container.appendChild(this.buildLink());
     _container.appendChild(this.buildHeader());
     _container.appendChild(this.buildCharts());
     _container.appendChild(this.buildNotes());
