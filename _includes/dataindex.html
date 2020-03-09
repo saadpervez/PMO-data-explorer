@@ -7,14 +7,15 @@
     </button>
     <div class="index-container">
       <div class="row">
-        {% assign categories = site.data.pmo.indicators | group_by: "category" %}
+        {% assign categories = site.data.pmo.indicators | sort: "category" | group_by: "category" %}
         {% for category in categories %}
         <div class="col-md-3">
           <h3>
             <a class="index-link" href="#cat={{ category.name | slugify }}">{{ category.name }}</a>
           </h3>
           <ul class="index-links">
-          {% for item in category.items %}
+          {% assign sorted_items = (category.items | sort: "pmoName") %}
+          {% for item in sorted_items" %}
             <li>
               <a class="index-link" href="#ind={{ item.pmoName | slugify }}">
               {{ item.pmoName }}
