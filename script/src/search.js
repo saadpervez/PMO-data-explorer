@@ -23,6 +23,7 @@
           },
           cat: function(elem){
             if (elem.category.split(' ').join('-').toLowerCase() === task.value){
+              console.log(elem)
               return elem;
             }
           },
@@ -93,14 +94,6 @@
   // Build the article
   function buildArticleNode(query, indicator){
     const articles = document.querySelectorAll('.indicator-block');
-    const regex = new RegExp(query, 'i');
-    // Filter out indicators on screen that do not match the current query string
-    // Switch to for loop
-    for(let i = 0; i < articles.length; i++){
-      if(!regex.test(articles[i].className)){
-        articles[i].parentNode.removeChild(articles[i]);
-      }
-    };
     // Only build if an indicator block does not exist
     const _indicator = new PMO(indicator);
     if (!document.querySelector('.indicator-' + _indicator.slug)){
@@ -219,10 +212,10 @@
         const $closeBtn = $("#close-index");
         const settings = $closeBtn.data("toggle");
         window.location.hash = e.target.hash;
-          searchData({
-            action: info[0],
-            value: info[1],
-          });
+        searchData({
+          action: info[0],
+          value: info[1],
+        });
         // Simulatle closing the data index as this will
         // take up a lot of real estate 
         $closeBtn.trigger("toggle.wb-toggle", settings);

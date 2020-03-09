@@ -1,7 +1,7 @@
 (function(window, document){
 // PMO indicator instance
 let PMO = function(data){
-  this.version = "0.0.2";
+  this.version = "0.3.0";
   this.anchor = document.querySelector('.indicator-list');
   this.name = data.pmoName;
   this.description = data.description;
@@ -36,11 +36,32 @@ let PMO = function(data){
     headContainer.appendChild(header);
     headContainer.appendChild(desc);
     // Buttons
-    const allBtn = document.createElement('button');
-    const gradeBtn = document.createElement('button');
-    const genderBtn = document.createElement('button');
-    const trendBtn = document.createElement('button');
-    const buttons = [ allBtn, gradeBtn, genderBtn, trendBtn ];
+    const buttons = [];
+    Object.keys(this.chartData).forEach(function(chart){
+      let button = document.createElement('button');
+      let buttonText = function(){
+        let label = '';
+        switch(chart){
+          case 'byAll':
+            label  = 'By Response Category';
+            break;
+          case 'byGrade':
+            label  = 'By Grade';
+            break;          
+          case 'bySex':
+            label  = 'By Sex';
+            break;
+          case 'byYear':
+            label  = 'By Year';
+            break;
+        }
+        return label;
+      }
+      button.setAttribute('class', 'btn btn-default wb-toggle');
+      button.setAttribute('data-toggle', `{ "selector": "#${self.slug}-${chart}","group": ".chart-${self.slug}","type": "on"}`);
+      button.insertAdjacentText('afterbegin', buttonText());
+      buttons.push(button);
+    })
     const buttonDiv = document.createElement('div');
     const ctrlDiv = document.createElement('div');
     const optionsHint = document.createElement('a');
@@ -57,11 +78,6 @@ let PMO = function(data){
     ctrlDiv.setAttribute('class', 'view-control');
     buttonDiv.setAttribute('class', 'view-mode-control btn-group-sm btn-group');
     buttons.forEach(function(btn, idx){
-      const chartIds = [ 'byAll', 'byGrade', 'bySex', 'byYear' ];
-      const btnText = [ 'By Response Category', 'By Grade', 'By Sex', 'By Year' ];
-      btn.setAttribute('class', 'btn btn-default wb-toggle');
-      btn.setAttribute('data-toggle', `{ "selector": "#${self.slug}-${chartIds[idx]}","group": ".chart-${self.slug}","type": "on"}`);
-      btn.insertAdjacentText('afterbegin', btnText[idx]);
       buttonDiv.appendChild(btn);
     });
     ctrlDiv.appendChild(buttonDiv);
