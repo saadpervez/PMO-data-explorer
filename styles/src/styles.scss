@@ -59,7 +59,7 @@
     border-bottom: 2px solid black;
     text-align: center;
     background-color: inherit;
-    width: 60%;
+    max-width: 60%;
     &:hover, &:focus{
       background-color: darken(#FFB14B, 15%);
     }
