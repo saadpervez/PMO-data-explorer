@@ -2,7 +2,7 @@
 'use strict';
 // PMO indicator instance
 window.PMO = function(data){
-  this.version = "0.4.0";
+  this.version = "0.5.0";
   this.anchor = document.querySelector('.indicator-list');
   this.name = data.pmoName;
   this.description = data.description;
@@ -56,7 +56,7 @@ window.PMO = function(data){
     const buttons = [];
     Object.keys(this.chartData).forEach(function(chart){
       let button = document.createElement('button');
-      let buttonText = function(){
+      const buttonText = function(){
         let label = '';
         switch(chart){
           case 'byAll':
@@ -74,7 +74,7 @@ window.PMO = function(data){
         }
         return label;
       }
-      button.setAttribute('class', 'btn btn-default wb-toggle');
+      button.setAttribute('class', chart == 'byAll' ? 'btn btn-default active wb-toggle' : 'btn btn-default wb-toggle');
       button.setAttribute('data-toggle', `{ "selector": "#${self.slug}-${chart}","group": ".chart-${self.slug}","type": "on"}`);
       button.insertAdjacentText('afterbegin', buttonText());
       buttons.push(button);
