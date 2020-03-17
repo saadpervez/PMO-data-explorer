@@ -293,7 +293,7 @@
       "pmoID":9,
       "pmoName":"Riding with a Cannabis Impaired Driver",
       "description":"Frequency of being a passenger riding with a driver who had been using cannabis",
-      "tags": [ "driving safety","driving under the influence","risk" ],
+      "tags": [ "driving safety","driving under the influence","risk","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana","pot","weed" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
@@ -366,7 +366,7 @@
       "pmoID":11,
       "pmoName":"Tried Cannabis for the First Time",
       "description":"Percentage that tried cannabis for the first time in the past year",
-      "tags": [ "first use","first-time","start" ],
+      "tags": [ "first use","first-time","start","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana","pot","weed" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
@@ -387,7 +387,7 @@
       "pmoID":12,
       "pmoName":"Grade of First Cannabis Use",
       "description":"Grade students were in the first time they used cannabis",
-      "tags": [ "early use","first use","first-time","start" ],
+      "tags": [ "early use","first use","first-time","start","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana","pot","smoking","weed" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
@@ -434,7 +434,7 @@
       "pmoID":13,
       "pmoName":"Usual Source of Cannabis",
       "description":"Usual method for getting cannabis in the past year",
-      "tags": [ "access","pot","procurement","source","weed" ],
+      "tags": [ "access","pot","procurement","source","weed","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
@@ -455,7 +455,7 @@
       "pmoID":14,
       "pmoName":"View of Cannabis Availability",
       "description":"Belief on how difficult it is to get cannabis when needed",
-      "tags": [ "access","availability","ease of access","pot","weed" ],
+      "tags": [ "access","availability","ease of access","pot","weed","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
@@ -476,7 +476,7 @@
       "pmoID":37,
       "pmoName":"View on Harm of Trying Cannabis",
       "description":"Belief on the risk of trying cannabis once or twice",
-      "tags": [ "awareness of harm","harm","pot","risk","weed" ],
+      "tags": [ "awareness of harm","harm","pot","risk","weed","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana","smoking" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
@@ -497,7 +497,7 @@
       "pmoID":38,
       "pmoName":"View on Harm of Cannabis Use",
       "description":"Belief on the risk of smoking cannabis regularly",
-      "tags": [ "awareness of harm","harm","pot","risk","weed" ],
+      "tags": [ "awareness of harm","harm","pot","risk","weed","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana","smoking" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
@@ -518,7 +518,7 @@
       "pmoID":6,
       "pmoName":"Perceived Cannabis Use Since Legalization",
       "description":"Change in cannabis use among friends since legalization",
-      "tags": [ "cannabis","legalization impact" ],
+      "tags": [ "cannabis","legalization impact","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana","pot","smoking","weed" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
@@ -562,36 +562,10 @@
       "trendTests": [ "Between 2017 and 2019 driving after using cannabis stayed about the same in Durham Region", "Between 2009 and 2019 driving after using cannabis decreased in Durham Region", "Durham Region and Ontario have similar rates of driving after using cannabis since 2009"  ]
     },
     {
-      "pmoID":15,
-      "pmoName":"Driving After Using Cannabis",
-      "description":"Frequency of driving a vehicle within an hour of using cannabis",
-      "tags": [ "driving under the influence","hash","hashish","pot","weed" ],
-      "category": "Cannabis",
-      "estimates": {
-        "byAll": {
-            "labels": [ "Did not drive","Never","Once or more" ],
-            "series": [ { "name": "Durham Region", "data": [61,36,3], "cl": [[65,57],[40,32],[5,1]],"notes": [null,null,"Interpret with caution"] },{ "name": "Ontario", "data": [63,33,3], "cl": [[66,61],[35,31],[4,2]],"notes": [null,null,null] } ]
-        },
-        "bySex": {
-            "labels": [ "Did not drive","Never","Once or more" ],
-            "series": [ { "name": "Durham Region Male", "data": [62,34,4], "cl": [[65,59],[39,29],[6,1]],"notes": [null,null,"Interpret with caution"] },{ "name": "Durham Region Female", "data": [60,38,null], "cl": [[67,52],[46,30],[null,null]],"notes": [null,null,"Not releasable due to small numbers"] },{ "name": "Ontario Male", "data": [61,35,4], "cl": [[64,58],[38,32],[6,3]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [66,32,2], "cl": [[69,64],[34,29],[3,1]],"notes": [null,null,null] } ]
-        },
-        "byGrade": {
-            "labels": [ "Did not drive","Never","Once or more" ],
-            "series": [ { "name": "Durham Region Grades 9 to 12", "data": [61,36,3], "cl": [[65,57],[40,32],[5,1]],"notes": [null,null,"Interpret with caution"] },{ "name": "Ontario Grades 9 to 12", "data": [63,33,3], "cl": [[66,61],[35,31],[4,2]],"notes": [null,null,null] } ]
-        },
-        "byYear": {
-            "labels": [ "2011","2013","2015","2017","2019" ],
-            "series": [ { "name": "Durham Region", "data": [5,null,5,4,3], "cl": [[7,2],[null,null],[8,2],[7,1],[5,1]],"notes": ["Interpret with caution","Not releasable due to small numbers","Interpret with caution","Interpret with caution","Interpret with caution"] },{ "name": "Ontario", "data": [4,4,3,4,3], "cl": [[6,3],[5,2],[5,2],[6,3],[4,2]],"notes": [null,null,null,null,null] } ]
-        }
-      },
-      "trendTests": [ "Between 2017 and 2019 driving after using cannabis stayed about the same in Durham Region", "Between 2011 and 2019 driving after using cannabis stayed the same in Durham Region", "Durham Region and Ontario have similar rates of driving after using cannabis since 2011"  ]
-    },
-    {
       "pmoID":16,
       "pmoName":"View of Driving High Versus Driving Drunk",
       "description":"Opinion on the safety of driving after using cannabis compared with alcohol",
-      "tags": [ "alcohol","driving safety","driving under the influence","perceived risk","perceived safety","pot","weed" ],
+      "tags": [ "alcohol","driving safety","driving under the influence","perceived risk","perceived safety","pot","weed","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
