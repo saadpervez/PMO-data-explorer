@@ -12,7 +12,7 @@
 }
 
 a {
-	text-decoration: underline;		// re-enable underlining
+	@extend %no-decoration;		// re-enable underlining
 
 	&.btn {
 		@extend %no-decoration;	// except for buttons
@@ -20,7 +20,14 @@ a {
 
 	&:visited {
 		color: $link-visited-color;
-	}
+  }
+  &:focus {
+    outline: #209cee solid 2px;
+  }
+  &:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
 
 	// make placeholder links look like plain text
 	&:not([href]) {
