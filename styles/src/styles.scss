@@ -4,8 +4,7 @@
 
 // Navigation bar
 .nav-brand, .nav-btn, .nav-links, .wb-mb-links {
-  padding-top: 1em;
-  padding-bottom: 1em; }
+  padding: 0.5em 1em; }
 .nav-btn{
   margin-top: 3px; }
 .masthead{
@@ -21,10 +20,8 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    .nav-brand{
-      a{
-        margin-right: 1em;
-      }
+    &:hover{
+      background-color: darken(rgb(32, 156, 238), 10%);
     }
   }
   .nav-right{
