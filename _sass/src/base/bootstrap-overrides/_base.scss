@@ -12,7 +12,8 @@
 }
 
 a {
-	@extend %no-decoration;		// re-enable underlining
+  @extend %no-decoration;		// re-enable underlining
+  color: #3d7e9a;
 
 	&.btn {
 		@extend %no-decoration;	// except for buttons
