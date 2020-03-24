@@ -38,7 +38,7 @@
         }
         resetList();
         found.forEach(function(el){
-          buildArticleNode(task.value, el);
+          buildArticleNode(el);
         });           
       })
       .catch(function(error){
@@ -91,14 +91,26 @@
     }
   }
   // Build the article
-  function buildArticleNode(query, indicator){
-    const articles = document.querySelectorAll('.indicator-block');
+  function buildArticleNode(indicator){
     // Only build if an indicator block does not exist
     const _indicator = new PMO(indicator);
-    if (!document.querySelector('.indicator-' + _indicator.slug)){
+    let article = document.querySelector('.indicator-' + _indicator.slug);
+    if (!article){
       _indicator.create();
       _indicator.chartsToBuild.forEach(function(chart){
         buildArticleCharts(`#${_indicator.slug}-${chart}`, _indicator.chartData[chart]);
+      });
+      let article = document.querySelector('.indicator-' + _indicator.slug);
+      article.addEventListener('click', function(event){
+        if(event.target.tagName === 'BUTTON'){
+          const parent = event.target.parentNode;
+          if(parent.hasChildNodes()){
+            parent.childNodes.forEach(function(button){
+              button.classList.remove('active');
+            });
+          }
+          event.target.classList.add('active');
+        }
       });
     }
   }

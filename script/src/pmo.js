@@ -1,7 +1,8 @@
 (function(window, document){
+'use strict';
 // PMO indicator instance
 window.PMO = function(data){
-  this.version = "0.3.0";
+  this.version = "0.5.0";
   this.anchor = document.querySelector('.indicator-list');
   this.name = data.pmoName;
   this.description = data.description;
@@ -13,14 +14,30 @@ window.PMO = function(data){
     article.setAttribute('class', `indicator-block indicator-${this.slug}`);
     return article;
   };
-  this.notes = {
-    Notes: [
-      'Source: 2018-2019 Ontario Student Drug Use and Health Survey',
-      'Missing bars indicate an estimate is not releaseable due to small numbers'
-    ],
-    "Trend analysis": data.trendTests,
-    Feedback: 'Your comments are welcome through our <a href="#">feedback form</a>',
+  this.notes = function(){
+    if(!data.trendTests){
+      let notes = {
+        Notes: [
+          'Source: 2018-2019 Ontario Student Drug Use and Health Survey',
+          'Missing bars indicate an estimate is not releaseable due to small numbers'
+        ],
+        Feedback: 'Your comments are welcome through our <a href="#">feedback form</a>'
+      };
+      return notes;
+    }
+    else {
+      let notes = {
+        Notes: [
+          'Source: 2018-2019 Ontario Student Drug Use and Health Survey',
+          'Missing bars indicate an estimate is not releaseable due to small numbers'
+        ],
+        "Trend analysis": data.trendTests,
+        Feedback: 'Your comments are welcome through our <a href="#">feedback form</a>'
+      };
+      return notes;
+    }      
   };
+    
   // Build functions
   // Get all the Elements ready but do not print to the DOM
   this.buildHeader = function(){
@@ -39,7 +56,7 @@ window.PMO = function(data){
     const buttons = [];
     Object.keys(this.chartData).forEach(function(chart){
       let button = document.createElement('button');
-      let buttonText = function(){
+      const buttonText = function(){
         let label = '';
         switch(chart){
           case 'byAll':
@@ -57,7 +74,7 @@ window.PMO = function(data){
         }
         return label;
       }
-      button.setAttribute('class', 'btn btn-default wb-toggle');
+      button.setAttribute('class', chart == 'byAll' ? 'btn btn-default active wb-toggle' : 'btn btn-default wb-toggle');
       button.setAttribute('data-toggle', `{ "selector": "#${self.slug}-${chart}","group": ".chart-${self.slug}","type": "on"}`);
       button.insertAdjacentText('afterbegin', buttonText());
       buttons.push(button);
@@ -107,7 +124,7 @@ window.PMO = function(data){
     tabsDiv.setAttribute('class', 'wb-tabs');
     const panelDiv = document.createElement('div');
     panelDiv.setAttribute('class', 'tabpanels');
-    Object.entries(this.notes).forEach(function([key, value]){
+    Object.entries(this.notes()).forEach(function([key, value]){
       let noteTab = document.createElement('details');
       noteTab.setAttribute('class', `tab-${key.toLowerCase()}`);
       let noteTitle = document.createElement('summary');
