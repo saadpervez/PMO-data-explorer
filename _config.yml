@@ -2,7 +2,7 @@
 # Turn this into a basic template for HARP
 
 # Site settings
-title: PMO data explorer
+title: Discover Me! Find information about youth health risk factors
 description: Make data beautiful with Jekyll
 baseurl: "/PMO-data-explorer"
 url: "https://durhamregionharp.github.io"

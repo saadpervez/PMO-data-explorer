@@ -4,6 +4,7 @@ secondarymenu: false
 feedback: false
 layout: default
 title: "Technical Documentation"
+permalink: /technical-documentation
 ---
 # Technical Documentation
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt augue interdum velit euismod in pellentesque massa. Sem viverra aliquet eget sit amet tellus cras. Sit amet massa vitae tortor condimentum lacinia quis vel eros. Diam in arcu cursus euismod quis viverra nibh cras. Tempus iaculis urna id volutpat lacus laoreet non. Vitae elementum curabitur vitae nunc sed velit. Diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Est lorem ipsum dolor sit amet consectetur adipiscing elit. Tortor consequat id porta nibh venenatis cras sed felis eget. Consectetur adipiscing elit ut aliquam. Tristique nulla aliquet enim tortor at auctor urna nunc id. Vivamus arcu felis bibendum ut tristique et.
