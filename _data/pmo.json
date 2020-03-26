@@ -60,15 +60,15 @@
       "category": "Drugs",
       "estimates": {
         "byAll": {
-            "labels": [ "No","Yes run" ],
+            "labels": [ "No","Yes" ],
             "series": [ { "name": "Durham Region", "data": [96,4], "cl": [[99,94],[6,1]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario", "data": [97,3], "cl": [[97,96],[4,3]],"notes": [null,null] } ]
         },
         "bySex": {
-            "labels": [ "No","Yes run" ],
+            "labels": [ "No","Yes" ],
             "series": [ { "name": "Durham Region Male", "data": [95,null], "cl": [[98,91],[null,null]],"notes": [null,"Not releasable due to small numbers"] },{ "name": "Durham Region Female", "data": [98,null], "cl": [[100,96],[null,null]],"notes": [null,"Not releasable due to small numbers"] },{ "name": "Ontario Male", "data": [96,4], "cl": [[97,95],[5,3]],"notes": [null,null] },{ "name": "Ontario Female", "data": [97,3], "cl": [[98,96],[4,2]],"notes": [null,null] } ]
         },
         "byGrade": {
-            "labels": [ "No","Yes run" ],
+            "labels": [ "No","Yes" ],
             "series": [ { "name": "Durham Region Grades 9 to 12", "data": [96,4], "cl": [[99,94],[6,1]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario Grades 9 to 12", "data": [97,3], "cl": [[97,96],[4,3]],"notes": [null,null] } ]
         },
         "byYear": {
