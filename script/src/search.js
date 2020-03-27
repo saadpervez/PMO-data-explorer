@@ -16,7 +16,7 @@
         const searchFunc = {
           qry: function(elem){
             const regex = new RegExp(task.value, 'i');
-            if (regex.test(elem.pmoName) || regex.test(elem.description) || regex.test(elem.tags.join(' '))){
+            if (regex.test(elem.pmoName) || regex.test(elem.category) || regex.test(elem.description) || regex.test(elem.tags.join(' '))){
               return elem;
             }
           },
