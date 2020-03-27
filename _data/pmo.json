@@ -55,7 +55,7 @@
     {
       "pmoID":7,
       "pmoName":"Non-Medical Tranquilizer Use",
-      "description":"Used sedatives or tranquilizers once in life",
+      "description":"Used sedatives or tranquilizers like Ativan, Vallium, or Xanax, at least once in life",
       "tags": [ "Ativan","Valium","Xanax","bars","benzodiazapine","benzos","downers","tranqs","tranquilizer","xans" ],
       "category": "Drugs",
       "estimates": {
@@ -80,8 +80,8 @@
     },
     {
       "pmoID":2,
-      "pmoName":"Opioid Use",
-      "description":"How often opioids were used in the past year",
+      "pmoName":"Non-Medical Opioid Use",
+      "description":"How often opioids were used in the past year. Opioids are drugs like Codeine, OxyNeo, Percocet, Percodan, and Tylenol 3.",
       "tags": [ "Codeine","OxyNeo","Percocet","Percodan","Tylenol 3","addiction","drug problem","heroin","opioids","pain relief pills" ],
       "category": "Drugs",
       "estimates": {
@@ -181,8 +181,8 @@
     },
     {
       "pmoID":8,
-      "pmoName":"View of Drug Use as an Issue",
-      "description":"The size of the problem drug use has in schools today",
+      "pmoName":"View of Drug Use as an Issue at School",
+      "description":"Belief on the size of the problem drug use has in schools today",
       "tags": [ "drug problem","school drug use","school drug use prevalence" ],
       "category": "Drugs",
       "estimates": {
@@ -291,10 +291,10 @@
     },
     {
       "pmoID":9,
-      "pmoName":"Riding with a Cannabis Impaired Driver",
-      "description":"Frequency of being a passenger riding with a driver who had been using cannabis",
+      "pmoName":"Riding with a Drug Impaired Driver",
+      "description":"Frequency of being a passenger riding with a driver who had been using drugs",
       "tags": [ "driving safety","driving under the influence","risk","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana","pot","weed" ],
-      "category": "Cannabis",
+      "category": "Drugs",
       "estimates": {
         "byAll": {
             "labels": [ "Never","Once","Twice or more","Not sure" ],
@@ -364,7 +364,7 @@
     },
     {
       "pmoID":11,
-      "pmoName":"Tried Cannabis for the First Time",
+      "pmoName":"Tried Cannabis for the First Time in the Last Year",
       "description":"Percentage that tried cannabis for the first time in the past year",
       "tags": [ "first use","first-time","start","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana","pot","weed" ],
       "category": "Cannabis",
@@ -538,7 +538,7 @@
     {
       "pmoID":15,
       "pmoName":"Driving After Using Cannabis",
-      "description":"Frequency of driving a vehicle within an hour of using cannabis",
+      "description":"Frequency of driving a vehicle within an hour of using cannabis in the past year",
       "tags": [ "driving under the influence","hash","hashish","pot","weed" ],
       "category": "Cannabis",
       "estimates": {
@@ -564,27 +564,27 @@
     {
       "pmoID":16,
       "pmoName":"View of Driving High Versus Driving Drunk",
-      "description":"Opinion on the safety of driving after using cannabis compared with alcohol",
+      "description":"Opinion driving after using cannabis compared with alcohol",
       "tags": [ "alcohol","driving safety","driving under the influence","perceived risk","perceived safety","pot","weed","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
-            "labels": [ "Agree","Disagree","Not sure" ],
+            "labels": [ "Driving high is safer","Driving high is not safer","Not sure" ],
             "series": [ { "name": "Durham Region", "data": [27,42,31], "cl": [[37,17],[51,34],[37,25]],"notes": ["Interpret with caution",null,null] },{ "name": "Ontario", "data": [25,42,33], "cl": [[27,22],[45,40],[35,30]],"notes": [null,null,null] } ]
         },
         "bySex": {
-            "labels": [ "Agree","Disagree","Not sure" ],
+            "labels": [ "Driving high is safer","Driving high is not safer","Not sure" ],
             "series": [ { "name": "Durham Region Male", "data": [29,40,31], "cl": [[43,14],[56,24],[40,22]],"notes": ["Interpret with caution","Interpret with caution",null] },{ "name": "Durham Region Female", "data": [24,45,31], "cl": [[33,16],[56,34],[40,21]],"notes": ["Interpret with caution",null,"Interpret with caution"] },{ "name": "Ontario Male", "data": [29,36,35], "cl": [[33,25],[40,33],[38,31]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [20,49,31], "cl": [[23,18],[52,45],[34,28]],"notes": [null,null,null] } ]
         },
         "byGrade": {
-            "labels": [ "Agree","Disagree","Not sure" ],
+            "labels": [ "Driving high is safer","Driving high is not safer","Not sure" ],
             "series": [ { "name": "Durham Region Grades 9 to 12", "data": [27,42,31], "cl": [[37,17],[51,34],[37,25]],"notes": ["Interpret with caution",null,null] },{ "name": "Ontario Grades 9 to 12", "data": [25,42,33], "cl": [[27,22],[45,40],[35,30]],"notes": [null,null,null] } ]
         }
       }
     },
     {
       "pmoID":3,
-      "pmoName":"Alcohol use",
+      "pmoName":"Alcohol Use in the Past Year",
       "description":"Frequncy of drinking alcohol in past 12 months",
       "tags": [ "alcohol","alcohol consumption","liquor","rum","whiskey","vodka","gin","beer" ],
       "category": "Alcohol",
@@ -610,7 +610,7 @@
     },
     {
       "pmoID":17,
-      "pmoName":"Alcohol Use",
+      "pmoName":"Alcohol Use in the Past Month",
       "description":"Frequency of drinking alcohol in the past month",
       "tags": [ "liquor","rum","whiskey","vodka","gin","beer","party" ],
       "category": "Alcohol",
@@ -652,7 +652,7 @@
     },
     {
       "pmoID":20,
-      "pmoName":"Driving After Drinking Alcohol",
+      "pmoName":"Driving After Drinking Alcohol in the Past Year",
       "description":"Frequency of driving a vehicle within an hour of drinking 2 or more drinks of alcohol",
       "tags": [ "alcohol","drinking and driving","driving under the influence" ],
       "category": "Alcohol",
@@ -679,7 +679,7 @@
     {
       "pmoID":19,
       "pmoName":"Riding with an Alcohol Impaired Driver",
-      "description":"Frequency of being a passenger riding with a driver who has been drinking alcohol",
+      "description":"Frequency of being a passenger riding with a driver who had been drinking alcohol",
       "tags": [ "alcohol","drinking and driving","driving under the influence" ],
       "category": "Alcohol",
       "estimates": {
@@ -705,7 +705,7 @@
     {
       "pmoID":42,
       "pmoName":"Harmful Drinking",
-      "description":"Frequency with signs of an alcohol use disorder according to the AUDIT screening tool",
+      "description":"Frequency with signs of an alcohol use disorder in the past year, according to the AUDIT screening tool",
       "tags": [ "addiction","alcohol misuse","binge drinking","problem drinking","bender","party" ],
       "category": "Alcohol",
       "estimates": {
@@ -731,7 +731,7 @@
     {
       "pmoID":5,
       "pmoName":"Binge Drinking",
-      "description":"Frequency of having 5 or more drinks of alcohol on the same occasion in the past month",
+      "description":"Had 5 or more drinks of alcohol on the same occasion in the past month",
       "tags": [ "alcohol","alcohol misuse","hazardous drinking","liquor","rum","whiskey","vodka","gin","beer" ],
       "category": "Alcohol",
       "estimates": {
@@ -846,7 +846,7 @@
     {
       "pmoID":24,
       "pmoName":"Electronic Cigarette Use",
-      "description":"Frequency of vaping in the past year",
+      "description":"Frequency of vaping or e-cigarette use in the past year",
       "tags": [ "e-cig","e-cigarette","e-cigarettes","e-cigs","vape pen","vape pipes","vaporizer","juul" ],
       "category": "Tobacco",
       "estimates": {
@@ -872,7 +872,7 @@
     {
       "pmoID":26,
       "pmoName":"Smokeless Tobacco Use",
-      "description":"Frequecy of using chewing tobacco, snuff, plug or dipping tobacco in the past year",
+      "description":"Frequency of using chewing tobacco, snuff, plug or dipping tobacco in the past year",
       "tags": [ "chewing tobacco","dipping tobacco","plug","sniff" ],
       "category": "Tobacco",
       "estimates": {
