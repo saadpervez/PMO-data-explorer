@@ -38,7 +38,7 @@
       {% include search.html %}
       {% include dataindex.html %}
 {% endif %}
-			<h1 id="wb-cont" class="wb-inv" property="name">{{ page.title }}</h1>
+      <h1 id="wb-cont" {% if page.permalink == "/" %}class="wb-inv"{% endif %} property="name">{{ page.title }}</h1>
 			{{ content }}
 		</main>
 {% unless page.footer == "false" %}
