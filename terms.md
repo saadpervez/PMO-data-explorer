@@ -7,7 +7,7 @@ description: "Terms and conditions for this site and our privacy statement"
 secondarymenu: "false"
 ---
 ## Acceptance of the Terms of Use
-Your access to and the use of the RRFSS Data Explorer website ("Website") constitutes your acceptance of and compliance with the terms and conditions set out below. If you do not agree with the terms and conditions, immediately exit this website. The Durham Region Health Department ("DRHD") may change or modify the terms of use at any time and without notice. You are encouraged to check here regularly to ensure your continued acceptance.
+Your access to and the use of the DiscoverMe website ("Website") constitutes your acceptance of and compliance with the terms and conditions set out below. If you do not agree with the terms and conditions, immediately exit this website. The Durham Region Health Department ("DRHD") may change or modify the terms of use at any time and without notice. You are encouraged to check here regularly to ensure your continued acceptance.
 ## Using files located on third-party servers
 To improve the functionality of the Website, certain files (such as open source libraries, images and scripts) may be delivered automatically to your browser via a trusted third-party server or content delivery network. The delivery of these files is intended to provide a seamless user experience by speeding response times and avoiding the need for each visitor to download these files. Where applicable, specific privacy statements covering these files are included in our [Privacy Statement]({{ page.url }}/#privacy-statement).
 ## Linking to third-party sites
@@ -19,11 +19,11 @@ DRHD is the owner of the content on the Website. Unless otherwise indicated, the
 ### Source Code
 The code for this website is in the public domain. No licensing notice is necessary. This website uses open source software which may be subject to additional licensing terms.
 ### Use of DRHD Materials
-You are free to reproduce and use content on the Website for any purpose, provided you adhere to the terms of the CC-BY-SA license, above. You can reproduce and use content on the Website for non-commercial purposes,such as:
-- To support program planning and evaluation
-- To advocate for public policy development
-- To improve community awareness of risks
-- For educational use and for research.
+You are free to reproduce and use content on the Website for any purpose, provided you adhere to the terms of the CC-BY-SA license, above. You can reproduce and use content on the Website for non-commercial purposes, such as:
+- Support program planning and evaluation
+- Advocate for public policy development
+- Improve community awareness of risks
+- Other educational or research uses
 
 ## Risks
 DRHD takes care to publish only accurate information. From time to time errors do occur. For this reason, the Website is provided to you as is and without warranties of any kind.
@@ -59,4 +59,7 @@ The Website may contain links to other sites. If you click on a third-party link
 ## Changes to This Privacy Notice
 DRHD may update this Privacy Notice from time to time. We encourage you to review this page periodically for any changes.
 ## Contact Us
-If you have any questions about our privacy notice, do not hesitate to [contact us]({{ site.url }}/contact-us).
+If you have any questions about our privacy notice, do not hesitate to contact us using one of the following links:
+- [Open an issue](https://github.com/DurhamRegionHARP/PMO-data-explorer/issues/new) on the project's repository
+- [Tweet us](https://twitter.com/DurhamEpis) @DurhamEpis on Twitter
+- [Fill out and submit]({{ page.url }}) our feedback form
