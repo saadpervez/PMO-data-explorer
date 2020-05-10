@@ -4,7 +4,11 @@
   "main": "index.html",
   "repository": "https://github.com/HealthAnalyticsResearchPolicy/PMO-data-explorer.git",
   "author": "James Lane <lanejames35@gmail.com>",
-  "license": "",
+  "license": "MIT",
+  "scripts": {
+    "dev": "jekyll serve",
+    "build": "jekyll build"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
     "bootstrap-sass": "^3.4.1",
@@ -13,7 +17,6 @@
     "chartist-plugin-accessibility": "0.0.5",
     "chartist-plugin-legend": "^0.6.2",
     "chartist-plugin-tooltips": "0.0.17",
-    "gulp-uglify": "^3.0.2",
     "magnific-popup": "^1.1.0"
   },
   "devDependencies": {
@@ -23,6 +26,7 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0-beta.2",
     "gulp-concat": "^2.6.1",
-    "gulp-sourcemaps": "^2.6.5"
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
   }
 }
