@@ -10,7 +10,16 @@
   function searchData(task){
     fetch('https://cdn.jsdelivr.net/gh/DurhamRegionHARP/PMO-data-explorer@gh-pages/_data/pmo.json')
       .then(function(response){
-        return response.json();
+        if(!response.ok){
+          const snackbar = document.getElementById('snackbar-error');
+          snackbar.classList.add('show');
+          // Remove the "show" class after 3 seconds
+          setTimeout(function(){
+            snackbar.classList.remove('show');
+          }, 3000); 
+        } else {
+          return response.json();
+        }
       })
       .then(function(data){
         const searchFunc = {
@@ -42,9 +51,13 @@
         });           
       })
       .catch(function(error){
-        // TODO 
-        // Give the user some feedback here
         console.log(error);
+        const snackbar = document.getElementById('snackbar-error');
+        snackbar.classList.add('show');
+        // Remove the "show" class after 3 seconds
+        setTimeout(function(){
+          snackbar.classList.remove('show');
+        }, 3000);
       });
   }
   // Handle the result
