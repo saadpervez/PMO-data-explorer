@@ -261,6 +261,13 @@
   }
 }
 
+// View control buttons
+.view-control {
+  .overlay-lnk {
+    margin-left: 8px;
+  }
+}
+
 // Snackbar
 .snackbar {
   display: none;
@@ -274,7 +281,7 @@
   position: fixed;
   z-index: 1;
   left: 50%;
-  top: 30px;
+  top: 15px;
   &.show{
     display: block;
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
