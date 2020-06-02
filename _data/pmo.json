@@ -9,19 +9,19 @@
       "estimates": {
         "byAll": {
             "labels": [ "No","Yes" ],
-            "series": [ { "name": "Durham Region", "data": [95,5], "cl": [[98,91],[9,2]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario", "data": [92,8], "cl": [[93,92],[8,7]],"notes": [null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [95,5], "cl": [[99,91],[9,1]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario", "data": [92,8], "cl": [[94,91],[9,6]],"notes": [null,null] } ]
         },
         "bySex": {
             "labels": [ "No","Yes" ],
-            "series": [ { "name": "Durham Region Male", "data": [92,null], "cl": [[98,86],[null,null]],"notes": [null,"Not releasable due to small numbers"] },{ "name": "Durham Region Female", "data": [97,3], "cl": [[99,96],[4,1]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario Male", "data": [90,10], "cl": [[92,89],[11,8]],"notes": [null,null] },{ "name": "Ontario Female", "data": [95,5], "cl": [[95,94],[6,5]],"notes": [null,null] } ]
+            "series": [ { "name": "Durham Region Male", "data": [92,null], "cl": [[99,85],[null,null]],"notes": [null,"Not releasable due to small numbers"] },{ "name": "Durham Region Female", "data": [97,3], "cl": [[99,95],[5,1]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario Male", "data": [90,10], "cl": [[92,89],[11,8]],"notes": [null,null] },{ "name": "Ontario Female", "data": [95,5], "cl": [[96,93],[7,4]],"notes": [null,null] } ]
         },
         "byGrade": {
             "labels": [ "No","Yes" ],
-            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [100,null], "cl": [[100,99],[null,null]],"notes": ["Interpret with caution","Not releasable due to small numbers"] },{ "name": "Durham Region Grades 9 to 12", "data": [93,7], "cl": [[97,89],[11,3]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario Grades 7 and 8", "data": [100,null], "cl": [[100,99],[null,null]],"notes": [null,"Not releasable due to small numbers"] },{ "name": "Ontario Grades 9 to 12", "data": [91,9], "cl": [[92,91],[9,8]],"notes": [null,null] } ]
+            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [100,null], "cl": [[100,99],[null,null]],"notes": ["Interpret with caution","Not releasable due to small numbers"] },{ "name": "Durham Region Grades 9 to 12", "data": [93,7], "cl": [[98,89],[11,2]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario Grades 7 and 8", "data": [100,null], "cl": [[100,99],[null,null]],"notes": [null,"Not releasable due to small numbers"] },{ "name": "Ontario Grades 9 to 12", "data": [91,9], "cl": [[93,90],[10,7]],"notes": [null,null] } ]
         },
         "byYear": {
             "labels": [ "2009","2011","2013","2015","2017","2019" ],
-            "series": [ { "name": "Durham Region", "data": [9,7,6,10,7,5], "cl": [[11,7],[10,3],[8,4],[13,6],[10,4],[9,2]],"notes": [null,"Interpret with caution",null,"Interpret with caution","Interpret with caution","Interpret with caution"] },{ "name": "Ontario", "data": [10,8,7,8,7,8], "cl": [[11,8],[9,7],[8,6],[9,7],[8,6],[8,7]],"notes": [null,null,null,null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [9,7,6,10,7,5], "cl": [[11,6],[10,3],[8,4],[14,6],[10,4],[9,1]],"notes": [null,"Interpret with caution",null,"Interpret with caution","Interpret with caution","Interpret with caution"] },{ "name": "Ontario", "data": [10,8,7,8,7,8], "cl": [[11,8],[10,6],[9,5],[9,6],[8,5],[9,6]],"notes": [null,null,null,null,null,null] } ]
         }
       },
       "trendTests": [ "Between 2017 and 2019 illicit drug use in lifetime stayed about the same in Durham Region", "Between 2009 and 2019 illicit drug use in lifetime stayed the same in Durham Region", "Durham Region and Ontario have similar rates of illicit drug use in lifetime since 2009"  ]
@@ -35,19 +35,19 @@
       "estimates": {
         "byAll": {
             "labels": [ "No","Yes" ],
-            "series": [ { "name": "Durham Region", "data": [95,5], "cl": [[97,93],[7,3]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario", "data": [95,5], "cl": [[95,94],[6,5]],"notes": [null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [95,5], "cl": [[98,93],[7,2]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario", "data": [95,5], "cl": [[96,94],[6,4]],"notes": [null,null] } ]
         },
         "bySex": {
             "labels": [ "No","Yes" ],
-            "series": [ { "name": "Durham Region Male", "data": [96,null], "cl": [[99,94],[null,null]],"notes": [null,"Not releasable due to small numbers"] },{ "name": "Durham Region Female", "data": [95,5], "cl": [[97,92],[8,3]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario Male", "data": [95,5], "cl": [[96,94],[6,4]],"notes": [null,null] },{ "name": "Ontario Female", "data": [94,6], "cl": [[95,94],[6,5]],"notes": [null,null] } ]
+            "series": [ { "name": "Durham Region Male", "data": [96,null], "cl": [[99,93],[null,null]],"notes": [null,"Not releasable due to small numbers"] },{ "name": "Durham Region Female", "data": [95,5], "cl": [[97,92],[8,3]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario Male", "data": [95,5], "cl": [[97,94],[6,3]],"notes": [null,null] },{ "name": "Ontario Female", "data": [94,6], "cl": [[96,93],[7,4]],"notes": [null,null] } ]
         },
         "byGrade": {
             "labels": [ "No","Yes" ],
-            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [91,9], "cl": [[94,88],[12,6]],"notes": ["Interpret with caution","Interpret with caution"] },{ "name": "Durham Region Grades 9 to 12", "data": [97,3], "cl": [[99,96],[4,1]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario Grades 7 and 8", "data": [92,8], "cl": [[94,91],[9,6]],"notes": [null,null] },{ "name": "Ontario Grades 9 to 12", "data": [96,4], "cl": [[96,95],[5,4]],"notes": [null,null] } ]
+            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [91,9], "cl": [[94,88],[12,6]],"notes": ["Interpret with caution","Interpret with caution"] },{ "name": "Durham Region Grades 9 to 12", "data": [97,3], "cl": [[99,95],[5,1]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario Grades 7 and 8", "data": [92,8], "cl": [[94,91],[9,6]],"notes": [null,null] },{ "name": "Ontario Grades 9 to 12", "data": [96,4], "cl": [[97,94],[6,3]],"notes": [null,null] } ]
         },
         "byYear": {
             "labels": [ "2009","2011","2013","2015","2017","2019" ],
-            "series": [ { "name": "Durham Region", "data": [11,16,15,10,14,13], "cl": [[14,8],[20,13],[17,13],[13,8],[16,11],[15,11]],"notes": [null,null,null,null,null,null] },{ "name": "Ontario", "data": [14,17,14,10,14,13], "cl": [[15,12],[19,15],[16,13],[12,9],[16,13],[13,12]],"notes": [null,null,null,null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [11,16,15,10,14,13], "cl": [[14,7],[20,12],[17,13],[13,8],[17,10],[16,10]],"notes": [null,null,null,null,null,null] },{ "name": "Ontario", "data": [14,17,14,10,14,13], "cl": [[16,12],[19,14],[17,12],[12,8],[16,12],[14,11]],"notes": [null,null,null,null,null,null] } ]
         }
       },
       "trendTests": [ "Between 2017 and 2019 non-medical use of cold medication or inhalants stayed about the same in Durham Region", "Between 2009 and 2019 non-medical use of cold medication or inhalants stayed the same in Durham Region", "Durham Region and Ontario have similar rates of non-medical use of cold medication or inhalants since 2009"  ]
@@ -55,51 +55,51 @@
     {
       "pmoID":7,
       "pmoName":"Non-Medical Tranquilizer Use",
-      "description":"Used sedatives or tranquilizers like Ativan, Vallium, or Xanax, at least once in life",
+      "description":"Used sedatives or tranquilizers once in life",
       "tags": [ "Ativan","Valium","Xanax","bars","benzodiazapine","benzos","downers","tranqs","tranquilizer","xans" ],
       "category": "Drugs",
       "estimates": {
         "byAll": {
-            "labels": [ "No","Yes" ],
-            "series": [ { "name": "Durham Region", "data": [96,4], "cl": [[99,94],[6,1]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario", "data": [97,3], "cl": [[97,96],[4,3]],"notes": [null,null] } ]
+            "labels": [ "No","Yes run" ],
+            "series": [ { "name": "Durham Region", "data": [96,4], "cl": [[99,94],[6,1]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario", "data": [97,3], "cl": [[98,95],[5,2]],"notes": [null,null] } ]
         },
         "bySex": {
-            "labels": [ "No","Yes" ],
-            "series": [ { "name": "Durham Region Male", "data": [95,null], "cl": [[98,91],[null,null]],"notes": [null,"Not releasable due to small numbers"] },{ "name": "Durham Region Female", "data": [98,null], "cl": [[100,96],[null,null]],"notes": [null,"Not releasable due to small numbers"] },{ "name": "Ontario Male", "data": [96,4], "cl": [[97,95],[5,3]],"notes": [null,null] },{ "name": "Ontario Female", "data": [97,3], "cl": [[98,96],[4,2]],"notes": [null,null] } ]
+            "labels": [ "No","Yes run" ],
+            "series": [ { "name": "Durham Region Male", "data": [95,null], "cl": [[99,90],[null,null]],"notes": [null,"Not releasable due to small numbers"] },{ "name": "Durham Region Female", "data": [98,null], "cl": [[100,95],[null,null]],"notes": [null,"Not releasable due to small numbers"] },{ "name": "Ontario Male", "data": [96,4], "cl": [[98,95],[5,2]],"notes": [null,null] },{ "name": "Ontario Female", "data": [97,3], "cl": [[98,96],[4,2]],"notes": [null,null] } ]
         },
         "byGrade": {
-            "labels": [ "No","Yes" ],
-            "series": [ { "name": "Durham Region Grades 9 to 12", "data": [96,4], "cl": [[99,94],[6,1]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario Grades 9 to 12", "data": [97,3], "cl": [[97,96],[4,3]],"notes": [null,null] } ]
+            "labels": [ "No","Yes run" ],
+            "series": [ { "name": "Durham Region Grades 9 to 12", "data": [96,4], "cl": [[99,94],[6,1]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario Grades 9 to 12", "data": [97,3], "cl": [[98,95],[5,2]],"notes": [null,null] } ]
         },
         "byYear": {
             "labels": [ "2009","2011","2013","2015","2017","2019" ],
-            "series": [ { "name": "Durham Region", "data": [2,3,null,3,null,4], "cl": [[2,1],[4,2],[null,null],[5,2],[null,null],[6,1]],"notes": ["Interpret with caution",null,"Not releasable due to small numbers","Interpret with caution","Not releasable due to small numbers","Interpret with caution"] },{ "name": "Ontario", "data": [2,2,3,2,3,3], "cl": [[2,2],[3,2],[3,2],[3,2],[4,3],[4,3]],"notes": [null,null,null,null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [2,3,null,3,null,4], "cl": [[3,1],[5,2],[null,null],[5,1],[null,null],[6,1]],"notes": ["Interpret with caution",null,"Not releasable due to small numbers","Interpret with caution","Not releasable due to small numbers","Interpret with caution"] },{ "name": "Ontario", "data": [2,2,3,2,3,3], "cl": [[3,1],[3,1],[4,2],[3,1],[4,2],[5,2]],"notes": [null,null,null,null,null,null] } ]
         }
       },
       "trendTests": [ "Between 2017 and 2019 non-medical tranquilizer use stayed about the same in Durham Region", "Between 2009 and 2019 non-medical tranquilizer use stayed the same in Durham Region", "Durham Region and Ontario have similar rates of non-medical tranquilizer use since 2009"  ]
     },
     {
       "pmoID":2,
-      "pmoName":"Non-Medical Opioid Use",
-      "description":"How often opioids were used in the past year. Opioids are drugs like Codeine, OxyNeo, Percocet, Percodan, and Tylenol 3.",
+      "pmoName":"Opioid Use",
+      "description":"How often opioids were used in the past year",
       "tags": [ "Codeine","OxyNeo","Percocet","Percodan","Tylenol 3","addiction","drug problem","heroin","opioids","pain relief pills" ],
       "category": "Drugs",
       "estimates": {
         "byAll": {
             "labels": [ "Did not use","Once or twice","Three or more times" ],
-            "series": [ { "name": "Durham Region", "data": [91,4,5], "cl": [[93,89],[6,2],[6,3]],"notes": [null,"Interpret with caution",null] },{ "name": "Ontario", "data": [89,5,6], "cl": [[90,88],[5,4],[7,6]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [91,4,5], "cl": [[94,88],[7,2],[6,3]],"notes": [null,"Interpret with caution",null] },{ "name": "Ontario", "data": [89,5,6], "cl": [[90,88],[6,4],[8,5]],"notes": [null,null,null] } ]
         },
         "bySex": {
             "labels": [ "Did not use","Once or twice","Three or more times" ],
-            "series": [ { "name": "Durham Region Male", "data": [91,5,3], "cl": [[94,88],[8,2],[5,2]],"notes": [null,"Interpret with caution","Interpret with caution"] },{ "name": "Durham Region Female", "data": [91,null,6], "cl": [[93,88],[null,null],[8,4]],"notes": [null,"Not releasable due to small numbers","Interpret with caution"] },{ "name": "Ontario Male", "data": [89,5,6], "cl": [[90,88],[6,4],[7,5]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [89,4,7], "cl": [[90,88],[5,4],[8,6]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Male", "data": [91,5,3], "cl": [[95,88],[9,2],[5,1]],"notes": [null,"Interpret with caution","Interpret with caution"] },{ "name": "Durham Region Female", "data": [91,null,6], "cl": [[94,88],[null,null],[8,3]],"notes": [null,"Not releasable due to small numbers","Interpret with caution"] },{ "name": "Ontario Male", "data": [89,5,6], "cl": [[91,88],[6,4],[7,5]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [89,4,7], "cl": [[91,87],[5,3],[8,5]],"notes": [null,null,null] } ]
         },
         "byGrade": {
             "labels": [ "Did not use","Once or twice","Three or more times" ],
-            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [91,5,4], "cl": [[94,89],[6,4],[5,2]],"notes": ["Interpret with caution","Interpret with caution","Not releasable due to small numbers"] },{ "name": "Durham Region Grades 9 to 12", "data": [91,null,5], "cl": [[94,88],[null,null],[6,4]],"notes": [null,"Not releasable due to small numbers","Interpret with caution"] },{ "name": "Ontario Grades 7 and 8", "data": [89,5,6], "cl": [[91,88],[5,4],[7,5]],"notes": [null,null,null] },{ "name": "Ontario Grades 9 to 12", "data": [89,5,6], "cl": [[90,88],[5,4],[7,6]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [91,5,4], "cl": [[95,88],[7,3],[6,1]],"notes": ["Interpret with caution","Interpret with caution","Not releasable due to small numbers"] },{ "name": "Durham Region Grades 9 to 12", "data": [91,null,5], "cl": [[94,87],[null,null],[7,3]],"notes": [null,"Not releasable due to small numbers","Interpret with caution"] },{ "name": "Ontario Grades 7 and 8", "data": [89,5,6], "cl": [[91,87],[6,3],[8,4]],"notes": [null,null,null] },{ "name": "Ontario Grades 9 to 12", "data": [89,5,6], "cl": [[90,88],[6,3],[8,5]],"notes": [null,null,null] } ]
         },
         "byYear": {
             "labels": [ "2009","2011","2013","2015","2017","2019" ],
-            "series": [ { "name": "Durham Region", "data": [20,16,10,10,10,9], "cl": [[24,15],[19,13],[14,6],[14,7],[13,7],[11,7]],"notes": [null,null,"Interpret with caution",null,null,null] },{ "name": "Ontario", "data": [18,14,12,10,11,11], "cl": [[19,17],[15,13],[14,11],[11,9],[12,9],[12,10]],"notes": [null,null,null,null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [20,16,10,10,10,9], "cl": [[25,14],[19,12],[14,5],[14,7],[13,6],[12,6]],"notes": [null,null,"Interpret with caution",null,null,null] },{ "name": "Ontario", "data": [18,14,12,10,11,11], "cl": [[19,16],[16,12],[14,11],[11,8],[12,9],[12,10]],"notes": [null,null,null,null,null,null] } ]
         }
       },
       "trendTests": [ "Between 2017 and 2019 opioid use stayed about the same in Durham Region", "Between 2009 and 2019 opioid use decreased in Durham Region", "Durham Region and Ontario have similar rates of opioid use since 2009"  ]
@@ -113,19 +113,15 @@
       "estimates": {
         "byAll": {
             "labels": [ "Difficult","Easy","Not sure" ],
-            "series": [ { "name": "Durham Region", "data": [63,8,29], "cl": [[72,53],[12,4],[36,22]],"notes": [null,"Interpret with caution",null] },{ "name": "Ontario", "data": [55,12,33], "cl": [[57,53],[14,10],[35,31]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [63,8,29], "cl": [[72,53],[13,4],[37,21]],"notes": [null,"Interpret with caution",null] },{ "name": "Ontario", "data": [55,12,33], "cl": [[57,52],[14,10],[36,30]],"notes": [null,null,null] } ]
         },
         "bySex": {
             "labels": [ "Difficult","Easy","Not sure" ],
-            "series": [ { "name": "Durham Region Male", "data": [64,7,30], "cl": [[72,55],[10,3],[38,22]],"notes": [null,"Interpret with caution",null] },{ "name": "Durham Region Female", "data": [61,10,29], "cl": [[72,51],[17,4],[37,20]],"notes": [null,"Not releasable due to small numbers",null] },{ "name": "Ontario Male", "data": [55,12,33], "cl": [[58,51],[15,9],[37,30]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [55,12,32], "cl": [[58,52],[14,10],[35,30]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Male", "data": [64,7,30], "cl": [[72,55],[11,3],[38,21]],"notes": [null,"Interpret with caution",null] },{ "name": "Durham Region Female", "data": [61,10,29], "cl": [[72,50],[17,3],[38,19]],"notes": [null,"Not releasable due to small numbers",null] },{ "name": "Ontario Male", "data": [55,12,33], "cl": [[58,51],[15,9],[37,30]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [55,12,32], "cl": [[58,52],[15,10],[36,29]],"notes": [null,null,null] } ]
         },
         "byGrade": {
             "labels": [ "Difficult","Easy","Not sure" ],
-            "series": [ { "name": "Durham Region Grades 9 to 12", "data": [63,8,29], "cl": [[72,53],[12,4],[36,22]],"notes": [null,"Interpret with caution",null] },{ "name": "Ontario Grades 9 to 12", "data": [55,12,33], "cl": [[57,53],[14,10],[35,31]],"notes": [null,null,null] } ]
-        },
-        "byYear": {
-            "labels": [ "2009","2011","2013","2015","2017","2019" ],
-            "series": [ { "name": "Durham Region", "data": [20,16,10,10,10,9], "cl": [[24,15],[19,13],[14,6],[14,7],[13,7],[11,7]],"notes": [null,null,"Interpret with caution",null,null,null] },{ "name": "Ontario", "data": [18,14,12,10,11,11], "cl": [[19,17],[15,13],[14,11],[11,9],[12,9],[12,10]],"notes": [null,null,null,null,null,null] } ]
+            "series": [ { "name": "Durham Region Grades 9 to 12", "data": [63,8,29], "cl": [[72,53],[13,4],[37,21]],"notes": [null,"Interpret with caution",null] },{ "name": "Ontario Grades 9 to 12", "data": [55,12,33], "cl": [[57,52],[14,10],[36,30]],"notes": [null,null,null] } ]
         }
       }
     },
@@ -138,19 +134,15 @@
       "estimates": {
         "byAll": {
             "labels": [ "Difficult","Easy","Not sure" ],
-            "series": [ { "name": "Durham Region", "data": [59,10,31], "cl": [[66,52],[14,6],[38,25]],"notes": [null,"Interpret with caution",null] },{ "name": "Ontario", "data": [51,11,37], "cl": [[54,49],[13,10],[39,35]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [59,10,31], "cl": [[67,51],[14,5],[39,24]],"notes": [null,"Interpret with caution",null] },{ "name": "Ontario", "data": [51,11,37], "cl": [[54,49],[14,9],[40,35]],"notes": [null,null,null] } ]
         },
         "bySex": {
             "labels": [ "Difficult","Easy","Not sure" ],
-            "series": [ { "name": "Durham Region Male", "data": [60,7,33], "cl": [[68,53],[11,3],[40,25]],"notes": [null,"Interpret with caution",null] },{ "name": "Durham Region Female", "data": [57,13,30], "cl": [[65,50],[19,6],[38,21]],"notes": [null,"Interpret with caution",null] },{ "name": "Ontario Male", "data": [51,12,37], "cl": [[54,48],[15,9],[40,34]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [52,10,37], "cl": [[56,49],[13,8],[40,35]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Male", "data": [60,7,33], "cl": [[68,52],[12,3],[40,25]],"notes": [null,"Interpret with caution",null] },{ "name": "Durham Region Female", "data": [57,13,30], "cl": [[65,50],[20,6],[39,21]],"notes": [null,"Interpret with caution",null] },{ "name": "Ontario Male", "data": [51,12,37], "cl": [[54,47],[16,9],[41,33]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [52,10,37], "cl": [[56,48],[13,8],[41,34]],"notes": [null,null,null] } ]
         },
         "byGrade": {
             "labels": [ "Difficult","Easy","Not sure" ],
-            "series": [ { "name": "Durham Region Grades 9 to 12", "data": [59,10,31], "cl": [[66,52],[14,6],[38,25]],"notes": [null,"Interpret with caution",null] },{ "name": "Ontario Grades 9 to 12", "data": [51,11,37], "cl": [[54,49],[13,10],[39,35]],"notes": [null,null,null] } ]
-        },
-        "byYear": {
-            "labels": [ "2009","2011","2013","2015","2017","2019" ],
-            "series": [ { "name": "Durham Region", "data": [20,16,10,10,10,9], "cl": [[24,15],[19,13],[14,6],[14,7],[13,7],[11,7]],"notes": [null,null,"Interpret with caution",null,null,null] },{ "name": "Ontario", "data": [18,14,12,10,11,11], "cl": [[19,17],[15,13],[14,11],[11,9],[12,9],[12,10]],"notes": [null,null,null,null,null,null] } ]
+            "series": [ { "name": "Durham Region Grades 9 to 12", "data": [59,10,31], "cl": [[67,51],[14,5],[39,24]],"notes": [null,"Interpret with caution",null] },{ "name": "Ontario Grades 9 to 12", "data": [51,11,37], "cl": [[54,49],[14,9],[40,35]],"notes": [null,null,null] } ]
         }
       }
     },
@@ -163,40 +155,36 @@
       "estimates": {
         "byAll": {
             "labels": [ "Difficult","Easy","Not sure" ],
-            "series": [ { "name": "Durham Region", "data": [56,10,34], "cl": [[66,46],[16,4],[41,27]],"notes": [null,"Interpret with caution",null] },{ "name": "Ontario", "data": [52,10,38], "cl": [[54,50],[12,9],[40,36]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [56,10,34], "cl": [[66,46],[17,4],[42,26]],"notes": [null,"Interpret with caution",null] },{ "name": "Ontario", "data": [52,10,38], "cl": [[54,50],[12,9],[40,35]],"notes": [null,null,null] } ]
         },
         "bySex": {
             "labels": [ "Difficult","Easy","Not sure" ],
-            "series": [ { "name": "Durham Region Male", "data": [53,13,34], "cl": [[66,40],[21,5],[43,25]],"notes": [null,"Not releasable due to small numbers",null] },{ "name": "Durham Region Female", "data": [59,null,34], "cl": [[67,52],[null,null],[42,26]],"notes": [null,"Not releasable due to small numbers",null] },{ "name": "Ontario Male", "data": [52,11,36], "cl": [[55,49],[14,9],[40,33]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [52,10,39], "cl": [[55,49],[11,8],[42,36]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Male", "data": [53,13,34], "cl": [[66,40],[21,5],[44,25]],"notes": [null,"Not releasable due to small numbers",null] },{ "name": "Durham Region Female", "data": [59,null,34], "cl": [[67,51],[null,null],[42,26]],"notes": [null,"Not releasable due to small numbers",null] },{ "name": "Ontario Male", "data": [52,11,36], "cl": [[56,49],[14,9],[40,33]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [52,10,39], "cl": [[55,49],[12,7],[42,35]],"notes": [null,null,null] } ]
         },
         "byGrade": {
             "labels": [ "Difficult","Easy","Not sure" ],
-            "series": [ { "name": "Durham Region Grades 9 to 12", "data": [56,10,34], "cl": [[66,46],[16,4],[41,27]],"notes": [null,"Interpret with caution",null] },{ "name": "Ontario Grades 9 to 12", "data": [52,10,38], "cl": [[54,50],[12,9],[40,36]],"notes": [null,null,null] } ]
-        },
-        "byYear": {
-            "labels": [ "2009","2011","2013","2015","2017","2019" ],
-            "series": [ { "name": "Durham Region", "data": [20,16,10,10,10,9], "cl": [[24,15],[19,13],[14,6],[14,7],[13,7],[11,7]],"notes": [null,null,"Interpret with caution",null,null,null] },{ "name": "Ontario", "data": [18,14,12,10,11,11], "cl": [[19,17],[15,13],[14,11],[11,9],[12,9],[12,10]],"notes": [null,null,null,null,null,null] } ]
+            "series": [ { "name": "Durham Region Grades 9 to 12", "data": [56,10,34], "cl": [[66,46],[17,4],[42,26]],"notes": [null,"Interpret with caution",null] },{ "name": "Ontario Grades 9 to 12", "data": [52,10,38], "cl": [[54,50],[12,9],[40,35]],"notes": [null,null,null] } ]
         }
       }
     },
     {
       "pmoID":8,
-      "pmoName":"View of Drug Use as an Issue at School",
-      "description":"Belief on the size of the problem drug use has in schools today",
+      "pmoName":"View of Drug Use as an Issue",
+      "description":"The size of the problem drug use has in schools today",
       "tags": [ "drug problem","school drug use","school drug use prevalence" ],
       "category": "Drugs",
       "estimates": {
         "byAll": {
             "labels": [ "A big problem","A small problem","Not a problem" ],
-            "series": [ { "name": "Durham Region", "data": [21,64,15], "cl": [[28,14],[71,57],[20,11]],"notes": ["Interpret with caution",null,null] },{ "name": "Ontario", "data": [29,57,14], "cl": [[32,27],[59,55],[15,12]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [21,64,15], "cl": [[29,13],[71,57],[20,10]],"notes": ["Interpret with caution",null,null] },{ "name": "Ontario", "data": [29,57,14], "cl": [[32,26],[59,55],[16,12]],"notes": [null,null,null] } ]
         },
         "bySex": {
             "labels": [ "A big problem","A small problem","Not a problem" ],
-            "series": [ { "name": "Durham Region Male", "data": [17,63,20], "cl": [[27,6],[76,50],[27,13]],"notes": ["Interpret with caution",null,"Interpret with caution"] },{ "name": "Durham Region Female", "data": [26,65,10], "cl": [[33,18],[73,57],[13,6]],"notes": ["Interpret with caution",null,"Interpret with caution"] },{ "name": "Ontario Male", "data": [25,58,18], "cl": [[28,22],[60,55],[20,15]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [34,56,10], "cl": [[37,31],[59,53],[12,8]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Male", "data": [17,63,20], "cl": [[27,6],[77,50],[28,13]],"notes": ["Interpret with caution",null,"Interpret with caution"] },{ "name": "Durham Region Female", "data": [26,65,10], "cl": [[34,17],[74,56],[14,5]],"notes": ["Interpret with caution",null,"Interpret with caution"] },{ "name": "Ontario Male", "data": [25,58,18], "cl": [[28,21],[61,55],[20,15]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [34,56,10], "cl": [[38,30],[60,53],[12,7]],"notes": [null,null,null] } ]
         },
         "byGrade": {
             "labels": [ "A big problem","A small problem","Not a problem" ],
-            "series": [ { "name": "Durham Region Grades 9 to 12", "data": [21,64,15], "cl": [[28,14],[71,57],[20,11]],"notes": ["Interpret with caution",null,null] },{ "name": "Ontario Grades 9 to 12", "data": [29,57,14], "cl": [[32,27],[59,55],[15,12]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Grades 9 to 12", "data": [21,64,15], "cl": [[29,13],[71,57],[20,10]],"notes": ["Interpret with caution",null,null] },{ "name": "Ontario Grades 9 to 12", "data": [29,57,14], "cl": [[32,26],[59,55],[16,12]],"notes": [null,null,null] } ]
         }
       }
     },
@@ -209,15 +197,15 @@
       "estimates": {
         "byAll": {
             "labels": [ "Low risk","High risk","Not sure" ],
-            "series": [ { "name": "Durham Region", "data": [24,67,8], "cl": [[33,16],[75,59],[13,4]],"notes": ["Interpret with caution",null,"Interpret with caution"] },{ "name": "Ontario", "data": [22,65,13], "cl": [[24,20],[68,63],[14,12]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [24,67,8], "cl": [[33,15],[76,59],[14,3]],"notes": ["Interpret with caution",null,"Interpret with caution"] },{ "name": "Ontario", "data": [22,65,13], "cl": [[24,19],[68,62],[15,11]],"notes": [null,null,null] } ]
         },
         "bySex": {
             "labels": [ "Low risk","High risk","Not sure" ],
-            "series": [ { "name": "Durham Region Male", "data": [21,69,10], "cl": [[31,11],[80,58],[15,5]],"notes": ["Interpret with caution",null,"Interpret with caution"] },{ "name": "Durham Region Female", "data": [28,65,null], "cl": [[39,17],[74,57],[null,null]],"notes": ["Interpret with caution",null,"Not releasable due to small numbers"] },{ "name": "Ontario Male", "data": [20,65,16], "cl": [[23,17],[69,61],[18,13]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [24,66,10], "cl": [[26,22],[68,63],[12,9]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Male", "data": [21,69,10], "cl": [[32,11],[80,58],[15,4]],"notes": ["Interpret with caution",null,"Interpret with caution"] },{ "name": "Durham Region Female", "data": [28,65,null], "cl": [[39,16],[75,56],[null,null]],"notes": ["Interpret with caution",null,"Not releasable due to small numbers"] },{ "name": "Ontario Male", "data": [20,65,16], "cl": [[23,16],[69,60],[18,13]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [24,66,10], "cl": [[27,21],[69,63],[12,8]],"notes": [null,null,null] } ]
         },
         "byGrade": {
             "labels": [ "Low risk","High risk","Not sure" ],
-            "series": [ { "name": "Durham Region Grades 9 to 12", "data": [24,67,8], "cl": [[33,16],[75,59],[13,4]],"notes": ["Interpret with caution",null,"Interpret with caution"] },{ "name": "Ontario Grades 9 to 12", "data": [22,65,13], "cl": [[24,20],[68,63],[14,12]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Grades 9 to 12", "data": [24,67,8], "cl": [[33,15],[76,59],[14,3]],"notes": ["Interpret with caution",null,"Interpret with caution"] },{ "name": "Ontario Grades 9 to 12", "data": [22,65,13], "cl": [[24,19],[68,62],[15,11]],"notes": [null,null,null] } ]
         }
       }
     },
@@ -230,15 +218,15 @@
       "estimates": {
         "byAll": {
             "labels": [ "Low risk","High risk","Not sure" ],
-            "series": [ { "name": "Durham Region", "data": [22,60,17], "cl": [[29,15],[69,51],[24,11]],"notes": [null,null,"Interpret with caution"] },{ "name": "Ontario", "data": [18,59,23], "cl": [[20,17],[61,57],[24,21]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [22,60,17], "cl": [[30,15],[70,51],[24,10]],"notes": [null,null,"Interpret with caution"] },{ "name": "Ontario", "data": [18,59,23], "cl": [[21,16],[62,56],[25,20]],"notes": [null,null,null] } ]
         },
         "bySex": {
             "labels": [ "Low risk","High risk","Not sure" ],
-            "series": [ { "name": "Durham Region Male", "data": [24,57,19], "cl": [[38,10],[70,43],[24,14]],"notes": ["Interpret with caution",null,"Interpret with caution"] },{ "name": "Durham Region Female", "data": [20,64,16], "cl": [[26,15],[74,54],[25,6]],"notes": [null,null,"Interpret with caution"] },{ "name": "Ontario Male", "data": [19,56,25], "cl": [[22,16],[60,53],[27,22]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [18,62,20], "cl": [[20,16],[65,59],[23,18]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Male", "data": [24,57,19], "cl": [[38,10],[71,43],[25,14]],"notes": ["Interpret with caution",null,"Interpret with caution"] },{ "name": "Durham Region Female", "data": [20,64,16], "cl": [[26,14],[74,54],[26,5]],"notes": [null,null,"Interpret with caution"] },{ "name": "Ontario Male", "data": [19,56,25], "cl": [[22,16],[61,52],[28,21]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [18,62,20], "cl": [[20,15],[65,59],[23,17]],"notes": [null,null,null] } ]
         },
         "byGrade": {
             "labels": [ "Low risk","High risk","Not sure" ],
-            "series": [ { "name": "Durham Region Grades 9 to 12", "data": [22,60,17], "cl": [[29,15],[69,51],[24,11]],"notes": [null,null,"Interpret with caution"] },{ "name": "Ontario Grades 9 to 12", "data": [18,59,23], "cl": [[20,17],[61,57],[24,21]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Grades 9 to 12", "data": [22,60,17], "cl": [[30,15],[70,51],[24,10]],"notes": [null,null,"Interpret with caution"] },{ "name": "Ontario Grades 9 to 12", "data": [18,59,23], "cl": [[21,16],[62,56],[25,20]],"notes": [null,null,null] } ]
         }
       }
     },
@@ -251,15 +239,15 @@
       "estimates": {
         "byAll": {
             "labels": [ "Low risk","High risk","Not sure" ],
-            "series": [ { "name": "Durham Region", "data": [17,64,19], "cl": [[20,14],[68,60],[23,15]],"notes": [null,null,null] },{ "name": "Ontario", "data": [15,66,19], "cl": [[17,14],[68,64],[20,17]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [17,64,19], "cl": [[21,13],[69,60],[23,14]],"notes": [null,null,null] },{ "name": "Ontario", "data": [15,66,19], "cl": [[17,13],[69,64],[21,17]],"notes": [null,null,null] } ]
         },
         "bySex": {
             "labels": [ "Low risk","High risk","Not sure" ],
-            "series": [ { "name": "Durham Region Male", "data": [19,61,20], "cl": [[23,14],[68,55],[26,14]],"notes": [null,null,null] },{ "name": "Durham Region Female", "data": [16,67,17], "cl": [[19,12],[72,62],[23,12]],"notes": [null,null,null] },{ "name": "Ontario Male", "data": [15,63,21], "cl": [[17,13],[66,60],[23,19]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [15,69,16], "cl": [[17,14],[71,67],[18,14]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Male", "data": [19,61,20], "cl": [[24,13],[68,55],[26,14]],"notes": [null,null,null] },{ "name": "Durham Region Female", "data": [16,67,17], "cl": [[20,11],[72,62],[23,12]],"notes": [null,null,null] },{ "name": "Ontario Male", "data": [15,63,21], "cl": [[18,13],[67,60],[24,19]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [15,69,16], "cl": [[17,13],[72,66],[18,14]],"notes": [null,null,null] } ]
         },
         "byGrade": {
             "labels": [ "Low risk","High risk","Not sure" ],
-            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [16,57,27], "cl": [[20,12],[64,50],[34,20]],"notes": ["Interpret with caution",null,null] },{ "name": "Durham Region Grades 9 to 12", "data": [18,70,13], "cl": [[23,13],[73,66],[17,8]],"notes": ["Interpret with caution",null,"Interpret with caution"] },{ "name": "Ontario Grades 7 and 8", "data": [14,62,24], "cl": [[16,12],[65,59],[27,22]],"notes": [null,null,null] },{ "name": "Ontario Grades 9 to 12", "data": [16,67,17], "cl": [[17,14],[70,65],[19,15]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [16,57,27], "cl": [[21,11],[64,49],[34,20]],"notes": ["Interpret with caution",null,null] },{ "name": "Durham Region Grades 9 to 12", "data": [18,70,13], "cl": [[23,13],[74,65],[18,7]],"notes": ["Interpret with caution",null,"Interpret with caution"] },{ "name": "Ontario Grades 7 and 8", "data": [14,62,24], "cl": [[17,11],[65,58],[27,21]],"notes": [null,null,null] },{ "name": "Ontario Grades 9 to 12", "data": [16,67,17], "cl": [[18,14],[70,64],[19,15]],"notes": [null,null,null] } ]
         }
       }
     },
@@ -272,45 +260,45 @@
       "estimates": {
         "byAll": {
             "labels": [ "Did not use drugs","Not problematic drug use","Problematic drug use" ],
-            "series": [ { "name": "Durham Region", "data": [77,8,15], "cl": [[82,73],[11,6],[18,12]],"notes": [null,null,null] },{ "name": "Ontario", "data": [75,9,15], "cl": [[78,73],[10,8],[17,14]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [77,8,15], "cl": [[82,72],[11,5],[18,11]],"notes": [null,null,null] },{ "name": "Ontario", "data": [75,9,15], "cl": [[78,73],[11,8],[17,13]],"notes": [null,null,null] } ]
         },
         "bySex": {
             "labels": [ "Did not use drugs","Not problematic drug use","Problematic drug use" ],
-            "series": [ { "name": "Durham Region Male", "data": [77,8,15], "cl": [[82,71],[12,4],[19,11]],"notes": [null,"Interpret with caution",null] },{ "name": "Durham Region Female", "data": [77,8,14], "cl": [[82,73],[10,6],[18,11]],"notes": [null,null,null] },{ "name": "Ontario Male", "data": [75,8,17], "cl": [[78,72],[10,6],[20,14]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [76,10,14], "cl": [[79,74],[12,9],[15,12]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Male", "data": [77,8,15], "cl": [[82,71],[13,4],[20,11]],"notes": [null,"Interpret with caution",null] },{ "name": "Durham Region Female", "data": [77,8,14], "cl": [[83,72],[11,6],[18,11]],"notes": [null,null,null] },{ "name": "Ontario Male", "data": [75,8,17], "cl": [[78,71],[11,6],[20,14]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [76,10,14], "cl": [[79,73],[12,8],[16,12]],"notes": [null,null,null] } ]
         },
         "byGrade": {
             "labels": [ "Did not use drugs","Not problematic drug use","Problematic drug use" ],
-            "series": [ { "name": "Durham Region Grades 9 to 12", "data": [77,8,15], "cl": [[82,73],[11,6],[18,12]],"notes": [null,null,null] },{ "name": "Ontario Grades 9 to 12", "data": [75,9,15], "cl": [[78,73],[10,8],[17,14]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Grades 9 to 12", "data": [77,8,15], "cl": [[82,72],[11,5],[18,11]],"notes": [null,null,null] },{ "name": "Ontario Grades 9 to 12", "data": [75,9,15], "cl": [[78,73],[11,8],[17,13]],"notes": [null,null,null] } ]
         },
         "byYear": {
             "labels": [ "2011","2013","2015","2017","2019" ],
-            "series": [ { "name": "Durham Region", "data": [15,18,17,18,15], "cl": [[17,12],[25,11],[24,10],[24,12],[18,12]],"notes": [null,"Interpret with caution","Interpret with caution",null,null] },{ "name": "Ontario", "data": [13,17,16,14,15], "cl": [[15,10],[19,14],[18,14],[16,11],[17,14]],"notes": [null,null,null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [15,18,17,18,15], "cl": [[18,11],[26,10],[25,10],[24,12],[18,11]],"notes": [null,"Interpret with caution","Interpret with caution",null,null] },{ "name": "Ontario", "data": [13,17,16,14,15], "cl": [[16,10],[20,14],[19,13],[16,11],[17,13]],"notes": [null,null,null,null,null] } ]
         }
       },
       "trendTests": [ "Between 2017 and 2019 problematic drug use stayed about the same in Durham Region", "Between 2011 and 2019 problematic drug use stayed the same in Durham Region", "Durham Region and Ontario have similar rates of problematic drug use since 2011"  ]
     },
     {
       "pmoID":9,
-      "pmoName":"Riding with a Drug Impaired Driver",
-      "description":"Frequency of being a passenger riding with a driver who had been using drugs",
-      "tags": [ "driving safety","driving under the influence","risk","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana","pot","weed" ],
-      "category": "Drugs",
+      "pmoName":"Riding with a Cannabis Impaired Driver",
+      "description":"Frequency of being a passenger riding with a driver who had been using cannabis",
+      "tags": [ "driving safety","driving under the influence","risk" ],
+      "category": "Cannabis",
       "estimates": {
         "byAll": {
             "labels": [ "Never","Once","Twice or more","Not sure" ],
-            "series": [ { "name": "Durham Region", "data": [85,3,5,7], "cl": [[88,82],[4,2],[7,3],[9,6]],"notes": [null,"Interpret with caution","Interpret with caution",null] },{ "name": "Ontario", "data": [83,3,7,7], "cl": [[84,82],[4,3],[7,6],[7,6]],"notes": [null,null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [85,3,5,7], "cl": [[88,82],[4,1],[7,3],[10,5]],"notes": [null,"Interpret with caution","Interpret with caution",null] },{ "name": "Ontario", "data": [83,3,7,7], "cl": [[85,82],[4,3],[8,6],[8,5]],"notes": [null,null,null,null] } ]
         },
         "bySex": {
             "labels": [ "Never","Once","Twice or more","Not sure" ],
-            "series": [ { "name": "Durham Region Male", "data": [87,3,4,6], "cl": [[90,84],[4,1],[6,2],[8,4]],"notes": [null,"Interpret with caution","Interpret with caution",null] },{ "name": "Durham Region Female", "data": [82,3,6,9], "cl": [[86,79],[4,2],[8,4],[12,5]],"notes": [null,"Interpret with caution","Interpret with caution","Interpret with caution"] },{ "name": "Ontario Male", "data": [84,3,7,7], "cl": [[85,82],[4,3],[8,6],[7,6]],"notes": [null,null,null,null] },{ "name": "Ontario Female", "data": [83,4,7,7], "cl": [[84,82],[4,3],[8,6],[7,6]],"notes": [null,null,null,null] } ]
+            "series": [ { "name": "Durham Region Male", "data": [87,3,4,6], "cl": [[91,83],[5,1],[7,2],[8,4]],"notes": [null,"Interpret with caution","Interpret with caution",null] },{ "name": "Durham Region Female", "data": [82,3,6,9], "cl": [[87,78],[5,1],[9,3],[13,5]],"notes": [null,"Interpret with caution","Interpret with caution","Interpret with caution"] },{ "name": "Ontario Male", "data": [84,3,7,7], "cl": [[85,82],[4,2],[8,5],[8,5]],"notes": [null,null,null,null] },{ "name": "Ontario Female", "data": [83,4,7,7], "cl": [[84,81],[5,3],[8,6],[8,5]],"notes": [null,null,null,null] } ]
         },
         "byGrade": {
             "labels": [ "Never","Once","Twice or more","Not sure" ],
-            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [86,3,null,8], "cl": [[90,83],[4,2],[null,null],[12,5]],"notes": ["Interpret with caution","Not releasable due to small numbers","Not releasable due to small numbers","Not releasable due to small numbers"] },{ "name": "Durham Region Grades 9 to 12", "data": [84,3,6,7], "cl": [[88,81],[4,2],[9,4],[9,5]],"notes": [null,"Interpret with caution","Interpret with caution","Interpret with caution"] },{ "name": "Ontario Grades 7 and 8", "data": [89,1,2,7], "cl": [[91,88],[2,1],[3,1],[8,7]],"notes": [null,null,"Interpret with caution",null] },{ "name": "Ontario Grades 9 to 12", "data": [81,4,8,6], "cl": [[83,80],[5,4],[9,7],[7,6]],"notes": [null,null,null,null] } ]
+            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [86,3,null,8], "cl": [[90,82],[5,1],[null,null],[12,4]],"notes": ["Interpret with caution","Not releasable due to small numbers","Not releasable due to small numbers","Not releasable due to small numbers"] },{ "name": "Durham Region Grades 9 to 12", "data": [84,3,6,7], "cl": [[88,80],[5,1],[9,3],[10,4]],"notes": [null,"Interpret with caution","Interpret with caution","Interpret with caution"] },{ "name": "Ontario Grades 7 and 8", "data": [89,1,2,7], "cl": [[91,87],[2,0],[3,1],[9,6]],"notes": [null,null,"Interpret with caution",null] },{ "name": "Ontario Grades 9 to 12", "data": [81,4,8,6], "cl": [[83,80],[5,3],[9,7],[8,5]],"notes": [null,null,null,null] } ]
         },
         "byYear": {
             "labels": [ "2011","2013","2015","2017","2019" ],
-            "series": [ { "name": "Durham Region", "data": [35,15,16,14,8], "cl": [[41,29],[20,10],[20,12],[18,10],[10,6]],"notes": [null,"Interpret with caution",null,null,null] },{ "name": "Ontario", "data": [35,14,12,10,10], "cl": [[38,33],[15,12],[14,11],[11,9],[11,10]],"notes": [null,null,null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [35,15,16,14,8], "cl": [[42,28],[20,9],[20,12],[19,9],[10,6]],"notes": [null,"Interpret with caution",null,null,null] },{ "name": "Ontario", "data": [35,14,12,10,10], "cl": [[38,32],[16,12],[14,10],[12,8],[12,9]],"notes": [null,null,null,null,null] } ]
         }
       },
       "trendTests": [ "Between 2017 and 2019 riding with a cannabis impaired driver decreased in Durham Region", "Between 2011 and 2019 riding with a cannabis impaired driver decreased in Durham Region", "Durham Region and Ontario have different rates of riding with a cannabis impaired driver since 2011"  ]
@@ -324,19 +312,19 @@
       "estimates": {
         "byAll": {
             "labels": [ "Did not use","Once or twice","Three or more times" ],
-            "series": [ { "name": "Durham Region", "data": [83,4,13], "cl": [[86,81],[4,3],[15,10]],"notes": [null,null,null] },{ "name": "Ontario", "data": [78,7,15], "cl": [[80,76],[7,6],[17,14]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [83,4,13], "cl": [[86,80],[5,3],[16,10]],"notes": [null,null,null] },{ "name": "Ontario", "data": [78,7,15], "cl": [[80,76],[8,6],[17,14]],"notes": [null,null,null] } ]
         },
         "bySex": {
             "labels": [ "Did not use","Once or twice","Three or more times" ],
-            "series": [ { "name": "Durham Region Male", "data": [84,4,12], "cl": [[88,79],[6,2],[17,8]],"notes": [null,"Interpret with caution","Interpret with caution"] },{ "name": "Durham Region Female", "data": [83,4,13], "cl": [[86,80],[5,3],[16,10]],"notes": [null,null,null] },{ "name": "Ontario Male", "data": [77,6,17], "cl": [[79,75],[7,5],[18,15]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [79,8,14], "cl": [[80,77],[9,7],[15,12]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Male", "data": [84,4,12], "cl": [[88,79],[6,2],[18,7]],"notes": [null,"Interpret with caution","Interpret with caution"] },{ "name": "Durham Region Female", "data": [83,4,13], "cl": [[87,80],[5,2],[16,10]],"notes": [null,null,null] },{ "name": "Ontario Male", "data": [77,6,17], "cl": [[80,75],[7,4],[19,15]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [79,8,14], "cl": [[81,76],[9,6],[16,12]],"notes": [null,null,null] } ]
         },
         "byGrade": {
             "labels": [ "Did not use","Once or twice","Three or more times" ],
-            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [97,null,null], "cl": [[99,96],[null,null],[null,null]],"notes": ["Interpret with caution","Not releasable due to small numbers","Not releasable due to small numbers"] },{ "name": "Durham Region Grades 9 to 12", "data": [77,5,18], "cl": [[82,72],[6,4],[23,13]],"notes": [null,null,null] },{ "name": "Ontario Grades 7 and 8", "data": [97,2,1], "cl": [[98,96],[2,1],[2,1]],"notes": [null,"Interpret with caution","Interpret with caution"] },{ "name": "Ontario Grades 9 to 12", "data": [72,8,20], "cl": [[74,70],[9,7],[21,18]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [97,null,null], "cl": [[99,96],[null,null],[null,null]],"notes": ["Interpret with caution","Not releasable due to small numbers","Not releasable due to small numbers"] },{ "name": "Durham Region Grades 9 to 12", "data": [77,5,18], "cl": [[83,72],[6,4],[23,12]],"notes": [null,null,null] },{ "name": "Ontario Grades 7 and 8", "data": [97,2,1], "cl": [[98,96],[3,0],[3,0]],"notes": [null,"Interpret with caution","Interpret with caution"] },{ "name": "Ontario Grades 9 to 12", "data": [72,8,20], "cl": [[75,70],[10,7],[22,17]],"notes": [null,null,null] } ]
         },
         "byYear": {
             "labels": [ "2009","2011","2013","2015","2017","2019" ],
-            "series": [ { "name": "Durham Region", "data": [24,23,24,24,20,17], "cl": [[28,19],[27,19],[30,18],[29,19],[26,15],[19,14]],"notes": [null,null,null,null,null,null] },{ "name": "Ontario", "data": [26,22,23,21,19,22], "cl": [[27,24],[24,20],[26,21],[24,19],[21,17],[24,20]],"notes": [null,null,null,null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [24,23,24,24,20,17], "cl": [[28,19],[27,19],[30,17],[29,18],[26,14],[20,14]],"notes": [null,null,null,null,null,null] },{ "name": "Ontario", "data": [26,22,23,21,19,22], "cl": [[28,23],[24,20],[26,20],[24,19],[21,17],[24,20]],"notes": [null,null,null,null,null,null] } ]
         }
       },
       "trendTests": [ "Between 2017 and 2019 cannabis use stayed about the same in Durham Region", "Between 2009 and 2019 cannabis use stayed the same in Durham Region", "Durham Region and Ontario have similar rates of cannabis use since 2009"  ]
@@ -350,36 +338,36 @@
       "estimates": {
         "byAll": {
             "labels": [ "Never","Once or twice","Three or more times" ],
-            "series": [ { "name": "Durham Region", "data": [93,6,null], "cl": [[96,90],[9,3],[null,null]],"notes": [null,"Interpret with caution","Not releasable due to small numbers"] },{ "name": "Ontario", "data": [89,7,4], "cl": [[90,87],[9,6],[5,3]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [93,6,null], "cl": [[97,89],[10,3],[null,null]],"notes": [null,"Interpret with caution","Not releasable due to small numbers"] },{ "name": "Ontario", "data": [89,7,4], "cl": [[91,87],[9,5],[5,3]],"notes": [null,null,null] } ]
         },
         "bySex": {
             "labels": [ "Never","Once or twice","Three or more times" ],
-            "series": [ { "name": "Durham Region Male", "data": [91,null,null], "cl": [[97,85],[null,null],[null,null]],"notes": [null,"Not releasable due to small numbers","Not releasable due to small numbers"] },{ "name": "Durham Region Female", "data": [95,null,null], "cl": [[98,91],[null,null],[null,null]],"notes": [null,"Not releasable due to small numbers","Not releasable due to small numbers"] },{ "name": "Ontario Male", "data": [88,7,5], "cl": [[90,86],[9,5],[6,4]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [89,8,3], "cl": [[91,87],[9,6],[4,2]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Male", "data": [91,null,null], "cl": [[98,85],[null,null],[null,null]],"notes": [null,"Not releasable due to small numbers","Not releasable due to small numbers"] },{ "name": "Durham Region Female", "data": [95,null,null], "cl": [[99,91],[null,null],[null,null]],"notes": [null,"Not releasable due to small numbers","Not releasable due to small numbers"] },{ "name": "Ontario Male", "data": [88,7,5], "cl": [[91,85],[9,4],[7,3]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [89,8,3], "cl": [[92,87],[10,5],[4,2]],"notes": [null,null,null] } ]
         },
         "byGrade": {
             "labels": [ "Never","Once or twice","Three or more times" ],
-            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [100,null,null], "cl": [[100,99],[null,null],[null,null]],"notes": [null,"Not releasable due to small numbers",null] },{ "name": "Durham Region Grades 9 to 12", "data": [88,11,null], "cl": [[94,83],[16,6],[null,null]],"notes": [null,"Interpret with caution","Not releasable due to small numbers"] },{ "name": "Ontario Grades 7 and 8", "data": [99,null,null], "cl": [[100,98],[null,null],[null,null]],"notes": [null,"Not releasable due to small numbers","Not releasable due to small numbers"] },{ "name": "Ontario Grades 9 to 12", "data": [85,9,5], "cl": [[87,84],[11,7],[6,4]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [100,null,null], "cl": [[100,99],[null,null],[null,null]],"notes": [null,"Not releasable due to small numbers",null] },{ "name": "Durham Region Grades 9 to 12", "data": [88,11,null], "cl": [[94,82],[16,5],[null,null]],"notes": [null,"Interpret with caution","Not releasable due to small numbers"] },{ "name": "Ontario Grades 7 and 8", "data": [99,null,null], "cl": [[100,98],[null,null],[null,null]],"notes": [null,"Not releasable due to small numbers","Not releasable due to small numbers"] },{ "name": "Ontario Grades 9 to 12", "data": [85,9,5], "cl": [[88,83],[11,7],[7,4]],"notes": [null,null,null] } ]
         }
       }
     },
-    {
+      {
       "pmoID":11,
-      "pmoName":"Tried Cannabis for the First Time in the Last Year",
+      "pmoName":"Tried Cannabis for the First Time",
       "description":"Percentage that tried cannabis for the first time in the past year",
-      "tags": [ "first use","first-time","start","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana","pot","weed" ],
+      "tags": [ "Blaze","blunt","bong","dabbing","first use","first-time","grass","hash","hashish","joint","marijuana","pot","start","weed" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
             "labels": [ "Yes","No","Never tried" ],
-            "series": [ { "name": "Durham Region", "data": [6,17,77], "cl": [[9,4],[21,13],[81,73]],"notes": ["Interpret with caution",null,null] },{ "name": "Ontario", "data": [10,21,69], "cl": [[11,9],[22,19],[71,67]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [6,17,77], "cl": [[9,3],[22,13],[81,72]],"notes": ["Interpret with caution",null,null] },{ "name": "Ontario", "data": [10,21,69], "cl": [[12,9],[23,19],[71,66]],"notes": [null,null,null] } ]
         },
         "bySex": {
             "labels": [ "Yes","No","Never tried" ],
-            "series": [ { "name": "Durham Region Male", "data": [4,19,77], "cl": [[6,2],[26,13],[84,70]],"notes": ["Interpret with caution",null,null] },{ "name": "Durham Region Female", "data": [8,15,77], "cl": [[13,4],[21,9],[84,69]],"notes": ["Interpret with caution","Interpret with caution",null] },{ "name": "Ontario Male", "data": [9,22,69], "cl": [[11,8],[25,20],[71,66]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [11,19,69], "cl": [[13,10],[21,18],[72,67]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Male", "data": [4,19,77], "cl": [[6,2],[26,12],[84,69]],"notes": ["Interpret with caution",null,null] },{ "name": "Durham Region Female", "data": [8,15,77], "cl": [[14,3],[21,9],[84,69]],"notes": ["Interpret with caution","Interpret with caution",null] },{ "name": "Ontario Male", "data": [9,22,69], "cl": [[11,7],[25,19],[72,65]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [11,19,69], "cl": [[14,9],[22,17],[72,66]],"notes": [null,null,null] } ]
         },
         "byGrade": {
             "labels": [ "Yes","No","Never tried" ],
-            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [null,null,90], "cl": [[null,null],[null,null],[96,85]],"notes": ["Not releasable due to small numbers","Not releasable due to small numbers",null] },{ "name": "Durham Region Grades 9 to 12", "data": [9,24,67], "cl": [[14,5],[29,19],[73,61]],"notes": ["Interpret with caution",null,null] },{ "name": "Ontario Grades 7 and 8", "data": [2,9,88], "cl": [[3,1],[11,7],[90,86]],"notes": ["Interpret with caution",null,null] },{ "name": "Ontario Grades 9 to 12", "data": [13,24,63], "cl": [[14,11],[26,22],[66,61]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [null,null,90], "cl": [[null,null],[null,null],[96,84]],"notes": ["Not releasable due to small numbers","Not releasable due to small numbers",null] },{ "name": "Durham Region Grades 9 to 12", "data": [9,24,67], "cl": [[14,4],[29,18],[73,61]],"notes": ["Interpret with caution",null,null] },{ "name": "Ontario Grades 7 and 8", "data": [2,9,88], "cl": [[4,1],[12,7],[91,86]],"notes": ["Interpret with caution",null,null] },{ "name": "Ontario Grades 9 to 12", "data": [13,24,63], "cl": [[14,11],[27,22],[66,60]],"notes": [null,null,null] } ]
         }
       }
     },
@@ -387,24 +375,24 @@
       "pmoID":12,
       "pmoName":"Grade of First Cannabis Use",
       "description":"Grade students were in the first time they used cannabis",
-      "tags": [ "early use","first use","first-time","start","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana","pot","smoking","weed" ],
+      "tags": [ "Blaze","blunt","bong","dabbing","early use","first use","first-time","grass","hash","hashish","joint","marijuana","pot","start","weed" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
             "labels": [ "Before Grade 9","Grade 9 or 10","Grade 11 or 12","Never tried" ],
-            "series": [ { "name": "Durham Region", "data": [5,9,3,82], "cl": [[8,3],[12,7],[4,2],[85,80]],"notes": ["Interpret with caution",null,null,null] },{ "name": "Ontario", "data": [6,14,5,75], "cl": [[6,5],[15,12],[6,5],[77,74]],"notes": [null,null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [5,9,3,82], "cl": [[9,2],[12,6],[5,2],[86,79]],"notes": ["Interpret with caution",null,null,null] },{ "name": "Ontario", "data": [6,14,5,75], "cl": [[7,5],[15,12],[7,4],[77,73]],"notes": [null,null,null,null] } ]
         },
         "bySex": {
             "labels": [ "Before Grade 9","Grade 9 or 10","Grade 11 or 12","Never tried" ],
-            "series": [ { "name": "Durham Region Male", "data": [null,9,2,84], "cl": [[null,null],[13,6],[3,1],[88,79]],"notes": ["Not releasable due to small numbers","Interpret with caution","Interpret with caution",null] },{ "name": "Durham Region Female", "data": [5,9,4,81], "cl": [[7,4],[12,7],[6,3],[84,78]],"notes": [null,null,null,null] },{ "name": "Ontario Male", "data": [6,13,5,75], "cl": [[7,5],[15,12],[6,4],[77,73]],"notes": [null,null,null,null] },{ "name": "Ontario Female", "data": [5,14,6,76], "cl": [[6,4],[15,12],[6,5],[78,74]],"notes": [null,null,null,null] } ]
+            "series": [ { "name": "Durham Region Male", "data": [null,9,2,84], "cl": [[null,null],[13,5],[3,0],[89,79]],"notes": ["Not releasable due to small numbers","Interpret with caution","Interpret with caution",null] },{ "name": "Durham Region Female", "data": [5,9,4,81], "cl": [[7,3],[12,6],[6,3],[84,78]],"notes": [null,null,null,null] },{ "name": "Ontario Male", "data": [6,13,5,75], "cl": [[8,5],[16,11],[7,4],[77,72]],"notes": [null,null,null,null] },{ "name": "Ontario Female", "data": [5,14,6,76], "cl": [[6,4],[16,12],[7,4],[78,73]],"notes": [null,null,null,null] } ]
         },
         "byGrade": {
             "labels": [ "Before Grade 9","Grade 9 or 10","Grade 11 or 12","Never tried" ],
-            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [null,null,null,97], "cl": [[null,null],[null,null],[null,null],[99,95]],"notes": ["Not releasable due to small numbers",null,null,"Interpret with caution"] },{ "name": "Durham Region Grades 9 to 12", "data": [6,13,5,76], "cl": [[10,2],[18,9],[6,3],[81,70]],"notes": ["Interpret with caution",null,null,null] },{ "name": "Ontario Grades 7 and 8", "data": [4,null,null,96], "cl": [[5,3],[null,null],[null,null],[97,95]],"notes": [null,null,null,null] },{ "name": "Ontario Grades 9 to 12", "data": [6,18,7,69], "cl": [[7,6],[19,16],[8,6],[71,67]],"notes": [null,null,null,null] } ]
+            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [null,null,null,97], "cl": [[null,null],[null,null],[null,null],[99,94]],"notes": ["Not releasable due to small numbers",null,null,"Interpret with caution"] },{ "name": "Durham Region Grades 9 to 12", "data": [6,13,5,76], "cl": [[11,2],[18,9],[7,2],[82,70]],"notes": ["Interpret with caution",null,null,null] },{ "name": "Ontario Grades 7 and 8", "data": [4,null,null,96], "cl": [[5,2],[null,null],[null,null],[98,95]],"notes": [null,null,null,null] },{ "name": "Ontario Grades 9 to 12", "data": [6,18,7,69], "cl": [[8,5],[20,15],[8,6],[71,66]],"notes": [null,null,null,null] } ]
         },
         "byYear": {
             "labels": [ "2009","2011","2013","2015","2017","2019" ],
-            "series": [ { "name": "Durham Region", "data": [12,9,9,7,4,5], "cl": [[15,8],[13,6],[13,6],[10,5],[6,2],[8,3]],"notes": [null,"Interpret with caution","Interpret with caution","Interpret with caution","Interpret with caution","Interpret with caution"] },{ "name": "Ontario", "data": [11,9,8,7,5,6], "cl": [[12,10],[10,8],[9,6],[7,6],[6,5],[6,5]],"notes": [null,null,null,null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [12,9,9,7,4,5], "cl": [[15,8],[13,5],[13,5],[11,4],[7,2],[9,2]],"notes": [null,"Interpret with caution","Interpret with caution","Interpret with caution","Interpret with caution","Interpret with caution"] },{ "name": "Ontario", "data": [11,9,8,7,5,6], "cl": [[13,9],[11,7],[9,6],[8,5],[6,4],[7,5]],"notes": [null,null,null,null,null,null] } ]
         }
       },
       "trendTests": [ "Between 2017 and 2019 grade of first cannabis use stayed about the same in Durham Region", "Between 2009 and 2019 grade of first cannabis use decreased in Durham Region", "Durham Region and Ontario have similar rates of grade of first cannabis use since 2009"  ]
@@ -418,15 +406,15 @@
       "estimates": {
         "byAll": {
             "labels": [ "Difficult","Easy","Not sure" ],
-            "series": [ { "name": "Durham Region", "data": [48,20,32], "cl": [[53,42],[24,16],[37,27]],"notes": [null,null,null] },{ "name": "Ontario", "data": [45,20,35], "cl": [[46,43],[22,19],[37,34]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region", "data": [48,20,32], "cl": [[54,41],[25,16],[37,27]],"notes": [null,null,null] },{ "name": "Ontario", "data": [45,20,35], "cl": [[47,42],[22,18],[38,33]],"notes": [null,null,null] } ]
         },
         "bySex": {
             "labels": [ "Difficult","Easy","Not sure" ],
-            "series": [ { "name": "Durham Region Male", "data": [49,18,32], "cl": [[57,42],[22,15],[37,27]],"notes": [null,null,null] },{ "name": "Durham Region Female", "data": [45,23,32], "cl": [[53,38],[29,17],[39,24]],"notes": [null,null,null] },{ "name": "Ontario Male", "data": [45,19,36], "cl": [[47,42],[21,17],[39,34]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [44,21,34], "cl": [[47,42],[23,19],[37,32]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Male", "data": [49,18,32], "cl": [[57,42],[22,14],[38,27]],"notes": [null,null,null] },{ "name": "Durham Region Female", "data": [45,23,32], "cl": [[53,38],[29,16],[40,24]],"notes": [null,null,null] },{ "name": "Ontario Male", "data": [45,19,36], "cl": [[48,42],[22,17],[39,33]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [44,21,34], "cl": [[47,42],[24,19],[37,32]],"notes": [null,null,null] } ]
         },
         "byGrade": {
             "labels": [ "Difficult","Easy","Not sure" ],
-            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [51,14,35], "cl": [[57,45],[19,9],[41,30]],"notes": [null,"Interpret with caution",null] },{ "name": "Durham Region Grades 9 to 12", "data": [45,25,30], "cl": [[54,37],[30,20],[37,22]],"notes": [null,null,null] },{ "name": "Ontario Grades 7 and 8", "data": [51,14,35], "cl": [[54,47],[17,12],[38,31]],"notes": [null,null,null] },{ "name": "Ontario Grades 9 to 12", "data": [43,22,35], "cl": [[45,41],[24,20],[37,33]],"notes": [null,null,null] } ]
+            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [51,14,35], "cl": [[57,44],[20,8],[41,29]],"notes": [null,"Interpret with caution",null] },{ "name": "Durham Region Grades 9 to 12", "data": [45,25,30], "cl": [[54,36],[30,20],[37,22]],"notes": [null,null,null] },{ "name": "Ontario Grades 7 and 8", "data": [51,14,35], "cl": [[55,46],[17,12],[39,31]],"notes": [null,null,null] },{ "name": "Ontario Grades 9 to 12", "data": [43,22,35], "cl": [[45,40],[24,20],[38,33]],"notes": [null,null,null] } ]
         }
       }
     },
@@ -434,7 +422,7 @@
       "pmoID":13,
       "pmoName":"Usual Source of Cannabis",
       "description":"Usual method for getting cannabis in the past year",
-      "tags": [ "access","pot","procurement","source","weed","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana" ],
+      "tags": [ "Blaze","access","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana","pot","procurement","source","weed" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
@@ -455,7 +443,7 @@
       "pmoID":14,
       "pmoName":"View of Cannabis Availability",
       "description":"Belief on how difficult it is to get cannabis when needed",
-      "tags": [ "access","availability","ease of access","pot","weed","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana" ],
+      "tags": [ "Blaze","access","availability","blunt","bong","dabbing","ease of access","grass","hash","hashish","joint","marijuana","pot","weed" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
@@ -476,7 +464,7 @@
       "pmoID":37,
       "pmoName":"View on Harm of Trying Cannabis",
       "description":"Belief on the risk of trying cannabis once or twice",
-      "tags": [ "awareness of harm","harm","pot","risk","weed","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana","smoking" ],
+      "tags": [ "Blaze","awareness of harm","blunt","bong","dabbing","grass","harm","hash","hashish","joint","marijuana","pot","risk","smoking","weed" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
@@ -497,7 +485,7 @@
       "pmoID":38,
       "pmoName":"View on Harm of Cannabis Use",
       "description":"Belief on the risk of smoking cannabis regularly",
-      "tags": [ "awareness of harm","harm","pot","risk","weed","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana","smoking" ],
+      "tags": [ "Blaze","awareness of harm","blunt","bong","dabbing","grass","harm","hash","hashish","joint","marijuana","pot","risk","smoking","weed" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
@@ -518,7 +506,7 @@
       "pmoID":6,
       "pmoName":"Perceived Cannabis Use Since Legalization",
       "description":"Change in cannabis use among friends since legalization",
-      "tags": [ "cannabis","legalization impact","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana","pot","smoking","weed" ],
+      "tags": [ "Blaze","blunt","bong","cannabis","dabbing","grass","hash","hashish","joint","legalization impact","marijuana","pot","weed" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
@@ -538,7 +526,7 @@
     {
       "pmoID":15,
       "pmoName":"Driving After Using Cannabis",
-      "description":"Frequency of driving a vehicle within an hour of using cannabis in the past year",
+      "description":"Frequency of driving a vehicle within an hour of using cannabis",
       "tags": [ "driving under the influence","hash","hashish","pot","weed" ],
       "category": "Cannabis",
       "estimates": {
@@ -555,36 +543,36 @@
             "series": [ { "name": "Durham Region Grades 9 to 12", "data": [61,36,3], "cl": [[65,57],[40,32],[5,1]],"notes": [null,null,"Interpret with caution"] },{ "name": "Ontario Grades 9 to 12", "data": [63,33,3], "cl": [[66,61],[35,31],[4,2]],"notes": [null,null,null] } ]
         },
         "byYear": {
-            "labels": [ "2009","2011","2013","2015","2017","2019" ],
-            "series": [ { "name": "Durham Region", "data": [12,9,9,7,4,5], "cl": [[15,8],[13,5],[13,5],[11,4],[7,2],[9,2]],"notes": [null,"Interpret with caution","Interpret with caution","Interpret with caution","Interpret with caution","Interpret with caution"] },{ "name": "Ontario", "data": [11,9,8,7,5,6], "cl": [[13,9],[11,7],[9,6],[8,5],[6,4],[7,5]],"notes": [null,null,null,null,null,null] } ]
+            "labels": [ "2011","2013","2015","2017","2019" ],
+            "series": [ { "name": "Durham Region", "data": [5,null,5,4,3], "cl": [[7,2],[null,null],[8,2],[7,1],[5,1]],"notes": ["Interpret with caution","Not releasable due to small numbers","Interpret with caution","Interpret with caution","Interpret with caution"] },{ "name": "Ontario", "data": [4,4,3,4,3], "cl": [[6,3],[5,2],[5,2],[6,3],[4,2]],"notes": [null,null,null,null,null] } ]
         }
       },
-      "trendTests": [ "Between 2017 and 2019 driving after using cannabis stayed about the same in Durham Region", "Between 2009 and 2019 driving after using cannabis decreased in Durham Region", "Durham Region and Ontario have similar rates of driving after using cannabis since 2009"  ]
+      "trendTests": [ "Between 2017 and 2019 driving after using cannabis stayed about the same in Durham Region", "Between 2011 and 2019 driving after using cannabis stayed the same in Durham Region", "Durham Region and Ontario have similar rates of driving after using cannabis since 2011"  ]
     },
     {
       "pmoID":16,
       "pmoName":"View of Driving High Versus Driving Drunk",
-      "description":"Opinion driving after using cannabis compared with alcohol",
-      "tags": [ "alcohol","driving safety","driving under the influence","perceived risk","perceived safety","pot","weed","Blaze","blunt","bong","dabbing","grass","hash","hashish","joint","marijuana" ],
+      "description":"Opinion on the safety of driving after using cannabis compared with alcohol",
+      "tags": [ "Blaze","alcohol","blunt","bong","dabbing","driving safety","driving under the influence","grass","hash","hashish","joint","marijuana","perceived risk","perceived safety","pot","weed" ],
       "category": "Cannabis",
       "estimates": {
         "byAll": {
-            "labels": [ "Driving high is safer","Driving high is not safer","Not sure" ],
+            "labels": [ "Agree","Disagree","Not sure" ],
             "series": [ { "name": "Durham Region", "data": [27,42,31], "cl": [[37,17],[51,34],[37,25]],"notes": ["Interpret with caution",null,null] },{ "name": "Ontario", "data": [25,42,33], "cl": [[27,22],[45,40],[35,30]],"notes": [null,null,null] } ]
         },
         "bySex": {
-            "labels": [ "Driving high is safer","Driving high is not safer","Not sure" ],
+            "labels": [ "Agree","Disagree","Not sure" ],
             "series": [ { "name": "Durham Region Male", "data": [29,40,31], "cl": [[43,14],[56,24],[40,22]],"notes": ["Interpret with caution","Interpret with caution",null] },{ "name": "Durham Region Female", "data": [24,45,31], "cl": [[33,16],[56,34],[40,21]],"notes": ["Interpret with caution",null,"Interpret with caution"] },{ "name": "Ontario Male", "data": [29,36,35], "cl": [[33,25],[40,33],[38,31]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [20,49,31], "cl": [[23,18],[52,45],[34,28]],"notes": [null,null,null] } ]
         },
         "byGrade": {
-            "labels": [ "Driving high is safer","Driving high is not safer","Not sure" ],
+            "labels": [ "Agree","Disagree","Not sure" ],
             "series": [ { "name": "Durham Region Grades 9 to 12", "data": [27,42,31], "cl": [[37,17],[51,34],[37,25]],"notes": ["Interpret with caution",null,null] },{ "name": "Ontario Grades 9 to 12", "data": [25,42,33], "cl": [[27,22],[45,40],[35,30]],"notes": [null,null,null] } ]
         }
       }
     },
     {
       "pmoID":3,
-      "pmoName":"Alcohol Use in the Past Year",
+      "pmoName":"Alcohol use",
       "description":"Frequncy of drinking alcohol in past 12 months",
       "tags": [ "alcohol","alcohol consumption","liquor","rum","whiskey","vodka","gin","beer" ],
       "category": "Alcohol",
@@ -610,7 +598,7 @@
     },
     {
       "pmoID":17,
-      "pmoName":"Alcohol Use in the Past Month",
+      "pmoName":"Alcohol Use",
       "description":"Frequency of drinking alcohol in the past month",
       "tags": [ "liquor","rum","whiskey","vodka","gin","beer","party" ],
       "category": "Alcohol",
@@ -630,29 +618,8 @@
       }
     },
     {
-      "pmoID":10,
-      "pmoName":"Alcohol and Cannabis Combined Use",
-      "description":"Used alcohol and cannabis together in the past year",
-      "tags": [ "co-use","party" ],
-      "category": "Alcohol",
-      "estimates": {
-        "byAll": {
-            "labels": [ "Never","Once or twice","Three or more times" ],
-            "series": [ { "name": "Durham Region", "data": [93,6,null], "cl": [[97,89],[10,3],[null,null]],"notes": [null,"Interpret with caution","Not releasable due to small numbers"] },{ "name": "Ontario", "data": [89,7,4], "cl": [[91,87],[9,5],[5,3]],"notes": [null,null,null] } ]
-        },
-        "bySex": {
-            "labels": [ "Never","Once or twice","Three or more times" ],
-            "series": [ { "name": "Durham Region Male", "data": [91,null,null], "cl": [[98,85],[null,null],[null,null]],"notes": [null,"Not releasable due to small numbers","Not releasable due to small numbers"] },{ "name": "Durham Region Female", "data": [95,null,null], "cl": [[99,91],[null,null],[null,null]],"notes": [null,"Not releasable due to small numbers","Not releasable due to small numbers"] },{ "name": "Ontario Male", "data": [88,7,5], "cl": [[91,85],[9,4],[7,3]],"notes": [null,null,null] },{ "name": "Ontario Female", "data": [89,8,3], "cl": [[92,87],[10,5],[4,2]],"notes": [null,null,null] } ]
-        },
-        "byGrade": {
-            "labels": [ "Never","Once or twice","Three or more times" ],
-            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [100,null,null], "cl": [[100,99],[null,null],[null,null]],"notes": [null,"Not releasable due to small numbers",null] },{ "name": "Durham Region Grades 9 to 12", "data": [88,11,null], "cl": [[94,82],[16,5],[null,null]],"notes": [null,"Interpret with caution","Not releasable due to small numbers"] },{ "name": "Ontario Grades 7 and 8", "data": [99,null,null], "cl": [[100,98],[null,null],[null,null]],"notes": [null,"Not releasable due to small numbers","Not releasable due to small numbers"] },{ "name": "Ontario Grades 9 to 12", "data": [85,9,5], "cl": [[88,83],[11,7],[7,4]],"notes": [null,null,null] } ]
-        }
-      }
-    },
-    {
       "pmoID":20,
-      "pmoName":"Driving After Drinking Alcohol in the Past Year",
+      "pmoName":"Driving After Drinking Alcohol",
       "description":"Frequency of driving a vehicle within an hour of drinking 2 or more drinks of alcohol",
       "tags": [ "alcohol","drinking and driving","driving under the influence" ],
       "category": "Alcohol",
@@ -679,7 +646,7 @@
     {
       "pmoID":19,
       "pmoName":"Riding with an Alcohol Impaired Driver",
-      "description":"Frequency of being a passenger riding with a driver who had been drinking alcohol",
+      "description":"Frequency of being a passenger riding with a driver who has been drinking alcohol",
       "tags": [ "alcohol","drinking and driving","driving under the influence" ],
       "category": "Alcohol",
       "estimates": {
@@ -705,7 +672,7 @@
     {
       "pmoID":42,
       "pmoName":"Harmful Drinking",
-      "description":"Frequency with signs of an alcohol use disorder in the past year, according to the AUDIT screening tool",
+      "description":"Frequency with signs of an alcohol use disorder according to the AUDIT screening tool",
       "tags": [ "addiction","alcohol misuse","binge drinking","problem drinking","bender","party" ],
       "category": "Alcohol",
       "estimates": {
@@ -731,7 +698,7 @@
     {
       "pmoID":5,
       "pmoName":"Binge Drinking",
-      "description":"Had 5 or more drinks of alcohol on the same occasion in the past month",
+      "description":"Frequency of having 5 or more drinks of alcohol on the same occasion in the past month",
       "tags": [ "alcohol","alcohol misuse","hazardous drinking","liquor","rum","whiskey","vodka","gin","beer" ],
       "category": "Alcohol",
       "estimates": {
@@ -846,7 +813,7 @@
     {
       "pmoID":24,
       "pmoName":"Electronic Cigarette Use",
-      "description":"Frequency of vaping or e-cigarette use in the past year",
+      "description":"Frequency of vaping in the past year",
       "tags": [ "e-cig","e-cigarette","e-cigarettes","e-cigs","vape pen","vape pipes","vaporizer","juul" ],
       "category": "Tobacco",
       "estimates": {
@@ -872,7 +839,7 @@
     {
       "pmoID":26,
       "pmoName":"Smokeless Tobacco Use",
-      "description":"Frequency of using chewing tobacco, snuff, plug or dipping tobacco in the past year",
+      "description":"Frequecy of using chewing tobacco, snuff, plug or dipping tobacco in the past year",
       "tags": [ "chewing tobacco","dipping tobacco","plug","sniff" ],
       "category": "Tobacco",
       "estimates": {
@@ -929,6 +896,48 @@
         "byGrade": {
             "labels": [ "Low risk","High risk","Not sure" ],
             "series": [ { "name": "Durham Region Grades 7 and 8", "data": [43,35,22], "cl": [[54,32],[44,26],[30,14]],"notes": [null,null,"Interpret with caution"] },{ "name": "Durham Region Grades 9 to 12", "data": [45,43,11], "cl": [[56,34],[52,35],[19,4]],"notes": [null,null,"Interpret with caution"] },{ "name": "Ontario Grades 7 and 8", "data": [32,45,22], "cl": [[37,28],[49,41],[27,18]],"notes": [null,null,null] },{ "name": "Ontario Grades 9 to 12", "data": [42,43,16], "cl": [[44,39],[45,40],[18,14]],"notes": [null,null,null] } ]
+        }
+      }
+    },
+    {
+      "pmoID":27,
+      "pmoName":"Waterpipe Use",
+      "description":"Frequecy of smoking a waterpipe in the past year",
+      "tags": [ "gouza","hookah","narghile","pipe","shisha" ],
+      "category": "Tobacco",
+      "estimates": {
+        "byAll": {
+            "labels": [ "Did not use","Once or more" ],
+            "series": [ { "name": "Durham Region", "data": [20,80], "cl": [[24,15],[85,76]],"notes": [null,null] },{ "name": "Ontario", "data": [21,79], "cl": [[23,18],[82,77]],"notes": [null,null] } ]
+        },
+        "bySex": {
+            "labels": [ "Did not use","Once or more" ],
+            "series": [ { "name": "Durham Region Male", "data": [16,84], "cl": [[21,11],[89,79]],"notes": [null,null] },{ "name": "Durham Region Female", "data": [23,77], "cl": [[30,17],[83,70]],"notes": [null,null] },{ "name": "Ontario Male", "data": [19,81], "cl": [[22,17],[83,78]],"notes": [null,null] },{ "name": "Ontario Female", "data": [22,78], "cl": [[24,19],[81,76]],"notes": [null,null] } ]
+        },
+        "byGrade": {
+            "labels": [ "Did not use","Once or more" ],
+            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [32,68], "cl": [[38,25],[75,62]],"notes": [null,null] },{ "name": "Durham Region Grades 9 to 12", "data": [11,89], "cl": [[16,6],[94,84]],"notes": ["Interpret with caution",null] },{ "name": "Ontario Grades 7 and 8", "data": [29,71], "cl": [[33,26],[74,67]],"notes": [null,null] },{ "name": "Ontario Grades 9 to 12", "data": [18,82], "cl": [[20,16],[84,80]],"notes": [null,null] } ]
+        }
+      }
+    },
+    {
+      "pmoID":25,
+      "pmoName":"Electronic Cigarette Use with Nicotine",
+      "description":"Whether the usual vape product contains nicotine or not",
+      "tags": [ "e-cig","e-cigarette","e-cigarettes","e-cigs","vape pen","vape pipes","vaporizer","juul" ],
+      "category": "Tobacco",
+      "estimates": {
+        "byAll": {
+            "labels": [ "Usually with nicotine","Usually without nicotine","Usually both","Not sure which type","Did not vape" ],
+            "series": [ { "name": "Durham Region", "data": [7,6,5,4,78], "cl": [[11,4],[9,3],[8,1],[6,1],[84,73]],"notes": ["Interpret with caution","Interpret with caution","Interpret with caution","Interpret with caution",null] },{ "name": "Ontario", "data": [14,7,5,3,70], "cl": [[17,12],[8,6],[7,4],[4,2],[73,67]],"notes": [null,null,null,null,null] } ]
+        },
+        "bySex": {
+            "labels": [ "Usually with nicotine","Usually without nicotine","Usually both","Not sure which type","Did not vape" ],
+            "series": [ { "name": "Durham Region Male", "data": [7,4,null,null,79], "cl": [[11,2],[7,2],[null,null],[null,null],[88,71]],"notes": ["Interpret with caution","Interpret with caution","Not releasable due to small numbers","Not releasable due to small numbers",null] },{ "name": "Durham Region Female", "data": [8,7,4,null,78], "cl": [[13,3],[12,3],[7,2],[null,null],[83,72]],"notes": ["Interpret with caution","Interpret with caution","Interpret with caution","Not releasable due to small numbers",null] },{ "name": "Ontario Male", "data": [16,8,5,3,69], "cl": [[19,13],[9,6],[6,3],[4,1],[72,66]],"notes": [null,null,null,null,null] },{ "name": "Ontario Female", "data": [12,7,6,4,71], "cl": [[15,10],[8,5],[8,4],[5,2],[74,68]],"notes": [null,null,null,null,null] } ]
+        },
+        "byGrade": {
+            "labels": [ "Usually with nicotine","Usually without nicotine","Usually both","Not sure which type","Did not vape" ],
+            "series": [ { "name": "Durham Region Grades 7 and 8", "data": [null,4,null,null,94], "cl": [[null,null],[6,2],[null,null],[null,null],[97,91]],"notes": ["Not releasable due to small numbers","Interpret with caution","Not releasable due to small numbers","Not releasable due to small numbers",null] },{ "name": "Durham Region Grades 9 to 12", "data": [12,7,8,5,67], "cl": [[18,6],[12,2],[13,3],[9,1],[76,59]],"notes": ["Interpret with caution","Interpret with caution","Interpret with caution","Not releasable due to small numbers",null] },{ "name": "Ontario Grades 7 and 8", "data": [2,3,1,2,93], "cl": [[3,1],[4,2],[2,0],[3,0],[95,90]],"notes": ["Interpret with caution",null,"Interpret with caution","Interpret with caution",null] },{ "name": "Ontario Grades 9 to 12", "data": [18,8,7,3,63], "cl": [[21,15],[10,7],[8,5],[4,2],[67,60]],"notes": [null,null,null,null,null] } ]
         }
       }
     }
