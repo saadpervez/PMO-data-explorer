@@ -261,6 +261,69 @@
   }
 }
 
+// Skeleton loader
+.indicator-list {
+  &:empty {
+    display: block;
+    margin-top: 5px;
+    width: 1140px;
+    height: 580px;
+    background-repeat: no-repeat;
+    background-image:
+      /* Animation blur */
+      linear-gradient(
+        90deg,
+        rgba(lighten(#75C1F2, 25%), 0) 0,
+        rgba(lighten(#75C1F2, 25%), .8) 50%,
+        rgba(lighten(#75C1F2, 25%), 0) 100%
+      ),
+      /* Title */
+      linear-gradient(white 50px, transparent 0),
+      /* Buttons */
+      linear-gradient(white 36px, transparent 0),
+      /* Chart */
+      linear-gradient(white 425px, transparent 0),
+      /* Backgroung layer */
+      linear-gradient(lighten(#75C1F2, 25%) 100%, transparent 0);
+    background-size:
+      60% 100%,
+      500px 50px,
+      350px 36px,
+      1100px 425px,
+      100% 100%;
+    background-position:
+      -150%  0,
+      20px 20px,
+      20px 80px,
+      20px 126px,
+      0 0;
+    animation: loading 1.5s infinite;
+    -webkit-animation: loading 1.5s infinite;
+  }
+}
+
+// Skeleton animation
+@-webkit-keyframes loading {
+  to {
+    background-position:
+      350%  0,
+      20px 20px,
+      20px 80px,
+      20px 126px,
+      0 0;
+  }
+}
+@keyframes loading {
+  to {
+    background-position:
+      350%  0,
+      20px 20px,
+      20px 80px,
+      20px 126px,
+      0 0;
+  }
+}
+
 // View control buttons
 .view-control {
   .overlay-lnk {

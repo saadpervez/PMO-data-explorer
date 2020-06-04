@@ -3,7 +3,7 @@
 // PMO indicator instance
 window.PMO = function(data){
   this.version = "0.5.0";
-  this.anchor = document.querySelector('.indicator-list');
+  this.anchor = document.getElementById('cards');
   this.name = data.pmoName;
   this.description = data.description;
   this.slug = data.pmoName.split(' ').join('-').toLowerCase();

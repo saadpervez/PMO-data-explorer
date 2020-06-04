@@ -45,7 +45,6 @@
         if(task.action === 'qry'){
           handleSearchResult(found);
         }
-        resetList();
         found.forEach(function(el){
           buildArticleNode(el);
         });           
@@ -98,8 +97,8 @@
   }
   // Reset the indicator block
   function resetList(){
-    const list = document.querySelector('.indicator-list');
-    while(list.firstChild){
+    const list = document.getElementById('cards');
+    while(list.firstChild){ 
       list.removeChild(list.firstChild);
     }
   }
@@ -216,6 +215,8 @@
   }
   document.addEventListener('DOMContentLoaded', function(){
     search.addEventListener('input', function(e){
+      let listDiv = document.getElementById('cards');
+      listDiv.setAttribute('class', 'indicator-list');
       if(typeof this.toId === 'number'){
         clearTimeout(this.toId);
         this.toId = undefined;
@@ -227,6 +228,7 @@
           return;
         }
         resetSearch();
+        resetList();
         const hashString = `#qry=${currentQuery}`;
         const info = hashString.substr(1).split("=");
         window.location.hash = hashString;
@@ -238,6 +240,9 @@
     });
     index.addEventListener('click', function(e){
       if(e.target.className === "index-link"){
+        resetList();
+        let listDiv = document.getElementById('cards');
+        listDiv.setAttribute('class', 'indicator-list');  
         const hashString = e.target.hash;
         const info = hashString.substr(1).split("=");
         const $closeBtn = $("#close-index");
