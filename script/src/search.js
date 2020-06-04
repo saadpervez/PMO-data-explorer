@@ -221,14 +221,13 @@
         clearTimeout(this.toId);
         this.toId = undefined;
       }
+      resetList();
       this.toId = setTimeout(function(evt){
         let currentQuery = evt.target.value;
         if(!currentQuery.length){
           resetSearch();
           return;
         }
-        resetSearch();
-        resetList();
         const hashString = `#qry=${currentQuery}`;
         const info = hashString.substr(1).split("=");
         window.location.hash = hashString;
