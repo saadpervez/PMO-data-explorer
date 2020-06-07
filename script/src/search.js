@@ -226,6 +226,7 @@
         let currentQuery = evt.target.value;
         if(!currentQuery.length){
           resetSearch();
+          listDiv.classList.remove('indicator-list');
           return;
         }
         const hashString = `#qry=${currentQuery}`;
