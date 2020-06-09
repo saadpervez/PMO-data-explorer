@@ -31,7 +31,6 @@
           },
           cat: function(elem){
             if (elem.category.split(' ').join('-').toLowerCase() === task.value){
-              console.log(elem)
               return elem;
             }
           },
