@@ -1,5 +1,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="{{ "/script/dist/wet-boew.js" | absolute_url }}"></script>
+{% if page.permalink == "/" %}
 <script src="{{ "/script/dist/vendor.js" | absolute_url }}"></script>
 <script src="{{ "/script/dist/details.js" | absolute_url }}"></script>
 <script src="{{ "/script/dist/bundle.js" | absolute_url }}"></script>
+{% endif %}
