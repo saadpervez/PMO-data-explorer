@@ -44,8 +44,8 @@ sass:
 
 # Plugins
 plugins:
- - jekyll-sitemap
- - jekyll-seo-tag
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Prose configuration
 # Set ignore parameter to limit access to files we don't want available to edit
