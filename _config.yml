@@ -2,9 +2,8 @@
 # Turn this into a basic template for HARP
 
 # Site settings
-title: DiscoverMe! Find information about youth health risk factors
+title: "Youth Data Explorer"
 description: "Using the OSDUHS survey, our goal is to provide reliable information about health risk behaviours and attitudes of Durham Region teens, tracking changes over time."
-author: Health Analytics and Research Team
 baseurl: "/PMO-data-explorer"
 url: "https://durhamregionharp.github.io"
 copyright_date: "2020"
