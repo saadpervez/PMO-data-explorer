@@ -7,7 +7,7 @@ description: "Terms and conditions for this site and our privacy statement"
 secondarymenu: "false"
 ---
 ## Acceptance of the Terms of Use
-Your access to and the use of the DiscoverMe website ("Website") constitutes your acceptance of and compliance with the terms and conditions set out below. If you do not agree with the terms and conditions, immediately exit this website. The Durham Region Health Department ("DRHD") may change or modify the terms of use at any time and without notice. You are encouraged to check here regularly to ensure your continued acceptance.
+Your access to and the use of the Youth Data Explorer website ("Website") constitutes your acceptance of and compliance with the terms and conditions set out below. If you do not agree with the terms and conditions, immediately exit this website. The Durham Region Health Department ("DRHD") may change or modify the terms of use at any time and without notice. You are encouraged to check here regularly to ensure your continued acceptance.
 ## Using files located on third-party servers
 To improve the functionality of the Website, certain files (such as open source libraries, images and scripts) may be delivered automatically to your browser via a trusted third-party server or content delivery network. The delivery of these files is intended to provide a seamless user experience by speeding response times and avoiding the need for each visitor to download these files. Where applicable, specific privacy statements covering these files are included in our [Privacy Statement]({{ page.url }}/#privacy-statement).
 ## Linking to third-party sites
