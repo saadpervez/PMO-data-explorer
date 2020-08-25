@@ -55,20 +55,20 @@
     {
       "pmoID":7,
       "pmoName":"Non-Medical Tranquilizer Use",
-      "description":"Used sedatives or tranquilizers once in life",
+      "description":"Any non-medical use in lifetime of sedatives or tranquilizers",
       "tags": [ "Ativan","Valium","Xanax","bars","benzodiazapine","benzos","downers","tranqs","tranquilizer","xans" ],
       "category": "Drugs",
       "estimates": {
         "byAll": {
-            "labels": [ "No","Yes run" ],
+            "labels": [ "No","Yes" ],
             "series": [ { "name": "Durham Region", "data": [96,4], "cl": [[99,94],[6,1]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario", "data": [97,3], "cl": [[98,95],[5,2]],"notes": [null,null] } ]
         },
         "bySex": {
-            "labels": [ "No","Yes run" ],
+            "labels": [ "No","Yes" ],
             "series": [ { "name": "Durham Region Male", "data": [95,null], "cl": [[99,90],[null,null]],"notes": [null,"Not releasable due to small numbers"] },{ "name": "Durham Region Female", "data": [98,null], "cl": [[100,95],[null,null]],"notes": [null,"Not releasable due to small numbers"] },{ "name": "Ontario Male", "data": [96,4], "cl": [[98,95],[5,2]],"notes": [null,null] },{ "name": "Ontario Female", "data": [97,3], "cl": [[98,96],[4,2]],"notes": [null,null] } ]
         },
         "byGrade": {
-            "labels": [ "No","Yes run" ],
+            "labels": [ "No","Yes" ],
             "series": [ { "name": "Durham Region Grades 9 to 12", "data": [96,4], "cl": [[99,94],[6,1]],"notes": [null,"Interpret with caution"] },{ "name": "Ontario Grades 9 to 12", "data": [97,3], "cl": [[98,95],[5,2]],"notes": [null,null] } ]
         },
         "byYear": {
@@ -81,7 +81,7 @@
     {
       "pmoID":2,
       "pmoName":"Opioid Use",
-      "description":"How often opioids were used in the past year",
+      "description":"How often opioids (Tylenol #3, OxyContin, Vicodin, etc.) were used in the past year",
       "tags": [ "Codeine","OxyNeo","Percocet","Percodan","Tylenol 3","addiction","drug problem","heroin","opioids","pain relief pills" ],
       "category": "Drugs",
       "estimates": {
@@ -280,7 +280,7 @@
     {
       "pmoID":9,
       "pmoName":"Riding with a Cannabis Impaired Driver",
-      "description":"Frequency of being a passenger riding with a driver who had been using cannabis",
+      "description":"Frequency of riding with a driver who had been using cannabis",
       "tags": [ "driving safety","driving under the influence","risk" ],
       "category": "Cannabis",
       "estimates": {
@@ -332,7 +332,7 @@
     {
       "pmoID":10,
       "pmoName":"Alcohol and Cannabis Combined Use",
-      "description":"Used alcohol and cannabis together in the past year",
+      "description":"How often alcohol and cannabis were used together in the past year",
       "tags": [ "co-use","party" ],
       "category": "Alcohol",
       "estimates": {
@@ -353,7 +353,7 @@
       {
       "pmoID":11,
       "pmoName":"Tried Cannabis for the First Time",
-      "description":"Percentage that tried cannabis for the first time in the past year",
+      "description":"Frequency that tried cannabis for the first time in the past year",
       "tags": [ "Blaze","blunt","bong","dabbing","first use","first-time","grass","hash","hashish","joint","marijuana","pot","start","weed" ],
       "category": "Cannabis",
       "estimates": {
@@ -505,7 +505,7 @@
     {
       "pmoID":6,
       "pmoName":"Perceived Cannabis Use Since Legalization",
-      "description":"Change in cannabis use among friends since legalization",
+      "description":"Estimated change in cannabis use among friends since legalization",
       "tags": [ "Blaze","blunt","bong","cannabis","dabbing","grass","hash","hashish","joint","legalization impact","marijuana","pot","weed" ],
       "category": "Cannabis",
       "estimates": {
@@ -552,7 +552,7 @@
     {
       "pmoID":16,
       "pmoName":"View of Driving High Versus Driving Drunk",
-      "description":"Opinion on the safety of driving after using cannabis compared with alcohol",
+      "description":"Belief that driving after using cannabis is safer than driving after using alcohol",
       "tags": [ "Blaze","alcohol","blunt","bong","dabbing","driving safety","driving under the influence","grass","hash","hashish","joint","marijuana","perceived risk","perceived safety","pot","weed" ],
       "category": "Cannabis",
       "estimates": {
@@ -572,8 +572,8 @@
     },
     {
       "pmoID":3,
-      "pmoName":"Alcohol use",
-      "description":"Frequncy of drinking alcohol in past 12 months",
+      "pmoName":"Alcohol Use",
+      "description":"How often alcohol was used in past year",
       "tags": [ "alcohol","alcohol consumption","liquor","rum","whiskey","vodka","gin","beer" ],
       "category": "Alcohol",
       "estimates": {
@@ -598,8 +598,8 @@
     },
     {
       "pmoID":17,
-      "pmoName":"Alcohol Use",
-      "description":"Frequency of drinking alcohol in the past month",
+      "pmoName":"Recent Alcohol Use",
+      "description":"How often alcohol was used in the past month",
       "tags": [ "liquor","rum","whiskey","vodka","gin","beer","party" ],
       "category": "Alcohol",
       "estimates": {
@@ -646,7 +646,7 @@
     {
       "pmoID":19,
       "pmoName":"Riding with an Alcohol Impaired Driver",
-      "description":"Frequency of being a passenger riding with a driver who has been drinking alcohol",
+      "description":"Frequency of riding with a driver who had been drinking alcohol",
       "tags": [ "alcohol","drinking and driving","driving under the influence" ],
       "category": "Alcohol",
       "estimates": {
@@ -698,7 +698,7 @@
     {
       "pmoID":5,
       "pmoName":"Binge Drinking",
-      "description":"Frequency of having 5 or more drinks of alcohol on the same occasion in the past month",
+      "description":"Drank 5 or more drinks of alcohol on the same occasion in the past month",
       "tags": [ "alcohol","alcohol misuse","hazardous drinking","liquor","rum","whiskey","vodka","gin","beer" ],
       "category": "Alcohol",
       "estimates": {
@@ -787,7 +787,7 @@
     {
       "pmoID":4,
       "pmoName":"Cigarette Smoking",
-      "description":"Frequency of smoking tobacco cigarettes in the past year",
+      "description":"How often tobacco cigarettes were used in the past year",
       "tags": [ "smoking","tobacco","ciggy","dart","stogie","smokes" ],
       "category": "Tobacco",
       "estimates": {
@@ -813,8 +813,8 @@
     {
       "pmoID":24,
       "pmoName":"Electronic Cigarette Use",
-      "description":"Frequency of vaping in the past year",
-      "tags": [ "e-cig","e-cigarette","e-cigarettes","e-cigs","vape pen","vape pipes","vaporizer","juul" ],
+      "description":"How often vape products were used in the past year",
+      "tags": [ "e-cig","e-cigarette","e-cigarettes","e-cigs","vape pen","vape pipes","vaporizer","juul","vaping" ],
       "category": "Tobacco",
       "estimates": {
         "byAll": {
@@ -839,7 +839,7 @@
     {
       "pmoID":26,
       "pmoName":"Smokeless Tobacco Use",
-      "description":"Frequecy of using chewing tobacco, snuff, plug or dipping tobacco in the past year",
+      "description":"How often chewing tobacco, snuff, plug or dipping tobacco was used in the past year",
       "tags": [ "chewing tobacco","dipping tobacco","plug","sniff" ],
       "category": "Tobacco",
       "estimates": {
@@ -902,7 +902,7 @@
     {
       "pmoID":27,
       "pmoName":"Waterpipe Use",
-      "description":"Frequecy of smoking a waterpipe in the past year",
+      "description":"How often waterpipes were used in the past year",
       "tags": [ "gouza","hookah","narghile","pipe","shisha" ],
       "category": "Tobacco",
       "estimates": {
@@ -924,7 +924,7 @@
       "pmoID":25,
       "pmoName":"Electronic Cigarette Use with Nicotine",
       "description":"Whether the usual vape product contains nicotine or not",
-      "tags": [ "e-cig","e-cigarette","e-cigarettes","e-cigs","vape pen","vape pipes","vaporizer","juul" ],
+      "tags": [ "e-cig","e-cigarette","e-cigarettes","e-cigs","vape pen","vape pipes","vaporizer","juul","vaping" ],
       "category": "Tobacco",
       "estimates": {
         "byAll": {
