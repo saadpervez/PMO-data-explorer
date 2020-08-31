@@ -2,11 +2,18 @@
 # Turn this into a basic template for HARP
 
 # Site settings
-title: Discover Me! Find information about youth health risk factors
-description: Make data beautiful with Jekyll
+title: "Youth Data Explorer"
+description: "Using the OSDUHS survey, our goal is to provide reliable information about health risk behaviours and attitudes of Durham Region teens, tracking changes over time."
 baseurl: "/PMO-data-explorer"
 url: "https://durhamregionharp.github.io"
 copyright_date: "2020"
+lang: en-US
+logo: "/assets/icon-128.png"
+
+# Social settings
+twitter:
+  username: durhamepis
+  card: summary
 
 # User settings
 username: Durham Region HARP
@@ -14,7 +21,6 @@ user_description: Epidemiologists making data fun again
 user_title: Health Analytics Research and Policy
 email: harp@durham.ca
 facebook_username: durhamregionhealth
-twitter_username: durhamepis
 github_username: DurhamRegionHARP
 
 # Build settings
@@ -36,8 +42,9 @@ sass:
   style: compact
 
 # Plugins
-#plugins:
-#  - jekyll-sitemap
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Prose configuration
 # Set ignore parameter to limit access to files we don't want available to edit
