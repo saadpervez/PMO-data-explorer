@@ -230,6 +230,10 @@
         }
         const hashString = `#qry=${currentQuery}`;
         const info = hashString.substr(1).split("=");
+        dataLayer.push({
+          'event': 'query',
+          'query_string': info[1]
+        });
         window.location.hash = hashString;
         searchData({
           action: info[0],
