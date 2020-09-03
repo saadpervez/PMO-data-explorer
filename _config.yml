@@ -34,7 +34,8 @@ exclude: [
   'node_modules',
   'README.md',
   'pmo.json',
-  'script/src'
+  'script/src',
+  'assets/email'
   ]
 
 # SASS settings
