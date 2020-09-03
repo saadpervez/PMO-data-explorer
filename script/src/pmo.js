@@ -2,7 +2,7 @@
 'use strict';
 // PMO indicator instance
 window.PMO = function(data){
-  this.version = "0.5.0";
+  this.version = "0.6.0";
   this.anchor = document.getElementById('cards');
   this.name = data.pmoName;
   this.description = data.description;
@@ -21,7 +21,7 @@ window.PMO = function(data){
           'Source: 2018-2019 Ontario Student Drug Use and Health Survey',
           'Missing bars indicate an estimate is not releaseable due to small numbers'
         ],
-        Feedback: 'Your comments are welcome through our <a href="#">feedback form</a>'
+        Feedback: 'Your comments are welcome through our <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=wsnXUknVtkGbH52hmNw_FpdyDt_B3DFNvD4pdKn3uNRUQUZGSUxKTzI3U0taMDVVVjhFWk1UQThQMCQlQCN0PWcu">feedback form</a>'
       };
       return notes;
     }
@@ -32,7 +32,7 @@ window.PMO = function(data){
           'Missing bars indicate an estimate is not releaseable due to small numbers'
         ],
         "Trend analysis": data.trendTests,
-        Feedback: 'Your comments are welcome through our <a href="#">feedback form</a>'
+        Feedback: 'Your comments are welcome through our <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=wsnXUknVtkGbH52hmNw_FpdyDt_B3DFNvD4pdKn3uNRUQUZGSUxKTzI3U0taMDVVVjhFWk1UQThQMCQlQCN0PWcu">feedback form</a>'
       };
       return notes;
     }      

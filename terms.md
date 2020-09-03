@@ -62,4 +62,4 @@ DRHD may update this Privacy Notice from time to time. We encourage you to revie
 If you have any questions about our privacy notice, do not hesitate to contact us using one of the following links:
 - [Open an issue](https://github.com/DurhamRegionHARP/PMO-data-explorer/issues/new) on the project's repository
 - [Tweet us](https://twitter.com/DurhamEpis) @DurhamEpis on Twitter
-- [Fill out and submit]({{ page.url }}) our feedback form
+- [Fill out and submit](https://forms.office.com/Pages/ResponsePage.aspx?id=wsnXUknVtkGbH52hmNw_FpdyDt_B3DFNvD4pdKn3uNRUNFREWFRNWTlETjlXUFFNN1FORDY1VVRGOSQlQCN0PWcu) our feedback form
